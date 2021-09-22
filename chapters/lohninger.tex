@@ -1,0 +1,465 @@
+\documentclass[output=paper,colorlinks,citecolor=brown]{langscibook}
+
+\author{Magdalena Lohninger\affiliation{University of Vienna}}
+\title{What moves where? A typological-syntactic approach to multiple wh-questions}
+\abstract{
+  This paper presents a new syntactic analysis for multiple wh-constructions. 
+  Adopting \cite{richards1997}, I assume that there are two types of languages concerning wh-movement: 
+  Such which A-move their wh-words (A-languages) and such which A’-move them (A’-languages). 
+  I expand this account by assuming that in both types, wh-movement targets the CP. 
+  This is done via A’-movement, as well as via A-movement. 
+  Building on recent work on Cross-clausal A-dependencies (mainly \citealp{wurmbrand2018cross}), 
+  I adopt the idea of [A]-features inside CP. 
+  Based on \cite{rizzi1997fine}, I propose a split CP domain whose different parts (\emph{ForceP, FocusP, TopicP}) can either have A'- or A-quality. 
+  Wh-movement targets \emph{ForceP} and \emph{FocusP}, CCA-elements move to \emph{TopicP}. 
+  The CP heads are ordered in an implicational hierarchical way, and their featural make-up entails the properties 
+  of the embedded and higher-ordered heads. 
+  Within this ordering, there is a threshold where A'-qualities shift to A-qualities. 
+  I assume that certain CP-heads are able to contain A-properties and by that, the CP domain contains A'- as well as A-properties. 
+  The option of having A-quality is restricted by embedding options: 
+  An A-CP-part cannot embed an A'-CP-part within the same domain (CP). 
+  I claim that languages pattern into three types, depending how high in the CP the A'/A-shift is located. 
+  This assumption predicts that there is a correlation between A-wh-movement and CCA-phenomena 
+  which indeed is the case and will be summarised as a novel typological generalisation: 
+  ``Whenever a language A-moves its wh-words, it allows CCA (but not the other way around).'' 
+  This generalisation describes that A-wh-movement entails CCA which is expected by my analysis of the CP domain. 
+  My account ties together CCA-phenomena and A-wh-movement in a syntactically novel way 
+  and might shed new light on the universal composition of the CP-domain.
+}
+
+\forestset{
+    standard/.style={baseline,for tree={parent anchor=south,child anchor=north,align=center}},
+%
+standardemptynodes/.style={baseline,delay={where content={}{shape=coordinate,for parent={for children={anchor=north}}}{}},for tree={calign=fixed edge angles,parent anchor=south,child anchor=north,align=center}},
+%
+    sn edges/.style={for tree={parent anchor=south, child anchor=north}},
+%
+background/.style={for tree={text opacity=0.2,draw opacity=0.2,edge={draw opacity=0.2}}},
+%
+    boldface/.style={for tree={font=\sffamily\bfseries}},
+%
+empty nodes/.style={delay={where content={}{shape=coordinate,for parent={for children={anchor=north}}}{}}}
+%
+    thickedges/.style={for tree={parent anchor=south,child anchor=north, align=center, edge={->,line width=4pt}}}
+}
+
+\begin{document}
+\maketitle
+
+\section{Wh-movement as A-movement}
+When it comes to multiple wh-questions, languages show three different kinds of behaviour. First, there are languages which raise one wh-word to sentence-initial position and leave all others in-situ (e.g. English, German, Greek, Brazilian Portuguese). I will call them `single-raising'.
+\ea
+What did John give to whom?\\  
+\emph{English} (\citealp{bovskovic2002multiple}: p. 351)
+\z
+
+\noindent Then, there are multiple-fronting languages like Bulgarian, Polish, Romanian, Hungarian, Bosnian, Croatian and Serbian,  which move several wh-words to sentence-initial position.
+\ea 
+\gll Na kogo kakvo dade Ivan?\\
+to whom what give.\textsc{3sg} Ivan\\ 
+\glt `What did Ivan give to whom?'\\
+\emph{Bulgarian} (\citealp{bovskovic2002multiple}: p. 351)
+\z
+
+\noindent Finally, there are languages which leave all of their wh-words in their base-generated position (such as Japanese, Chinese, Korean or Turkish), called `wh-in-situ languages'.
+\ea 
+\gll John-ga nani-o naze katta no?\\
+John.\textsc{nom} what.\textsc{acc} why bought \textsc{Q}\\ 
+\glt `What did John buy why?'\\
+\emph{Japanese} (\citealp{richards1997}: p. 31)
+\z
+
+\noindent Throughout linguistic history, there have been  several syntactic explanations for each of the three. One of those accounts stands out because of its unconventionality: The ideas proposed in \cite{richards1997}. He suggests that languages do not divide into three classes depending on what is moved on the surface but only into two classes instead. Based on \cite{huang1982move}, he assumes that in all languages, all wh-words move to sentence-initial position at LF due to interpretability.\footnote{This statement is probably not universally applicable. Literature provides different analyses for wh-in-situ languages, e.g. quantificational inverse linking (see for example \citealp{may1978grammar}, \citealp{larson1985quantifying}, \citealp{may1985logical}, \citealp{chang1997wh}, \citealp{pollard1998unified}, \citealp{cooper2013quantification}, \citealp{may2017inverse}) Additionally, it is more difficult to test the A'/A-movement distinction in in-situ languages. Since the length of this paper is restricted and for the sake of the argument, I adopt the claim in \cite{huang1982move}, that wh-words move on LF and \cite{richards1997} argumentation why and how in-situ languages part into A'- and A-languages and refer to his dissertation for a more detailed description of the supporting data. I am aware that wh-in-situ languages posit an important question for further research.} What happens on the surface is determined by other factors. Supposing that all wh-words move, \cite{richards1997} claims that there are only two types of languages: IP-absorption languages and CP-absorption languages. The difference between them is not the PF-quantity of moved wh-words but rather the LF-quality of their movement. According to him, languages can either A'-move their wh-words (CP-absorption languages; from here on A'-languages) or A-move them (IP-absorption languages, from here on A-languages). This sheds a completely new light onto the discussion of multiple wh-questions. So far, wh-movement has always been assumed to be pure A'-movement. However, \cite{richards1997} lists some criteria which show that the quality of wh-movement does not seem to be uniform within syntax. It appears that whether wh-movement has A- or A'-qualities is more important than how many wh-words move on the surface. The difference between A'-wh-movement and A-movement is bound to distinctive behaviour in the following aspects: A-languages do not obey Superiority between the wh-words, they usually allow A-scrambling of items other than wh-words and do not show WCO-effects in local wh-questions. A'-languages behave inversely to that; They do obey Superiority between their wh-words, do not allow A-scrambling in general and do show WCO-effects in local wh-questions. These observations are true for languages of all three surface classes. This means, each surface language type (multiple fronting, single fronting or in-situ) contains languages which A-move their wh-words as well as such which A'-move them. To put it differently: Whether a languages A- or A'-moves its wh-words is independent of how many wh-words are raised on the surface. The exact typology can be seen in table (\ref{lohningertab:1:richards}) (adapted from \citealp{richards1997}). 
+Each language type splits into two classes. Multiple-fronting languages for example divide into Bulgarian-like languages and Bo,Cr,Se-like languages\footnote{For reasons of simplicity, I cannot present all the supporting data for all languages here. It can be found in great detail in \cite{richards1997}.}. Bulgarian-like languages obey Superiority (\ref{lohninger1bgsup}), show WCO-effects (\ref{lohninger1bgwco}) and do not allow A-Scrambling and therefore A'-move their wh-words. 
+
+\begin{table}[H]
+\caption{A- versus A'-movement of wh-words}
+\label{lohningertab:1:richards}
+ \begin{tabular}{lllll} 
+  \lsptoprule
+     &       & \textbf{Superiority} & \textbf{WCO} & \textbf{A-SCR} \\ 
+  \midrule
+\fbox{Multiple fronting} & \emph{Bulgarian-like}  &   \cmark &    \cmark  &    \xmark    \\
+\fbox{Wh-in-situ} & \emph{Chinese-like}  &   \cmark &    \cmark  &    \xmark    \\
+\fbox{Single fronting} &  \emph{English-like}  &   \cmark &    \cmark  &    \xmark    \\
+ \fbox{Multiple fronting} & \emph{Bo,Cr,Se\footnote{In literature, Bosnian, Croatian and Serbian are summarized as 'Serbocroatian' or 'B/C/S'. The three languages are similar but not the same and therefore, I refer to them as Bo,Cr,Se. Since they do not seem to behave crucially different to each other concerning wh-movement (they all A-move their wh-words and are multiple fronting), I group them together in this paper.}-like}  &   \xmark &    \xmark  &    \cmark  \\
+ \fbox{Wh-in-situ} & \emph{Korean-like}  &   \xmark &    \xmark  &    \cmark  \\
+ \fbox{Single fronting} & \emph{German-like}  &   \xmark &    \xmark  &    \cmark  \\
+  \lspbottomrule
+ \end{tabular}
+\end{table}
+
+\ea\label{lohninger1bgsup}
+  \ea
+    \gll Koj kogo vi\v{z}da?\\
+    who whom sees\\
+    \glt 'Who sees whom?'
+  \ex
+    \gll * Kogo koj vi\v{z}da?\\
+    {} whom who sees\\
+    \glt {}
+    \textbf{Superiority} in \emph{Bulgarian} (\citealp{richards1997}: p. 30)
+  \z
+\z
+\ea\label{lohninger1bgwco}
+  \gll * Kogo$_{i}$ obi\v{c}a majka si$_{i}$?\\
+  {} who$_{i}$ loves mother his$_{i}$\\
+  \glt 'Whom$_{i}$ does his$_{i}$ mother love?' \\
+  \textbf{WCO} in \emph{Bulgarian} (\citealp{richards1997}: p. 32)
+\z
+Opposed to that, Bo,Cr,Se-like languages do not show Superiority effects (\ref{lohninger1bcssup}), omit WCO effects (\ref{lohninger1bcswco}) and have local A-scrambling. Therefore, they A-move their wh-words.\footnote{A reviewer noted that a crucial property of A-movement is that it is restricted to nominals. This predicts that properties like Superiority and WCO might arise in A-movement languages when a non-nominal is moved. This is a very interesting clue and is in need of proper examination. I have no answer to this question yet since providing a well-founded one includes fieldwork in different languages and a lot more literature research. Hence, I leave this question open to further investigation.}
+\ea\label{lohninger1bcssup}
+  \ea
+    \gll Ko je koga vidjeo?\\
+    who AUX whom seen\\
+    \glt 'Who saw whom?'\\
+  \ex
+    \gll Koga je ko vidjeo?\\
+    whom AUX who seen\\
+    \glt {}
+    \textbf{Superiority} in \emph{Bo,Cr,Se} (\citealp{richards1997}: p. 30)
+  \z
+\z 
+\ea\label{lohninger1bcswco}
+  \gll Koga$_{i}$ voli njegova$_{i}$ majka?\\
+  who$_{i}$ loves his$_{i}$-NOM mother-NOM\\
+  \glt 'Whom$_{i}$ does his$_{i}$ mother love?'\\
+  \textbf{WCO} in \emph{Bo,Cr,Se} (\citealp{richards1997}: p. 33)
+\z
+
+On the following pages, I will propose a new account for A-wh-movement by linking wh-movement to the concept of an A-position inside CP. The ingredients for my analysis have their origin in different, so far unrelated grammatical phenomena and their corresponding theories: First, \cite{richards1997} proposal that in some languages, wh-movement has A-quality. Then, cross-clausal A-phenomena (as discussed, among many others, in \citealp{wurmbrand2018cross}), i.e. the ability of certain languages to allow A-relations into embedded CP domains or A-movement out of them. And finally, an extended CP domain, consisting of multiple CP-parts (as proposed in \citealp{rizzi1997fine}). By combining these three, I will present a novel analysis of the CP domain, rendering new derivational positions for wh-movement. Eventually I will substantiate my claim with typological observations and a universal generalisation. 
+
+\section{An A-position inside CP}
+In recent literature, the claim for an A-position inside CP (\citealp{tanaka2002raising}, \citealp{csener2008non}, \citealp{takeuchi2010exceptional}, \citealp{alboiu2011case}, \citealp{bondarenko2017ecm}, \citealp{zyman2017p}, \citealp{zyman2018rich}, \citealp{wurmbrand2018cross},  \citealp{fong2019proper}), respectively the dissolving of strictly separated A- and A'-positions (\citealp{obata2011feature}, \citealp{vanUrk2015}) grew stronger. This idea is mainly used to explain cross-clausal A-dependencies (CCA) like Hyperraising, Hyper-ECM or Hyperagreement. CCA include A-dependencies (Case Assignment, Raising or Agreement) operating across a CP-boundary. Take Hyper-ECM as an example: It behaves like regular Exceptional Case-Marking (ECM) the only difference being that the embedded clause (containing the targeted DP) is a full CP. Mongolian, for example, shows this phenomenon: The embedded subject \emph{Dulmaa} receives accusative case from the matrix verb \emph{say}. The embedded clause, however, is a full CP and thus case assignment crosses a clause boundary.
+\ea 
+\gll Bat [ margaash Dulmaa-g nom unsh-n gej ] khel-sen.\\
+Bat [ tomorrow Dulmaa.\textsc{acc} book read.\textsc{n.pst} \textsc{comp} ] say.\textsc{pst}\\
+\glt `Bat said that Dulmaa will read a book tomorrow.'\\
+\emph{Mongolian} (\citealp{fong2019proper}: p. 2)
+\z
+
+\noindent Hyper-ECM appears in several non-related languages, amongst others in Korean \citep{yoon2007raising}, Japanese \citep{horn2008syntax}, Turkish \citep{csener2011null} or Uyghur \citep{SandS2014}. \cite{wurmbrand2018cross} (amongst others) negates that Hyper-ECM is an instance of Object Raising, Binding, Prolepsis or deficient CPs and argues that the embedded clause is a fully functional CP, that the accusative case comes from the matrix clause and targets the embedded subject and that the targeted DP remains within the embedded CP. She brings forward several arguments for this claim (such as idiomatic reading, impossibility of embedded overt pronominal subjects, embedded negation, matrix predicate scope, clefts, Proper Binding Condition violations, island sensitivity or shifted indexicals)\footnote{For detailed typological data and similar approaches see \cite{bondarenko2017ecm}, \cite{bruening2001syntax}, \cite{deal2017covert}, \cite{halpert2015argument}, \cite{halpert2015right}, \cite{podobryaev2014persons}, \cite{polinsky2001long}, \cite{SandS2014}, \cite{csener2011null},  \cite{zyman2017p}. Due to the limited extent of this paper, I cannot provide the the full analysis of CCA in these works. However, I only use languages from works on CCA which cearly show that the A-dependencies are made possible via an A-position in CP and not other mechanisms such as prolepsis, etc.}. Eventually, \cite{Wurmbrand2001} proposes the following analysis for CCA which I will adopt and apply to wh-constructions: She claims that languages allowing CCA contain an A-position inside CP which can be targeted by A-relations from the matrix and embedded clause. This A-position is made possible by an [A]-feature on C. Based on a composite probe approach by \cite{vanUrk2015}, stating that C-heads may have mixed [A] and [A’]-features, \cite{wurmbrand2018cross} proposes that in CCA-cases, C-heads can have [A]-features additionally to their [A’]-features. If a C-head has [A]-features, a DP agreeing with it inherits these [A]-features. Then, A-movement from a mixed A/A’-position is possible as well as an A-relation targeting it. Languages differ in whether they have [A]-features on their C-head or not. Languages allowing CCA do have [A]-features on C, languages disallowing CCA do not. The following structure
+shows the general idea (adapted from \citealp{wurmbrand2018cross}, p. 15):
+\begin{center}
+\begin{forest}standard
+[CP
+ [CCA.DP-\emph{{[}A{]}}]
+ [C'
+   [C-\emph{{[}A'/A{]}}]
+   [TP]
+ ]
+ ]
+\end{forest}
+\end{center}
+
+\noindent I will adapt the idea of a potential A-position in CP in order to derive a new account for multiple wh-questions typologically. This means that I will use the approach that CP is not a pure A'-domain and extend it to another phenomenon of grammar, namely wh-movement. Wh-movement has been the stereotypical instance of A'-movement for a long time. Assuming that this grammatical transformation might be A-movement (based on \citealp{richards1997}) sheds new light onto a very old discussion. What is new about my proposal is the idea that wh-movement has A-quality but still targets the CP-domain. How this combines and extends the accounts on CCA and multiple wh-questions will be elaborated on further in the following section.
+
+\section{Wh-movement as A-movement to CP}
+A-languages (like Bo,Cr,Se) remain a mystery for most accounts on multiple \sloppy{wh-constructions}. In A-languages, wh-movement resembles A-movement in that it shows neither WCO-effects nor Superiority. However, so far, the usual landing site for wh-words has been the CP-domain, a pure A'-domain. Thus, all wh-movement targeting it has to be A'-movement. A-languages constitute a problem for this assumption: Their wh-words do move but their movement does not have A'-quality. The question arises: If CP is an A'-domain, where do the wh-words move to? Several authors tried to find a position high enough to be close to CP and interpretable but simultaneously low enough as not to actually enter CP. \cite{citko1998multiple} for example proposes an additional functional phrase between CP and TP, \cite{bovskovic2002multiple} claims that wh-movement in A-languages is Focus-movement to a very high TP-position and \cite{rudin1988multiple} and \cite{richards1997} use TP-adjunction as a target position for wh-movement in A-languages. This means they all face the same problem: Apparently there are two kinds of languages: A'-languages (Bulgarian, Chinese, English...) in which all wh-words A'-move to CP and A-languages, in which only one or no wh-word A'-moves to CP. All others A-move to some very high functional position below CP but above TP. For the latter class, it seems to be difficult to find a proper landing-site and proper motivation to move at all. My idea is built on this struggle to find a destination for A-moved wh-words. I do not assume that these wh-words remain in TP or some inbetween functional projection between CP and TP. I claim that they target CP. This proposition is based on the ideas and data in \cite{wurmbrand2018cross} and related literature on CCA (\citealp{tanaka2002raising}, \citealp{csener2008non}, \citealp{takeuchi2010exceptional}, \citealp{alboiu2011case}, \citealp{obata2011feature}, \citealp{vanUrk2015}, \citealp{bondarenko2017ecm}, \citealp{zyman2017p}, \citealp{zyman2018rich}, \citealp{wurmbrand2018cross}, \citealp{fong2019proper}). I adopt their claim that CP is not a pure A'-domain but may involve [A]-features and thus A-positions and apply it to wh-movement. This assumption has one advantage over several others proposed earlier: A-languages and A'-languages do not differ any longer by the domains they move to but only by the quality of movement. This means that all wh-movement targets CP where it can be interpreted. The only difference is the featural make-up of the CP-part to whose specifier a wh-phrase moves: If it has A-features, the movement is A-movement, if not, it is A'-movement. In the following section, I will explain my approach in detail and eventually bring forward typological connections between CCA and A-wh-movement supporting my claim. 
+
+\subsection{Analysis}
+I adopt \cite{richards1997} analysis that there are two types of languages. Those, which move all of their wh-words via A'-movement and those, which move their wh-words by A-movement. I also adopt the idea that all wh-words are moved at LF, independently from what is moved or not on the surface (\citealp{huang1982move}). However, contrary to \cite{richards1997} (and \citealp{bovskovic2002multiple}, \citealp{citko1998multiple},  or \citealp{rudin1988multiple}), I claim that all of these movement-operations target the CP-domain instead of only adjoining to TP. In order to do so, I assume a split CP domain, as proposed in \cite{rizzi1997fine}.\footnote{I have to admit that my analysis of the CP configuration is still in a somewhat underdeveloped stage and needs theoretical improvement, as noted by two reviewers. The following proposal should rather be considered a raw sketch than a fully developed framework. However, the idea of both A'- and A-movement targeting CP will be important for the typological generalisations I am about to meet in the following section.}
+
+\subsubsection{A'-languages}
+My analysis for A'-languages (Bulgarian-like, Chinese-like, English-like), is based on assumptions in \cite{richards1997} and \cite{rudin1988multiple}; I claim that all wh-words A'-move to CP. Whether this movement targets separate A'-SpecCPs or the wh-words form a cluster is irrelevant for the moment. What is important is that the part of CP responsible for wh-movement has pure A'-quality in these cases. Assuming an extended left periphery, respectively a split CP (based on \citealp{rizzi1997fine}), this A'-movement presumably targets the highest part of CP, ForceP. A'-wh-movement is triggered by a [wh] feature on C and all wh-words. [Wh] is an A'-feature.
+
+\small
+\begin{center}
+\begin{forest}standard
+[CP (\emph{ForceP})
+[A'\\WH1$_{[wh]}$]
+  [CP (\emph{ForceP})
+    [A'\\WH2$_{[wh]}$]
+    [C'
+      [C$_{[wh]}$]
+      [TP]
+    ]
+  ]
+]
+\end{forest}
+\end{center}
+\normalsize
+
+\noindent All wh-words are attracted by the same C-head via Multiple Agreement (see \citealp{hiraiwa2001multiple}). This means that the wh-probe on C does not stop probing after it found a goal but continues to search. It finds the highest wh-word first and raises it to SpecCP (\emph{Attract Closest}). Then, it finds the next wh-word and tucks it in below the first SpecCP (\emph{Shortest Move}). By that, Superiority arises: The wh-word from the highest base-generated position becomes the highest in the movement-structure. Since all wh-words undergo A'-movement, the moved wh-words leave their binding domain and WCO-effects arise.
+
+\subsubsection{A-languages}
+The more interesting phenomenon are A-languages (Bo,Cr,Se-like, Japanese-like and German-like).\footnote{German is a very special case and behaves distinct to other A-languages. I only include it here since it is mentioned in \cite{richards1997} as A-language but I will further on not use it as an example.} \cite{richards1997} and \cite{bovskovic2002multiple} propose that all wh-words first adjoin to TP via Focus-movement and then one of them A'-moves up to CP to satisfy the [wh]-feature on C. The other wh-words remain adjoined to TP. Contrary to that, I bring forward an analysis where no wh-word remains in TP. I propose that in A-languages, all wh-words A-move to a Focus-phrase (\emph{FocusP}) within the CP domain. The idea that wh-movement in A-languages has focus qualities comes from \cite{bovskovic1997superiority}, (\citeyear{bovskovic1997syntax}), (\citeyear{bovskovic2002multiple}). The \emph{FocusP} (\emph{FocP}) constitutes a part of the split CP domain and is located below \emph{ForceP} but above \emph{TopicP}. I claim that its head \emph{Foc} has [focus] features and that in A-languages all wh-words have [focus] features as well. By that, they are attracted by \emph{Foc} and moved to its specifiers. I assume that [focus] features have A-quality and that in A-languages movement to \emph{FocP} is A-movement. One wh-word has a [wh] feature additionally to its [focus] feature and in a further step is probed by \emph{Force} and A'-moved to ForceP. 
+
+\small
+\begin{center}
+\begin{forest}standard
+[\emph{ForceP}
+[A'\\WH1$_{[wh][focus]}$]
+[C'
+[\emph{Force}$_{[wh]}$]
+  [\emph{FocP}
+    [A\\WH2$_{[focus]}$]
+    [C'
+      [\emph{Foc}$_{[focus]}$]
+      [\emph{TopicP}
+        [\emph{Topic}]
+        [TP]
+      ]]
+    ]
+  ]
+]
+\end{forest}
+\end{center}
+\normalsize
+
+\noindent The exact derivation looks like this: All wh-words bear a [focus] feature and one of them has an additonal [wh] as well. This is the main difference to A'-languages where all wh-words carry a [wh]-feature and none of them has a [focus]-feature. \emph{Foc} is a multiply agreeing [focus] probe and attracts all wh-words. Recall that [focus] is an A-feature. Attracted by [focus] on \emph{Foc}, all wh-words A-move and attach to specifiers of \emph{FocP}.\footnote{\cite{rizzi1997fine} claims that \emph{FocP} cannot be multiply filled. However, his claim is based on Italian focalized elements. As a matter of fact, Italian does not allow multiple wh-questions at all. Hence, the restriction on multiple focalized elements probably is language-specific.} Then, the one of them carrying a [wh] feature is attracted by the A'-probe [wh] on the higher-up \emph{Force} and A'-moves to the \emph{ForceP} specifier. Thereby only one wh-word A'-moves in A-languages whereas in A'-languages, all wh-words carry a [wh] and by that have to undergo A'-movement. A-languages lack Superiority due to the fact that only one wh-word bears an additional [wh]-feature whereas all others only have [focus] features. 
+The lack of WCO-effects in A-languages results from the intial Focus-movement of wh-words. In A-languages, all wh-words have a [focus] feature. Even in a non-multiple wh-construction, i.e. a construction with only one wh-word, this wh-word bears both [wh] and [focus]. Thus, it first A-moves to \emph{FocP} (trigered by [focus]) and then A'-moves to \emph{ForceP} (triggered by [wh]). (I assume that \emph{ForceP} always has to be filled in order to derive interrogative semantics.) The moved wh-word leaves a trace in \emph{FocP} which is able to bind an anaphor and WCO-effects are omitted. The following structure is an example for an external argument bearing the [wh]-feature. The underlined features are the satisfied ones whereas the blank ones are those which still need to be valued.
+
+\footnotesize 
+\begin{center}
+\begin{forest}standard
+[\emph{ForceP}
+ [\textbf{A'}\\WH$_{\underline{[wh][focus]}}$,name=whcp]
+ [\emph{Force}'
+  [\emph{Force}$_{[wh]}$]
+  [\emph{FocP}
+   [\textbf{A}\\trace-WH$_{[wh]\underline{[focus]}}$,name=whfoc]
+   [\emph{FocP}
+    [\textbf{A}\\WH$_{\underline{[focus]}}$,name=foc]
+    [\emph{Foc}'
+     [\emph{Focus}$_{[focus]}$]
+     [\emph{TopicP}
+     [\emph{Topic}]
+     [TP
+      [WH$_{[wh][focus]}$,name=Spec2start]
+      [VP
+      [V]
+      [WH$_{[focus]}$,name=2]
+      ]]
+     ]
+    ]
+   ]
+  ]
+ ]
+]
+\draw[->](Spec2start) to [out=south west,in=south west] node[fill=white,font=\small]{A-mvt} (whfoc);
+\draw[->](whfoc) to [out=south west,in=south west] node[fill=white,font=\small]{A'-mvt} (whcp);
+\draw[->](2) to [out=south west,in=south west] node[fill=white,font=\small]{A-mvt} (foc);
+\end{forest}
+\end{center}
+\normalsize
+
+\noindent In this framework, A-languages differ from A'-languages in the following way: In A'-languages, all wh-words carry an A'-[wh] feature. They are all attracted by an A'-head in CP (here \emph{Force}) and A'-move directly to the the highest part of CP. The [wh]-attracting head probes multiply for [wh]. In A-languages, on the other hand, all wh-words carry a [focus]-feature and only one of them has an additional [wh]-feature. They are all attracted by a \emph{Focus}-head in CP and A-move to \emph{FocP}. Then, one of them, namely the one carrying the [wh]-feature, is attracted by [wh] on \emph{Force} and A'-moves up to \emph{ForceP}, the higher part of CP. Given that, CP has a higher-layered A'-part and a lower A-part. Important for my analysis is that both of them are constituent parts of the CP domain and that there are projections of CP below them too, enabling other processes such as CCA. I will come back to this assumption in the next section. But first, there is one observation left that needs to be included into the framework: Long-distance questions.\\
+
+\subsubsection{Long-distance questions} Long-distance questions show very peculiar behaviour in A-languages. As soon as wh-words are moved over a CP-border into another clause, A-languages adopt the qualities of A'-languages: Superiority between the wh-words arises (\ref{lohningerbcslong}) and WCO-effects occur (\ref{lohningerbcslongwco}). 
+\ea 
+  \ea{\label{lohningerbcslong}
+    \gll * Koga si ko tvrdio da je istukao?\\
+    {} whom \sc{aux} who claimed that \sc{aux} beaten\\
+    \glt `Who did you claim beat whom?'\\
+    \textbf{Superiority} in \emph{Bo,Cr,Se} (\citealp{richards1997}: p. 51)}
+  \ex{\label{lohningerbcslongwco}
+    \gll * Koga$_{i}$ njegova$_{i}$ majka misli da Marija voli?\\
+    {} who$_{i}$ his$_{i}$-\sc{nom} mother-\sc{nom} thinks that Maria loves\\
+    \glt 'Who$_{i}$ does his$_{i}$ mother think that Mary loves?'\\ 
+    \textbf{WCO} in \emph{Bo,Cr,Se} (\citealp{richards1997}: p. 33)}
+  \z
+\z 
+All wh-movement seems to be A'-movement as soon as it crosses a clause boundary. In my framework, these facts can be accounted for the following way: In A-languages, all wh-words first focus-move since they have focus-qualities (A-qualities). I claim that focus-movement is clause-bound and that the \emph{FocusP} does not represent a phase-edge. This means an embedded interrogative CP cannot be truncated to \emph{FocusP} but needs a \emph{ForceP} (probably due to semantic/ selectional reasons, see section 4.4.3 for an exact elaboration). Thus, whatever element wants to move out of an embedded interrogative clause has to move through \emph{ForceP}. Since \emph{ForceP} is always an A' domain (and that is a stipulation one has to make), long-distance movement has to be A'-movement. For A-languages, this means that they have to shift and act like A'-languages if their CP is embedded and they want to move wh-words out of this embedded clause. 
+
+\section{Typological predictions}
+So far, I brought forward the idea that wh-movement has A-qualities and targets CP at the same time. This is a unification of two accounts, namely \cite{richards1997} and to some extent \cite{bovskovic2002multiple} who claim that wh-movement is A-movement and/or focus movement and \cite{wurmbrand2018cross} (and other accounts on CCA) who propose that CP can host A-positions or [A]-features. I will now go a step further: If we assume that the possibility of allowing an A-position inside CP is a language-specific parametric option, then there should be two kinds of languages. Such, that allow A-moved elements in their CP and thereby CCA and A-wh-movement, and such that do not. This is a very strong implication and it will have to be weakened. However, there seems to be a typological correlation between allowance of CCA and A-wh-movement. I bring forward a unidirectional generalisation, stating a correlation between languages allowing A-wh-movement and languages allowing CCA phenomena.
+\ea\label{lohningergeneralisation} Whenever a language A-moves its wh-words, it allows CCA (but not the other way around).\footnote{This generalisation is based upon a small set of languages and I do not claim its universal applicability. I looked at 10 languages from 6 different language families altogether. However, within those, the proposed generalisation appears to be plausible. Most of the languages are taken from current works on CCA.}
+\z 
+For the examined languages, I tested whether they allow some instance of CCA (based on the criteria brought forward in CCA-literature) and if their wh-words move via A-movement or A'-movement (based on Superiority and WCO-effects). There are four possible combinations resulting from this: Languages allowing both CCA and A-wh-movement, languages allowing neither, languages allowing only CCA and languages allowing only A-wh-movement. Crucially, there do not seem to be any languages allowing A-wh-movement but not CCA. The results I received are presented in table (\ref{lohningertab:2}).\footnote{Language data taken from: Turkish: \cite{ozsoy1996dependencies}, \cite{csener2011null}; Japanese: \cite{richards1997}, \cite{hiraiwa2001multiple}, \cite{watanabe1992subjacency}; Greek: P.c. Christos Christopoulos, \cite{sinopoulou2008multiple}, \cite{joseph1976raising}, \cite{alexiadou1999raising}; Hungarian: \cite{brody1995hungarian}, \cite{richards1997}, \cite{horvath1998multiple}, \cite{dendikken2017predication}; Korean: \cite{jeong2003deriving}, \cite{kim2016islands}, \cite{yoon2007raising}; Braz. Portuguese: P.c. Ingrid Cisneiro Facchim, \cite{nunes2009brazilian}; Romanian: \cite{rudin1988multiple}, \cite{rivero1991exceptional}; Mandarin Chinese: \cite{cheng1997typology}, \cite{richards1997}; English: P.c. Sean Anstiss, \cite{richards1997}, \cite{ross1967constraints}; Bulgarian: P.c. Marchela Oleinikova, Aline Panajotov, \cite{rudin21986aspects}, (\citeyear{rudin1988multiple}), \cite{richards1997}.
+}
+
+\begin{table}
+\caption{Correlation between CCA and A-wh-movement}
+\label{lohningertab:2}
+ \begin{tabular}{llll} 
+  \lsptoprule
+         \cmark\ \ A-wh-mvt &  \cmark\ \ A-wh-mvt    &  \xmark \ \ A-wh-mvt  & \xmark\ \  A-wh-mvt \\ 
+         \cmark\ \ CCA & \xmark\ \ CCA & \cmark\ \ CCA & \xmark\ \ CCA\\
+  \midrule
+  Turkish  &    &    Korean  &    English    \\
+  Japanese  &    &    Brazilian Portuguese &    Bulgarian    \\
+ Greek  &    &    Romanian &        \\
+  Hungarian  &    &    Mandarin Chinese  &     \\
+  \lspbottomrule
+ \end{tabular}
+\end{table}
+
+\noindent One class, namely A-wh-movement without the possibility of CCA is not attested. This renders the unidirectional implication between CCA and A-wh-movement in (\ref{lohningergeneralisation}). I will shortly exemplify each attested class and then give a formal explanation for the correlation. 
+
+\subsection{A-wh-movement and CCA}
+The expected outcome of combining A-wh-movement with allowance of CCA is a class of languages exhibiting both of these phenomena. Those are languages like Turkish, Japanese, Greek or Hungarian. Take Turkish as an example. It behaves like an A-language concerning wh-movement in that it does not show Superiority between the wh-words:
+\ea
+\ea
+\gll Kim Kim-e ne-yi sat-mi\c{s}?\\
+who who.\sc{dat} what.\sc{acc} sell.\sc{rep}\\
+\glt `Who has sold what to whom?'
+\ex Kim-e kim ne-yi sat-mi\c{s}?
+\ex Ne-yi kim kim-e sat-mi\c{s}?\\
+(\citealp{ozsoy1996dependencies}: p. 4)
+\z
+\z
+Additionally, Turkish allows Hyper-ECM, an instance of CCA:
+
+\ea[]{
+\gll Pelin [ dün Mert-i sinav-a gir-di diye ] bil-iyor.\\
+Pelin.\sc{nom} [ yesterday Mert.\sc{acc} exam.\sc{dat} enter.\sc{past} \sc{C} ] know.\sc{pres}\\
+\trans `Pelin thinks that yesterday, Mert took an exam.'\\
+(\citealp{csener2011null}: p. 5)}
+\z
+
+\subsection{No A-wh-movement, no CCA}
+Languages allowing neither A-wh-movement nor CCA are equally present. English and Bulgarian behave like that. Bulgarian shows Superiority between its wh-words as well as WCO-effects (see (\ref{lohninger1bgsup}) and (\ref{lohninger1bgwco}) from above). Therefore, its wh-movement has A'-quality. In addition to that, there are no CCA phenomena in Bulgarian. ECM is not possible, either into non-finite clauses (introduced by the particle `da') or into finite clauses. Neither are there instances of Hyperraising.
+\ea
+\gll Njama koj / *kogo da otide.\\
+isn't who.\sc{nom} / *whom.\sc{acc} to go\\
+\glt `There isn't anyone to go.'\\
+(\citealp{rudin21986aspects}: p. 193)
+\z
+Bulgarian thus neither has A-wh-movement nor does it allow CCA. In conclusion its CP-domain is a pure A'-domain. 
+
+
+
+\subsection{No A-wh-movement but CCA}
+Finally and most interestingly, there are several languages which do not A-move their wh-words but do exhibit CCA phenomena. This means that CCA cannot be directly dependent on A-wh-movement. Amongst these languages are Korean, Brazilian Portuguese, Romanian and Mandarin Chinese. I take a closer look at Korean here. It behaves like an A'-language when it comes to wh-movement. It does, for example, show Superiority effects:
+\ea
+\ea
+\gll Mwues-ul wae ne-nun sa-ess-ni?\\
+what.\sc{acc} why you.\sc{top} buy.\sc{past.q}\\
+\glt `Why did you buy what?'\\
+\ex\gll * Wae mwues-ul ne-nun sa-ess-ni?\\
+{} why what.\sc{acc} you.\sc{top} buy.\sc{past.q}\\
+\glt{} 
+(\citealp{jeong2003deriving}: p. 131)
+\z 
+\z
+Korean does also allow CCA, namely Hyper-ECM.
+\ea\gll Cheli-nun wonswungi-ka banana-lul cal meknunta-ko sayngkakhanta.\\
+Cheli.\sc{top} monkey.\sc{acc} banana.\sc{acc} well eat.\sc{comp} think.\sc{3.sg}\\
+\glt `Cheli thinks monkeys love to eat banana.’ \\ (\citealp{yoon2007raising}: p. 630)
+\z
+This means that its ability for CCA is not dependent on the quality of its wh-movement. However, the absence of the inverse configuration, a language allowing A-wh-movement but not CCA, indicates that the character of wh-movement determines CCA but not the other way around.
+
+\subsection{Generalisation}
+As has been shown in the previous section, there are languages allowing both, A-wh-movement and CCA and such allowing neither. Additionally, there are languages which allow CCA but not A-wh-movement but no languages that allow A-wh-movement but not CCA. This renders the unidirectional generalisation given in 
+(\ref{lohningergeneralisation}), repeated below.
+\ea Whenever a language A-moves its wh-words, it allows CCA (but not the other way around).
+\z
+In this last section, I will give a syntactic analysis on how the correlation between A-wh-movement and CCA could be explained. As noted above, both of them involve an A-position inside CP and thus derive from the same grammatical source: Allowance of [A]-features inside the CP-domain.
+
+\subsubsection{A split hierarchical CP domain}
+I assume that within a single CP-domain, A'-positions and A-positions are allowed. However, they stand in a hierarchical relation to each other: A'-projections can embed A-projections but not the other way around. My analysis is built upon a split CP domain, adopting \cite{rizzi1997fine}. I assume the following structure for CP:\footnote{\cite{rizzi1997fine} claims that there are at least an additonal \emph{FinP} and another \emph{FocusP} below \emph{TopicP}. These projections are irrelevant for me at the moment, hence I do not include them in my schematic structures.}
+\ea {[}\emph{ForceP}[\emph{FocusP}[\emph{TopicP}{]]]}
+\z 
+I assume that \emph{ForceP} always has A'-qualities, sustaining the traditional assumption of CP having A'-quality. It hosts one (or more) A'-specifiers which can be targeted by A'-wh-movement and serve as a left-edge to escape an embedded interrogative clause. Embedded in \emph{ForceP} is \emph{FocusP}, which can have A-properties. In A-languages, A-wh-movement targets \emph{ForceP} and A-moves its wh-words to that phrase. (Presumably, \emph{FocusP} can have A'-qualities instead of A-qualities in other languages.) Embedded into \emph{FocusP} is \emph{TopicP}. I claim that elements participating in CCA relations (like the accusative DP in Hyper-ECM or the embedded element in long-distance Agreement) move to \emph{TopicP} which, in languages allowing CCA, has A-properties. This assumption is based on \cite{csener2008non} and comes from the fact that very often, CCA is restricted to topicalized elements (as it is the case in Tsez and Turkish). Tsez Long-distance Agreement (LDA) becomes obligatory when the embedded element (`bread' in (\ref{lohningertsez})) is topic-marked (particle \emph{-(go)n}).
+\ea\label{lohningertsez}
+\ea 
+\gll Eni-r	{[}	u\v{z}-\={a}	magalu\textbf{-(go)n}	b-\={a}c’ru-{\l}i	{]}	b-iy-xo.\\
+mother-\sc{dat}	[	boy-\sc{erg}	bread.\textbf{\sc{III}}.\sc{abs}-\textbf{\sc{top}}	\textbf{\sc{III}}-eat-\sc{pst.prt.nmlz}	]	\textbf{\sc{III}}-know-\sc{pres}\\
+\glt (‘The mother knows the boy ate the bread.’) \\
+‘The mother knows that the bread, the boy ate.’
+\ex\gll * Eni-r	{[}	u\v{z}-\={a}	magalu-\textbf{(go)n}	b-\={a}c’ru-{\l}i	{]}	r-iy-xo.\\
+{} mother-\sc{dat}	[	boy-\sc{erg}	bread.\textbf{\sc{III}}.\sc{abs}-\textbf{\sc{top}}	\textbf{\sc{III}}-eat-\sc{pst.prt.nmlz}	]	\textbf{\sc{IV}}-know-\sc{pres}\\
+\glt ‘The mother knows the boy ate the bread.’ \\
+\emph{Tsez} (\citealp{polinsky2001long}: p. 610)
+\z 
+\z 
+Turkish Hyper-ECM is restricted to topicalized elements. Assuming that the object NPI \emph{anybody} cannot be topicalized predicts that it is excluded from undergoing Hyper-ECM. This prediction is borne out:
+\ea
+\gll * {} {[} Kimse-\textbf{yi} gel-di {]} san-ma-d{\i}-m.\\
+{} \emph{pro} [ anybody-\textbf{\sc{acc}} come-\sc{past} ] believe-\sc{neg-past-1sg}\\
+\glt ‘I didn’t think anybody came late.'\\
+\emph{Turkish} (\citealp{csener2008non}: p. 14)
+\z
+Taking these facts into consideration and based on the analysis in \cite{csener2008non}, I claim that the element undergoing CCA moves to or is located in \emph{TopicP}. This renders the following structure for the CP-domain:
+
+\begin{center}
+\footnotesize 
+\begin{forest}standard
+[\emph{ForceP}
+  [\fbox{A'-WH}]
+  [\emph{Force}'
+    [\emph{Force}]
+    [\emph{FocP}
+      [\fbox{A-WH}]
+      [Foc'
+        [\emph{Foc}]
+        [\emph{TopicP}
+          [\fbox{CCA.DP}]
+          [TP]
+        ]
+      ]
+    ]
+  ]
+]
+\end{forest}
+\normalsize 
+\end{center}
+
+\subsubsection{The A'/A shift} This leads to a genereal conclusion about the CP-domain: I assume that all parts of CP lower than \emph{ForceP} (i.e. \emph{FocusP} and \emph{TopicP}) can either have A'- or A-quality. Let us assume that within one domain (and I claim that CP still forms a single domain, consisting of multiple phrases), an A'-position can embed an A-position but not the other way around.  This means, an A'-\emph{ForceP} can embed an A-\emph{FocusP} but an A-\emph{FocusP} cannot embed an A'-\emph{TopicP}, only an A-\emph{TopicP}. At some point, there is an A'/A-threshold within CP. All projections above this threshold have A'-quality, all projections underneath it have A-quality.\footnote{A reviewer noted that a similar assumption could be modeled in the framework by \cite{williams2002representation} and subsequent works like \cite{keine2018not}.} In table (\ref{lohningertab:3}) the relevant CP-projections with their embedding options are presented.
+\begin{table}
+\caption{A'/A threshold options}
+\label{lohningertab:3}
+ \begin{tabular}{lll} 
+  \lsptoprule
+       {[} \textbf{\emph{ForceP}}  &  {[}  \textbf{\emph{FocusP}}  &  {[} \textbf{\emph{TopicP}} {]]]} \\ 
+  \midrule
+  A'  &  A'  &   A' \\
+ A'  &  A'  &  A    \\
+ A'  &  A  &   A    \\
+  \lspbottomrule
+ \end{tabular}
+\end{table}
+
+\noindent Languages part into different groups regarding this threshold. There are languages where the shift from A' to A lies between \emph{ForceP} and \emph{FocusP}, there are languages where it lies between \emph{FocusP} and \emph{TopicP} and then there are languages where it lies even lower, below \emph{TopicP}.\footnote{David Pesetsky, p.c., pointed out to me that this threshold could be even lower, somewhere inside TP. This could explain ‘regular' ECM-phenomena, such as English ECM and I leave the idea open for further research.} As explained above, I assume that A-wh-movement requires a \emph{FocusP} with A-qualities and CCA requires a \emph{TopicP} with A-qualities. I assume that there is a language-specific shifting threshold. Depending on the language type, the locus of the A'/A-shift varies. This assumption provides an explanation for the A-wh-movement + CCA combinations presented in table (\ref{lohningertab:2}). Take for example the group of languages allowing both A-wh-movement and CCA (as shown in (\ref{lohningerderivation1}): The A'/A-shift lies between \emph{ForceP} and \emph{FocusP}. This results in an A-\emph{FocusP} (enabling A-wh-movement) and an A-\emph{TopicP} (enabling CCA). The exact shifting location for each (im)possible language type is given below (the shift is indicated as \rightarrow).
+\ea\label{lohningerderivation1}
+\ea \cmark A-wh-mvt, \cmark CCA languages shift between \emph{ForceP} and \emph{FocusP}
+\ex {[}$_{\fbox{A'}}$ \emph{ForceP} \rightarrow [$_{\fbox{A}}$  \emph{FocusP} [$_{\fbox{A}}$  \emph{TopicP} {]]]}
+\z\z 
+\ea
+\ea \xmark A-wh-mvt, \cmark CCA languages shift between \emph{FocusP} and \emph{TopicP}
+\ex {[}$_{\fbox{A'}}$ \emph{ForceP}  [$_{\fbox{A'}}$  \emph{FocusP} \rightarrow [$_{\fbox{A}}$  \emph{TopicP} {]]]}
+\z\z 
+\ea
+\ea \xmark A-wh-mvt, \xmark CCA languages shift below \emph{TopicP}
+\ex {[}$_{\fbox{A'}}$ \emph{ForceP} [$_{\fbox{A'}}$  \emph{FocusP} [$_{\fbox{A'}}$  \emph{TopicP}  \rightarrow [$_{\fbox{A}}$ {]]]]}
+\z\z 
+\ea
+\ea \cmark A-wh-mvt, \xmark CCA languages are excludeed because they would require two shifts: One from A' to A between \emph{ForceP} and \emph{FocusP} and (a syntactically excluded) one from A to A' between \emph{FocusP} and \emph{TopicP}.
+\ex * {[}$_{\fbox{A'}}$ \emph{ForceP} \rightarrow [$_{\fbox{A}}$  \emph{FocusP} \rightarrow [$_{\fbox{A'}}$  \emph{TopicP} {]]]}
+\z\z 
+
+\subsubsection{Embedded clauses} It lies in the nature of CCA that they involve embedded clauses. I noted above that interrogative embedded clauses necessarily have to project a \emph{ForceP} in order to explain the A'-behaviour of long-distance wh-movement in A-languages. This probably is the case due to selectional requirements: The embedded clause has to be typed interrogative which can only be done in \emph{ForceP}. I claim that no such restriction is posited onto embedded CCA clauses. They are truncated down to \emph{TopicP}, or only project a \emph{TopicP}. This is based on the assumption that functional heads only project when there is a reason to do so (\citealp{bovskovic1997syntax}). The embedded CP in a CCA construction does neither have a \emph{ForceP} nor a \emph{FocusP}. By that, the specifier of \emph{TopicP} becomes the left-edge of the embedded clause (see \citealp{csener2008non} for a similar claim). In CCA-languages, \emph{TopicP} has A-qualities and therefore, this left-edge position is an A-position. This enables A-relations into the embedded clause and A-movement out of it to a higher clause. It also predicts that if both wh-movement and CCA occur together, wh-movement should block CCA. This should be the case since wh-movement requires an (A'-)\emph{ForceP} and CCA requires the absence of a ForceP. The prediction is illustrated in \cite{zyman2018rich} for Janitzio P’urhepecha. 
+\ea 
+\gll * \textquestiondown \textbf{Ambe=ri} ueka-s\"{i}n-\varnothing-gi Alicia-\textbf{ni} eska kusta-a-\varnothing-ka?\\
+{} \textbf{what=\sc{2sS}} want-\sc{hab-prs-int} Alice-\textbf{\sc{acc}} that play-\sc{fut-prs-sjv}\\
+\glt Int.: ‘What do you want Alice to play?'\\
+\emph{Janitzio P’urhepecha} (\citealp{zyman2018rich}: p. 114)
+\z 
+
+\section{Summary}
+I examined a typological correlation between wh-constructions exhibiting A-quality and CCA-phenomena. A new syntactic analysis for multiple wh-questions is presented which makes the right predictions about A-wh-questions and CCA-dependencies. I adopt the account in \cite{richards1997} who divides languages into two classes regarding their LF: Those which A-move their wh-words and those which A'-move them. I extend Richards' claim in that I propose that all wh-movement targets the CP domain. Assuming a split CP-domain (\citealp{rizzi1997fine}), I propose an analysis in which A'-wh-movement, A-wh-movement as well as CCA-elements target different CP-projections. A'-wh-movement uses \emph{ForceP} as a landing site, A-wh-movement \emph{FocusP} and CCA \emph{TopicP}. Given the hierarchical embedding structure of CP-projections such as \emph{ForceP, FocusP} and \emph{TopicP}, an implicational relation between A'-wh-mvt, A-wh-mvt and CCA arises. I bring forward an A'/A-shifting threshold inside CP which varies in height, depending on the language type. This means that the CP-domain has an A'-part and an A-part. At which exact point A'-positions end and A-positions begin is defined by a shifting threshold. This threshold varies language-specifically and can either be located between \emph{ForceP} and \emph{FocusP}, between \emph{FocusP} and \emph{TopicP} or below \emph{TopicP}. Languages pattern together, depending on the location of their A'/A-shift. This assumption renders the right predictions concerning the observed typological generalisation ‘whenever a language A-moves its wh-words, it allows CCA (but not the other way around)'.  Additionally, I propose that embedded wh-constructions require an (A'-)\emph{ForceP}, assigning all long-distance wh-movement A'-quality. CCA-constructions, on the other hand, have a truncated embedded CP, consisting solely of an (A-)\emph{TopicP}, rendering their left-edge CP position an A-position. 
+
+There are still several open issues remaining. Above all, a more detailed derivation of the CP-domain. Furthermore, in order to deploy a valid typological generalisation, a larger set of languages has to be examined. Wh-in-situ languages should be investigated more carefully since, for the moment, I simply adopt \cite{richards1997} and \cite{huang1982move}'s claims about their LF. Then, there are several languages posing fundamental problems like German which is hard to categorise into an A'- or A-language at all (see \citealp{wiltschko1997d} for an exact analysis). A closer look will have to be taken on D-linked wh-words, since they behave very different from regular wh-words (see for example \citealp{pesetsky1987wh}, \citealp{krapova1999subjunctive}). Finally, there might be a possbile correlation with the ICH proposed in \cite{WurmbrandLohningerToAppear}, regarding the type of matrix predicate and the behaviour of long-distance wh-questions. 
+
+
+
+
+\section*{Abbreviations}
+\textbf{\sc{acc}} = Accusative Case\\
+\textbf{\sc{cca}} = Cross-clausal A-dependencies\\
+\textbf{\sc{ecm}} = Exceptional Case Marking\\
+\textbf{\sc{nom}} = Nominative Case\\
+\textbf{\sc{wco}} = Weak Cross-over
+
+\section*{Acknowledgements}
+Thank you, Susi, for taking me under your wing, for all the Spritzer, support and friendship.
+This work has been supported by the Austrian Science Fund (FWF) Project \textit{Implicational hierarchies in clausal complementation} (P34012-G).
+
+%\citet{Nordhoff2018} is useful for compiling bibliographies
+%\nocite{*}
+
+
+\printbibliography[heading=subbibliography,notkeyword=this]
+
+\end{document}
