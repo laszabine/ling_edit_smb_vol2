@@ -53,14 +53,17 @@ In \citet{Despić2011,Despić2013} I argued that Serbo-Croatian (SC hereafter) d
 \begin{exe}
 \ex \label{4de}
 \begin{xlist}
-\ex \label{4ade}
-\gll *Njegov$_{i}$ najnoviji film    je  zaista razočarao  Kusturicu$_{i}$.\\
-His latest film is really disappointed Kusturica$_{\textsc{acc}}$\\\\
-‘His$_{i}$ latest film really disappointed Kusturica$_{i}$.’
-
-\ex \label{4bde}
-\gll Kusturicu$_{i}$ je     njegov$_{i}$  najnoviji film     zaista razočarao     t.\\
-Kusturica$_{\textsc{acc}}$ is his latest film really disappointed\\\\
+\ex[*]{
+    \label{4ade}
+    \gll Njegov$_{i}$ najnoviji film    je  zaista razočarao  Kusturicu$_{i}$.\\
+    His latest film is really disappointed Kusturica$_{\textsc{acc}}$\\
+    \glt ‘His$_{i}$ latest film really disappointed Kusturica$_{i}$.’
+}
+\ex[\cmark]{
+    \label{4bde}
+    \gll Kusturicu$_{i}$ je     njegov$_{i}$  najnoviji film     zaista razočarao     $t$.\\
+    Kusturica$_{\textsc{acc}}$ is his latest film really disappointed\\
+}
 \end{xlist}
 \end{exe}
 
@@ -205,12 +208,16 @@ But even if we assumed that the trace left by movement of \textit{every} is of t
 \ex \label{17de}
 
 \begin{forest}for tree=nice empty nodes
-[S \underline{\textbf{$\langle \langle$e, t$\rangle$, t $\rangle \rangle$}}
-[every\\ \underline{\textbf{$\langle \langle$e, t $\rangle$, $\langle \langle$e, t$\rangle$, t$\rangle \rangle$ }}][\underline{\textbf{$\langle$e, t$\rangle$}} (\textit{Predicate Abstraction} applies)
-[1][S \underline{\textbf{t}}
-[][.......]
-]
-]]
+    [S \underline{\textbf{$\langle \langle$e, t$\rangle$, t $\rangle \rangle$}}
+        [every\\ \underline{\textbf{$\langle \langle$e, t $\rangle$, $\langle \langle$e, t$\rangle$, t$\rangle \rangle$ }}]
+        [\underline{\textbf{$\langle$e, t$\rangle$}}\\ (\textit{Predicate Abstraction} applies)
+            [1]
+            [S \underline{\textbf{t}}
+                []
+                [.......]
+            ]
+        ]
+    ]
 \end{forest}
 
 
