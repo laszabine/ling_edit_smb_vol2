@@ -1,0 +1,331 @@
+\ProvidesPackage{jimsstyle}
+\usepackage{rotating}
+\usepackage{color}
+\usepackage[Symbolsmallscale]{upgreek} 
+%\setlength{\fboxrule}{3pt}% 
+%\setlength{\fboxsep}{8pt}%
+
+\newcommand{\nt}{\tit{n't}}
+\newcommand{\nast}{\nomacc{} \stvs}
+\newcommand{\conc}{\raisebox{.35em}{$\frown$}}
+%\definecolor{mygray}{gray}{0.92}
+\definecolor{mygray}{gray}{0.75}
+
+%\newcommand{\boxin}[1]{\vspace{1em}\noindent \fbox{\parbox[H]{7in}{#1}}}
+\newcommand{\boxin}[1]{\vspace{1em}\noindent \fcolorbox{black}{mygray}{\parbox[H]{6.7in}{#1}}\vspace{1em}}
+% FOR TEXT
+\newcommand{\boxinclear}[1]{\vspace{1em}\noindent \fcolorbox{black}{white}{\parbox[H]{6.7in}{#1}}\vspace{1em}}
+
+\newcommand{\rt}[1]{$\sqrt{\textsc{#1}}$}
+\newcommand{\throw}[1]{}
+
+%\newcommand{\attr}[1]{\vspace{-1.3em} \hfill{ #1 } \vspace{1.3em}}
+\newcommand{\attr}[1]{\vspace{-1.3em} \hfill{ #1 }}
+\newcommand{\stem}[2]{\textit{#1} + \textit{-st} $\rightarrow$ \textit{#2}}
+%\newcommand{\sdots}{\hspace{.25em}\ldots{}\hspace{.25em}}
+\newcommand{\sdots}{\hspace{.25em} \hspace{.25em}}
+\newcommand{\move}[1]{\qside \sout{#1}\kside}
+\newcommand{\lowf}[2]{#1\raisebox{-.05em}{\footnotesize $[$\textsc{#2}$]$}}
+\newcommand{\mlowf}[2]{\move{\lowf{#1}{#2}}}
+
+\newcommand{\lowfb}[2]{\textbf{#1\raisebox{-.05em}{\footnotesize $[$\textsc{#2}$]$}}}
+%\newcommand{\lowfb}[2]{\fbox{#1\raisebox{-.05em}{\footnotesize $[$\textsc{#2}$]$}}}
+%\newcommand{\lowfb}[2]{\color{blue}{#1\raisebox{-.05em}{\footnotesize $[$\textsc{#2}$]$}}}
+
+%\newcommand{\low}[1]{_{\tsc{\footnotesize #1}}}
+
+\newcommand{\thet}{$\uptheta$}
+\newcommand{\phit}{$\upvarphi$}
+
+
+\newcommand{\mlowfb}[2]{\textbf{\move{\lowf{#1}{#2}}}}
+%\newcommand{\mlowfb}[2]{\fbox{\move{\lowf{#1}{#2}}}}
+%\newcommand{\mlowfb}[2]{\color{blue}{\move{\lowf{#1}{#2}}}}
+
+% For Have/Need Paper
+\newcommand{\bewithn}{\textit{vera með} `be with'}
+\newcommand{\hafan}{\textit{hafa} `have'}
+\newcommand{\bewith}{\textit{vera með} `be with' }
+\newcommand{\hafa}{\textit{hafa} `have' }
+\newcommand{\need}{\textit{þurfa} `need' }
+\newcommand{\needn}{\textit{þurfa} `need'}
+\newcommand{\needst}{\textit{þarfnast} `need' }
+\newcommand{\needstn}{\textit{þarfnast} `need'}
+\newcommand{\eiga}{\textit{eiga} `have' }
+\newcommand{\eigan}{\textit{eiga} `have'}
+
+% For "may" IMC paper
+
+\newcommand{\mega}{\tit{mega} `may'}
+
+% For Number 1 paper
+\newcommand{\numone}{\textit{Number 1} }
+\newcommand{\numonen}{\textit{Number 1}}
+%\newcommand{\orr}{ordinary reflexive }
+%\newcommand{\orrn}{ordinary reflexive}
+\newcommand{\ors}{ordinary reflexives }
+\newcommand{\orsn}{ordinary reflexives}
+
+% Other
+\newcommand{\SF}{Stylistic Fronting }
+\newcommand{\st}{\textsc{-st}}
+%\newcommand{\ST}{\textsc{-st}}
+\newcommand{\std}{\textit{st-}}
+\newcommand{\sti}{\mbox{\textit{-st}} }
+\newcommand{\stin}{\mbox{\textit{-st}}}
+\newcommand{\stv}{\textit{-st} verb }
+\newcommand{\stvn}{\textit{-st} verb}
+\newcommand{\stvs}{\textit{-st} verbs }
+\newcommand{\stvsn}{\textit{-st} verbs}
+\newcommand{\hja}{\textsc{hjá}}
+\newcommand{\hjan}{\textsc{hjá}}
+\newcommand{\uu}{\textsc{u}}
+\newcommand{\at}{\textsc{u}}
+\newcommand{\ph}{$\phi$}
+\newcommand{\sch}{Schäfer }
+\newcommand{\schn}{Schäfer}
+\newcommand{\pylkk}{Pylkkänen }
+\newcommand{\pylkkn}{Pylkkänen}
+\newcommand{\nns}{non-nominative subjects }
+\newcommand{\nnsn}{non-nominative subjects}
+
+
+%THE FOLLOWING BRINGS UP DATA NOTES
+%\newcommand{\datante}[1]{\pdfmargincomment[color={0.66 0.89 0.63}]{#1}}
+%THE FOLLOWING REMOVES DATA NOTES
+%\newcommand{\datante}[1]{}
+%VARIETIES OF DATA NOTES AND OTHER NOTES:
+\newcommand{\chkcomf}[1]{}
+\newcommand{\chk}[1]{\pdfmargincomment[icon=Help,color={1.0 0.13 0.0}]{#1}}
+%\newcommand{\chkone}[1]{\pdfmargincomment[icon=Help,color={0.6 0.0 0.0}]{#1}}
+\newcommand{\chkone}[1]{\pdfmargincomment[color={0.6 0.0 0.0}]{#1}}
+\newcommand{\chktwo}[1]{\pdfmargincomment[color={0.66 0.89 0.63}]{#1}}
+\newcommand{\chkthr}[1]{\pdfmargincomment[color={0.13 0.7 0.67}]{#1}}
+%\newcommand{\chktwo}[1]{\pdfmargincomment[icon=Help,color={0.0 0.4 0.0}]{#1}}
+\newcommand{\chkfou}[1]{\pdfmargincomment[color={0.0 0.4 0.0}]{#1}}
+%\newcommand{\chktwo}[1]{\datante{#1}}
+
+
+%\newcommand{\chkthr}[1]{\datante{#1}}
+
+%\newcommand{\chkfou}[1]{\datante{#1}}
+
+\newcommand{\chkmin}[1]{\pdfmargincomment[icon=Help,color={0.98 0.94 0.75}]{#1}}
+%\newcommand{\chkmin}[1]{\datante{#1}}
+
+\newcommand{\ins}[1]{\pdfcomment[icon=Insert,color={0.29 0.0 0.51}]{#1}}
+%\newcommand{\nte}[1]{\pdfmargincomment{#1}}
+\newcommand{\nte}[1]{\pdfmargincomment[icon=Insert,color={0.29 0.0 0.51}]{#1}}
+\newcommand{\todonte}[1]{\pdfmargincomment[color={1.0 0.44 0.37}]{#1}}
+%\newcommand{\datante}[1]{\pdfmargincomment[color={1.0 0.44 0.37}]{#1}}
+%\newcommand{\datante}[1]{\pdfmargincomment[color={0.66 0.89 0.63}]{#1}}
+%\newcommand{\halldor}[1]{\pdfmargincomment[icon=Help,color={1.0 0.74 0.53}]{#1}}
+\newcommand{\halldor}[1]{\pdfmargincomment[color={1.0 0.74 0.53}]{#1}}
+\newcommand{\alec}[1]{\pdfmargincomment[icon=Help,color={0.13 0.7 0.67}]{#1}}
+\newcommand{\inna}[1]{\pdfcomment[icon=Help,color={0.13 0.7 0.67}]{#1}}
+%\newcommand{\jim}[1]{\pdfcomment[icon=Help,color={1.0 0.74 0.53}]{#1}}
+\newcommand{\jim}[1]{\pdfmargincomment[color={1.0 0.74 0.53}]{#1}}
+\newcommand{\datante}[1]{\pdfmargincomment[color={1.0 0.74 0.53}]{#1}}
+
+% THIS IS INTENDED TO TURN ON/OFF NOTES WITH UNDERLINING, TO POINT OUT MINOR CHANGES IN A REVISION, FOR EXAMPLE
+%\newcommand{\checkchange}[2]{\uline{#1}\ins{#2}}
+%THEY CAN BE REMOVED ALL AT ONCE BY TURNING ON THE FOLLOWING:
+\newcommand{\checkchange}[2]{#1}
+
+\newcommand{\refchk}[1]{\pdfmargincomment[icon=Note,color={0.52 0.52 0.51}]{#1}}
+
+%\newcommand{\chknum}[2]{\pdfmargincomment[icon=Help]{#1}}
+
+
+%0.34 0.56 0.12
+
+\newcommand{\letst}{\textit{let \textsc{verb}-st}}
+\newcommand{\datnom}{\textsc{dat-nom} }
+\newcommand{\datnomn}{\textsc{dat-nom}}
+\newcommand{\nomacc}{\textsc{nom-acc} }
+\newcommand{\nomaccn}{\textsc{nom-acc}}
+\newcommand{\accacc}{\textsc{acc-acc} }
+\newcommand{\nomgen}{\textsc{nom-gen} }
+\newcommand{\nomgenn}{\textsc{nom-gen}}
+\newcommand{\nomdat}{\textsc{nom-dat} }
+\newcommand{\nomdatn}{\textsc{nom-dat}}
+\newcommand{\accaccn}{\textsc{acc-acc}}
+\newcommand{\accgen}{\textsc{acc-gen} }
+\newcommand{\accgenn}{\textsc{acc-gen}}
+\newcommand{\datgen}{\textsc{dat-gen} }
+\newcommand{\datgenn}{\textsc{dat-gen}}
+\newcommand{\gennom}{\textsc{gen-nom} }
+\newcommand{\gennomn}{\textsc{gen-nom}}
+\newcommand{\datdat}{\textsc{dat-dat} }
+\newcommand{\datdatn}{\textsc{dat-dat}}
+\newcommand{\datacc}{\textsc{dat-acc} }
+\newcommand{\dataccn}{\textsc{dat-acc}}
+\newcommand{\accdat}{\textsc{acc-dat} }
+\newcommand{\accdatn}{\textsc{acc-dat}}
+\newcommand{\ergabs}{\textsc{erg-abs} }
+\newcommand{\ergabsn}{\textsc{erg-abs}}
+\newcommand{\nda}{\textsc{nom-dat-acc} }
+\newcommand{\ndan}{\textsc{nom-dat-acc}}
+\newcommand{\vacc}{v_{acc} }
+\newcommand{\vdat}{v_{dat} }
+\newcommand{\vgen}{v_{gen} }
+\newcommand{\beto}{\textit{vera að} `be to'}
+\newcommand{\lft}{$[$ }
+\newcommand{\rgt}{$]$ }
+\newcommand{\Vdat}{V-\textsc{dat} }
+\newcommand{\Vdatn}{V-\textsc{dat}}
+%\newcommand{\Vdat}{V_{\small\textsc{dat}} }
+%\newcommand{\Vdatn}{V_{\small\textsc{dat}}}
+%\newcommand{\vdat}{v_{\small\textsc{dat}} }
+%\newcommand{\vdatn}{v_{\small\textsc{dat}}}
+%\newcommand{\vst}{v\tss{\tit{s}}}
+\newcommand{\vst}{v}
+\newcommand{\vdy}{v}
+\newcommand{\vce}{Voice\tss{\{D\}}}
+\newcommand{\vcn}{Voice\tss{\{\}}}
+\newcommand{\pce}{p\tss{\{D\}}}
+\newcommand{\pcn}{p\tss{\{\}}}
+\newcommand{\ace}{Appl\tss{\{D\}}}
+\newcommand{\acn}{Appl\tss{\{\}}}
+\newcommand{\low}[1]{\tss{\tsc{#1}}}
+\newcommand{\lown}{\tss{\tsc{\{\}}}}
+%FROM Icelandic imposters paper
+\renewcommand{\cp}{Collins \& Postal (2008) }
+\newcommand{\cpn}{Collins \& Postal (2008)}
+\newcommand{\cpny}{Collins \& Postal }
+\newcommand{\tp}{third-person }
+%\newcommand{\sep}{second-person }
+\newcommand{\fp}{first-person }
+\newcommand{\tpn}{third-person}
+\newcommand{\sepn}{second-person}
+\newcommand{\fpn}{first-person}
+\newcommand{\imp}{imposters }
+\newcommand{\impn}{imposters}
+%\newcommand{\dps}{DP_{secondary} }
+%\newcommand{\dpc}{DP_{core} }
+%\newcommand{\dpsh}{DP_{shell} }
+%\newcommand{\dpsn}{DP_{secondary}}
+%\newcommand{\dpcn}{DP_{core}}
+%\newcommand{\dpshn}{DP_{shell}}
+\newcommand{\dsdp}{definite-suffixed DP }
+\newcommand{\dsdpn}{definite-suffixed DP}
+\newcommand{\pa}{proprial article }
+\newcommand{\pan}{proprial article}
+\newcommand{\ap}{$\alpha$P }
+\newcommand{\apn}{$\alpha$P}
+\newcommand{\np}{\textit{n}P }
+\newcommand{\npn}{\textit{n}P}
+
+
+% AFFIXES FOR TEXT
+\newcommand{\re}{\textit{re}- }
+\newcommand{\ren}{\textit{re}-}
+\newcommand{\en}{\textit{endur}- }
+\newcommand{\enn}{\textit{endur}-}
+\newcommand{\fr}{\textit{frum}- }
+\newcommand{\frn}{\textit{frum}-}
+\newcommand{\sii}{\textit{sí}- }
+\newcommand{\siin}{\textit{sí}-}
+\newcommand{\na}{-\textit{na} }
+\newcommand{\nan}{-\textit{na}}
+\newcommand{\andi}{-\textit{andi} }
+\newcommand{\andin}{-\textit{andi}}
+\newcommand{\ari}{-\textit{ari} }
+\newcommand{\arin}{-\textit{ari}}
+
+
+% FOR GLOSSES
+\newcommand{\tss}[1]{\textsubscript{#1}}
+\newcommand{\tsup}[1]{\textsuperscript{#1}}
+\newcommand{\tscb}[1]{\textbf{\textsc{#1}}}
+\newcommand{\tit}[1]{\textit{#1}}
+\newcommand{\titb}[1]{\textbf{\textit{#1}}}
+\newcommand{\titn}[1]{\textit{#1}}
+\newcommand{\tbf}[1]{\textbf{#1}}
+\newcommand{\tbfn}[1]{\textbf{#1}}
+\newcommand{\tsc}[1]{\textsc{#1}}
+\newcommand{\tscn}[1]{\textsc{#1}}
+\renewcommand{\gln}[1]{\textsc{#1} }
+\newcommand{\gl}[1]{.\textsc{#1} }
+\newcommand{\glb}[1]{.\textsc{\textbf{#1}} }
+\newcommand{\gld}[1]{-\textsc{#1} }
+\newcommand{\glf}[1]{$[$\textsc{#1}$]$}
+\newcommand{\expl}{\textsc{expl}}
+\newcommand{\rel}{\textsc{rel}}
+\newcommand{\nom}{.\textsc{nom}}
+\newcommand{\acc}{.\textsc{acc}}
+\newcommand{\dat}{.\textsc{dat}}
+\newcommand{\gen}{.\textsc{gen}}
+
+\newcommand{\NOM}{.\textsc{nom}}
+\newcommand{\ACC}{.\textsc{acc}}
+\newcommand{\DAT}{.\textsc{dat}}
+\newcommand{\GEN}{.\textsc{gen}}
+\newcommand{\ST}{-\textsc{st}}
+
+\newcommand{\nomm}{\textsc{nom}}
+\newcommand{\accc}{\textsc{acc}}
+\newcommand{\datt}{\textsc{dat}}
+\newcommand{\genn}{\textsc{gen}}
+\newcommand{\dpz}{$\zeta$}
+\newcommand{\subj}{\textsc{subject}} 
+\newcommand{\nomb}{.\textsc{\textbf{nom}} }
+\newcommand{\accb}{.\textsc{\textbf{acc}} }
+\newcommand{\datb}{.\textsc{\textbf{dat}} }
+\newcommand{\genb}{.\textsc{\textbf{gen}} }
+\newcommand{\frg}{proto-}
+\newcommand{\refl}{\textsc{refl}}
+\newcommand{\plusext}{\glf{$+$ext-arg} }
+\newcommand{\plusextn}{\glf{$+$ext-arg}}
+\newcommand{\noext}{\glf{$-$ext-arg} }
+\newcommand{\noextn}{\glf{$-$ext-arg}}
+\renewcommand{\loc}{\tsc{loc}}
+\newcommand{\pst}{\tsc{pst}}
+\newcommand{\prs}{\tsc{prs}}
+\newcommand{\benone}{\tsc{ben1}}
+\newcommand{\bentwo}{\tsc{ben2/3}}
+
+% IPA and Field Methods
+\newcommand{\textita}[1]{\textit{\textipa{#1}}}
+\newcommand{\ita}[1]{\textit{\textipa{#1}}}
+\newcommand{\iba}[1]{\textbf{\textipa{#1}}}
+\newcommand{\ipa}[1]{\textipa{#1}}
+%\newcommand{\dz}{\textdyoghlig}
+\newcommand{\ch}{\textteshlig}
+\newcommand{\te}{$\wr$}
+\newcommand{\first}{1st }
+\newcommand{\second}{2nd }
+\newcommand{\third}{3rd }
+\newcommand{\nfirst}{1st}
+\newcommand{\nsecond}{2nd}
+\newcommand{\nthird}{3rd}
+\newcommand{\pl}{\tsc{pl}}
+\newcommand{\mbnd}{\ita{-mb-/-nd-}}
+\newcommand{\mban}{\ita{mba/nda}}
+
+% Brackets Etc.
+\newcommand{\tup}[1]{\textup{#1}}
+\newcommand{\strslash}{\textup{/}}
+\newcommand{\either}[2]{\textup{\{} #1 \textup{/} #2 \textup{\}}}
+\newcommand{\lebr}{\textup{[}}
+\newcommand{\ribr}{\textup{]}}
+\newcommand{\lecbr}{\textup{\{}}
+\newcommand{\ricbr}{\textup{\}}}
+\newcommand{\brac}[1]{\textup{\{}#1\textup{\}}}
+\newcommand{\paren}[1]{\textup{(}#1\textup{)}}
+\newcommand{\pair}[1]{\textup{$\langle$}#1\textup{$\rangle$}}
+\newcommand{\concat}[2]{#1\raisebox{.3em}{$\frown$}#2}
+\newcommand{\sbrac}[1]{\textup{[}#1\textup{]}}
+
+\newcommand{\vs}{\vspace{1em}}
+%\newcommand{\bad}{\raisebox{.2em}{\begin{sideways}$\star$\end{sideways}}}
+\newcommand{\bad}{*}
+\newcommand{\primeu}{$^{\prime}$}
+\newcommand{\pr}{$^{\prime}$}
+\newcommand{\denote}[1]{\mbox{$\llbracket$ #1 $\rrbracket$}}
+
+\newcommand{\little}[1]{\hspace{-.2em}\tiny\textup{#1}\hspace{.2em}}
+\newcommand{\lam}{$\lambda$}
+\newcommand{\Lam}{$\Lambda$}
+\newcommand{\Lamp}{$\Lambda$P}
+\newcommand{\Lamap}{$\Lambda$\raisebox{-.13em}{\hspace{-.1em}\tiny\textup{\textsc{a/p}}\hspace{.1em}}}
