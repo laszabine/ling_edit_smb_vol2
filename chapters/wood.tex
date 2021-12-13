@@ -18,56 +18,13 @@ syntactic account of this syncretism which captures its morphological properties
 and predicts a difference between ameliorative syncreticism when \textit{-st} is present and 
 when it is not.}
   
-%move the following commands to the "local..." files of the master project when integrating this chapter
-\usepackage{tabularx}
-\usepackage{langsci-basic}
-\usepackage{langsci-optional}
-\usepackage{langsci-gb4e}
-\usepackage{xtab}
-\usepackage{multicol}
-% JIM PACKAGES
-\usepackage{qtree}
-\usepackage{tipa}
-\usepackage{jimsstyle}
-\usepackage{skak}
-\usepackage{ulem}
-
 % CUSTOM MACROS
 \def\exattr#1{\hfill{} #1}
 \def\tabadjust{\hspace{-1cm}}
 
-%\addbibresource{MainExport.bib}
+\tikzset{every tree node/.style={align=center, anchor=north}}
 
-\let\singlespacing\relax
-
-
-
-% \newpage
-% \bibliographystyle{spbasic}      % basic style, author-year citations
-% %\bibliographystyle{spmpsci}      % mathematics and physical sciences
-% %\bibliographystyle{spphys}       % APS-like style for physics
-% \bibliography{MainExport}   % name your BibTeX data base
-
-%\newcommand{\orcid}[1]{}
-%\pagenumbering{roman}
-
-% \IfFileExists{../localcommands.tex}{%hack to check whether this is being compiled as part of a collection or standalone
-%    \input{../localpackages}
-%    \input{../localcommands}
-%    \input{../localhyphenation}
-%     \bibliography{localbibliography}
-%     \togglepaper[23]
-% }{}
-
-% %custom footer for preprints
-% \papernote{\scriptsize\normalfont
-%     Change author.
-%     Change title.
-%     To appear in:
-%     Change Volume Editor.  
-%     Change volume title.  
-%     Berlin: Language Science Press. [preliminary page numbering]
-% }
+% \let\singlespacing\relax
 
 \begin{document}
 
@@ -704,7 +661,7 @@ Now consider what happens when \sti{} is present, and intervenes between Pn and 
 
 \ea
 {\gll Ég meiddi-st. \\
-I\nom{} hurt\gl{1/2/3sg\st{}} \\
+I\nom{} hurt\gl{1/2/3sg\woodst{}} \\
 \glt `I got hurt.'}
 \z
 
@@ -824,9 +781,14 @@ Given this much, the intuition that \sti is 3rd person but not fully 3rd person 
 
 \ea \singlespacing \small \begin{tabular}[t]{ll}
  \tbf{Singular agreement with \sti} & \tbf{`True' third-person singular agreement} \\
-
- \Tree [.Pn [.Nm T Nm\\(default)\\\glf{$+$sing} ] [.Pn \glf{$-$part}\\\tbf{\O} ] ] 
-  & \Tree [.Pn [.Nm T Nm\\(default)\\\glf{$+$sing} ] [.Pn \glf{$-$part}\\\tbf{\O} \glf{$-$auth}\\\tbf{-ur} ] ]  \\
+ \begin{tikzpicture}
+    \Tree [.Pn [.Nm T {Nm\\(default)\\\glf{$+$sing}} ] [.Pn {\glf{$-$part}\\\tbf{\O}} ] ] 
+ \end{tikzpicture}
+ & 
+ \begin{tikzpicture}
+    \Tree [.Pn [.Nm T {Nm\\(default)\\\glf{$+$sing}} ] [.Pn {\glf{$-$part}\\\tbf{\O}} {\glf{$-$auth}\\\tbf{-ur}} ] ]  
+ \end{tikzpicture}
+ \\
  \end{tabular}
 \z
 
@@ -954,7 +916,7 @@ Without the analysis of \sti given above, these accounts predict two situations:
 % \z
  
 \ea \label{woodstpred} \textbf{Predictions of  `multiple-agree' accounts}
-\begin{xtabular}[t]{llllll}
+\begin{tabular}[t]{llllll}
  & Verb & Feature Bundle & Syncretic Form? & &  \\
  \hline \hline
 a. & \tit{leiðast} `bore' & 1/2sg+3 & Yes & $\rightarrow$ & Improved \\
@@ -965,7 +927,7 @@ d. & \tit{líka} `like' & 1sg+3 & Yes & $\rightarrow$ & Improved \\
 e. & \tit{líka} `like' & 2sg+3 & No & $\rightarrow$ & Bad \\
 f. & \tit{líka} `like' & 1pl+3 & No & $\rightarrow$ & Bad \\
 g. & \tit{líka} `like' & 2pl+3 & No & $\rightarrow$ & Bad \\
-\end{xtabular}
+\end{tabular}
 
 \z
 However, as shown in (\ref{woodjudge}), there seem to be three classes of acceptability, rather than two. Most speakers found the 1st and 2nd person singular nominative objects in with the \sti verb \tit{leiðast} `bore' either OK or `?'. The plural syncretism of \tit{leiðast} in the 2nd/3rd person fared on par with the syncretism of the 1st/3rd person syncretism of the non\sti verb \tit{líka} `like', where the judgments split.
