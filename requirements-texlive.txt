@@ -29,6 +29,7 @@ texlive-qtree
 texlive-silence
 #texlive-tabto-generic
 #texlive-tabto-ltx
+texlive-textgreek
 texlive-tikz-qtree
 texlive-todonotes
 texlive-tree-dvips
