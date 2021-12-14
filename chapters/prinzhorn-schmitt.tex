@@ -4,34 +4,35 @@
 % hidelinks,
 % showindex
 ]{langscibook}
-\author{Martin Prinzhorn\affiliation{University of Vienna}\lastand Viola Schmitt\affiliation{Humboldt University Berlin}\orcid{}}
+\author{Martin Prinzhorn\affiliation{University of Vienna} and Viola Schmitt\affiliation{Humboldt University Berlin}\orcid{}}
 \title{Partial control and plural predication}
 \abstract{Partial control is known to exhibit constraints on which predicates can be embedded: While it allows for collective predicates like \textit{assemble}, it blocks predicates with the VP-modifier \textit{each}, for instance. This restriction is surprising if the subject of the embedded predicate is a plurality, and existing accounts appeal to syntactic explanations. Based on German data, we argue that the constraint is semantic in nature: Embedded predication in PC cannot ascribe properties to parts of a plurality that do not contain the matrix subject -- essentially because, following (a simplified version of) \cite{Pearson:2016}, PC involves a property attribution \textit{de se}. We sketch an implementation of this idea using the `Plural Projection' system (\citealt{Schmitt:2019, Haslinger:2018a, Haslinger:2018b}): It lets us `divide' certain predicates -- e.g., those involving \textit{each} -- into `parts'. The afore-mentioned constraint must hold for each such predicate part, which rules out certain types of predication in PC.}
 
-\usepackage{qtree}
+% \usepackage{qtree}
 
 %move the following commands to the "local..." files of the master project when integrating this chapter
-\usepackage{tabularx}
-\usepackage{langsci-basic}
-\usepackage{langsci-optional}
-\usepackage{langsci-gb4e}
+% \usepackage{tabularx}
+% \usepackage{langsci-basic}
+% \usepackage{langsci-optional}
+% \usepackage{langsci-gb4e}
 %\bibliography{localbibliography}
 %\newcommand{\orcid}[1]{}
 
 
+\tikzset{every tree node/.style={align=center, anchor=north}}
 
 
 \newcommand{\bigplus}{\ensuremath{\mbox{\LARGE+}}}
 
 \newcommand{\sem}[2]{\mbox{$[\![${#2}$]\!]^{#1}$}} %Semantik
 
-\IfFileExists{../localcommands.tex}{%hack to check whether this is being compiled as part of a collection or standalone
-   \input{../localpackages}
-   \input{../localcommands}
-   \input{../localhyphenation}
-%    \bibliography{localbibliography}
-    \togglepaper[23]
-}{}
+% \IfFileExists{../localcommands.tex}{%hack to check whether this is being compiled as part of a collection or standalone
+%    \input{../localpackages}
+%    \input{../localcommands}
+%    \input{../localhyphenation}
+% %    \bibliography{localbibliography}
+%     \togglepaper[23]
+% }{}
 
 
 
@@ -429,7 +430,14 @@ This `projection' behavior is implemented by a special composition rule (`CC' fo
 We need a slightly more complex system to generalize this idea, since if both the functor and the argument denote pluralities, a single plurality of values will be insufficient: Cumulative truth conditions (see \ref{prinzhornmyex}) are compatible with various ways of matching up the functor-parts and the argument-parts. Plural expressions are thus assumed to denote sets of pluralities --  \textbf{plural sets} (indicated here by square brackets) -- rather than single pluralities. These plural sets can be targeted by specific compositional rules: They form the input for the CC-rule that yields  `projection' and also encodes cumulativity. This rule combines a set of function pluralities and a set of argument pluralities as follows: It returns the set of all value pluralities obtained by applying atomic function parts to atomic argument parts in such a way that all the parts of some plurality in the function set are `covered', and all the parts of some plurality in the argument set are `covered'.\footnote{For instance, $\{ \langle f,a \rangle, \langle g,b \rangle \}$ would be a cover for the two pluralities $f+g$, $a+b$, but , $\{ \langle f,a \rangle, \langle g,a \rangle \}$ wouldn't be a cover, because we are `missing' a part of the $a+b$-plurality.} This is schematized in \ref{prinzhornpp2}. As in \ref{prinzhornpp1},  the denotation of the mother node preserves the part structure introduced by the plural expressions it dominates.  (\ref{prinzhornpp1} is what we obtain if one of the two plural sets is a singleton containing a non-plural denotation.) Crucially, this operation is repeated at any syntactic node that dominates at least one plural expression. So sentences containing plurality-denoting expressions denote plural sets of propositions: They count as true if at least one plurality in the set consists exclusively of true propositions. Accordingly, if \ref{prinzhornpp2} were the representation of a full sentence, the top level plural set would be a plural set of propositional pluralities and \ref{prinzhornpp2} would be mapped to true if at least one of the elements in the set were such that all of its atoms were true, e.g., if both $f(a)$ and $g(b)$ were true, or if both $f(b)$ and $g(a)$ were true etc.
 
 
-\ea \footnotesize \Tree [.{$[f(a)+g(b), f(b)+g(a), f(a)+g(a)+g(b), f(b)+g(a)+g(b), f(a)+f(b)+g(a), f(a)+f(b)+g(b),$\\$f(a)+f(b)+g(a)+g(b)]$} {$[f+g]$ }   {$[a+b]$} ] \label{prinzhornpp2} \z
+\ea 
+   \footnotesize 
+   \Tree [.{$[f(a)+g(b), f(b)+g(a), f(a)+g(a)+g(b), f(b)+g(a)+g(b), f(a)+f(b)+g(a),$ \\ $f(a)+f(b)+g(b), f(a)+f(b)+g(a)+g(b)]$} 
+      {$[f+g]$}   
+      {$[a+b]$} 
+   ] 
+   \label{prinzhornpp2} 
+   \z
 
 
 
@@ -469,12 +477,12 @@ We assume that \sem{}{vorhaben} = \sem{}{intend} (see \ref{prinzhornex32b}). In 
 \ea
 \ea  \sem{}{S2} = \textbf{[intend]} $\bullet$ \textbf{[f(D) + f(E) + f(F)]} = 
  [$\lambda w. \lambda x. \forall \langle w' ,y \rangle \in \mathcal{I}_{x,w} (\exists  z \,(y \le z\, \& \,\textbf{f(D)}(w')(z)))$ +
- $\lambda w. \lambda x. \forall \langle w' ,y \rangle \in \mathcal{I}_{x,w} (\exists  z \,(y \le z\, \& \,\textbf{f(E)}(w')(z)))$ +
+ $\lambda w. \lambda x. \forall \langle w' ,yï¿½\rangle \in \mathcal{I}_{x,w} (\exists  z \,(y \le z\, \& \,\textbf{f(E)}(w')(z)))$ +
  $\lambda w. \lambda x. \forall \langle w' ,y \rangle \in \mathcal{I}_{x,w} (\exists  z \,(y \le z\, \& \,\textbf{f(F)}(w')(z)))$]
 \label{prinzhornex62a}
 \ex \sem{}{S3} = \textbf{[Ada]} $\bullet$ \sem{}{S2} = \\
  $[\lambda w.  \forall \langle w' ,y \rangle \in \mathcal{I}_{A,w} (\exists  z \,(y \le z\, \& \,\textbf{f(D)}(w')(z)))$ +
- $\lambda w.  \forall \langle w' ,y \rangle \in \mathcal{I}_{A,w} (\exists  z \,(y \le z\, \& \,\textbf{f(E)}(w')(z)))$ +
+ $\lambda w.  \forall \langle w' ,yï¿½\rangle \in \mathcal{I}_{A,w} (\exists  z \,(y \le z\, \& \,\textbf{f(E)}(w')(z)))$ +
  $\lambda w.  \forall \langle w' ,y \rangle \in \mathcal{I}_{A,w} (\exists  z \,(y \le z\, \& \,\textbf{f(F)}(w')(z)))$ ]
 \label{prinzhornex62b}
 \z\z
