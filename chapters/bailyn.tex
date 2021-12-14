@@ -7,24 +7,24 @@
 \abstract{This article addresses one of the core questions in syntactic theory – the architecture of the (universal) tree. The question is crucial when we consider the recent rise of strict syntactic Cartography (\citealt{Rizzi1997}, \citealt{Cinque1999}, \citealt{CinqueRizzi2010}), a research program that seeks to map syntactic structure in as highly an atomized and universal a fashion as possible. In this article, I present two different arguments from Slavic syntax that the strictest current hypothesis about syntactic Cartography is insufficiently flexible to account for the various phenomena under consideration. In particular, I look at multiple WH-movement in Slavic, and the representation of Topic/Focus through word order and prosody. Both areas pose significant problems for strict Cartography, and the case studies should be taken seriously as important empirical tests for a theory that posits a fixed universal and extensive set of syntactic primitives with the additional restrictions imposed by considerations of anti-symmetry, such as single specifier positions and no free process of adjunction. In conclusion I discuss the appropriate place for Cartography in syntax, and the connection to syntactic features.}
   
 %move the following commands to the "local..." files of the master project when integrating this chapter
-\usepackage{tabularx}
-\usepackage{langsci-basic}
-\usepackage{langsci-optional}
-\usepackage{langsci-gb4e}
-\bibliography{localbibliography}
-\newcommand{\orcid}[1]{}
-\pagenumbering{roman}
-\usepackage[linguistics]{forest}
-\usepackage{xcolor}
-\usepackage{multicol}
-\usepackage{multirow}
+% \usepackage{tabularx}
+% \usepackage{langsci-basic}
+% \usepackage{langsci-optional}
+% \usepackage{langsci-gb4e}
+% \bibliography{localbibliography}
+% \newcommand{\orcid}[1]{}
+% \pagenumbering{roman}
+% \usepackage[linguistics]{forest}
+% \usepackage{xcolor}
+% \usepackage{multicol}
+% \usepackage{multirow}
 
 %%tikz
-\usepackage{textgreek}
-\usepackage{tikz}
-\usepackage{pgf}
+% \usepackage{textgreek}
+% \usepackage{tikz}
+% \usepackage{pgf}
 \usetikzlibrary{backgrounds, matrix, positioning}
-\usepackage{tipa}
+% \usepackage{tipa}
 
 \forestset{
 fairly nice empty nodes/.style={
@@ -37,23 +37,23 @@ for tree={s sep=4mm}
 \newcommand{\rcommentg}[1]{\hfill\raisebox{1.9\baselineskip}[0pt][0pt]{#1}}
 
 
-\IfFileExists{../localcommands.tex}{%hack to check whether this is being compiled as part of a collection or standalone
-   \input{../localpackages}
-   \input{../localcommands}
-   \input{../localhyphenation}
-    \bibliography{localbibliography}
-    \togglepaper[23]
-}{}
+% \IfFileExists{../localcommands.tex}{%hack to check whether this is being compiled as part of a collection or standalone
+%    \input{../localpackages}
+%    \input{../localcommands}
+%    \input{../localhyphenation}
+%     \bibliography{localbibliography}
+%     \togglepaper[23]
+% }{}
 
 %custom footer for preprints
-\papernote{\scriptsize\normalfont
-    Change author.
-    Change title.
-    To appear in:
-    Change Volume Editor.  
-    Change volume title.  
-    Berlin: Language Science Press. [preliminary page numbering]
-}
+% \papernote{\scriptsize\normalfont
+%     Change author.
+%     Change title.
+%     To appear in:
+%     Change Volume Editor.  
+%     Change volume title.  
+%     Berlin: Language Science Press. [preliminary page numbering]
+% }
 
 \begin{document}
 \maketitle
@@ -85,17 +85,33 @@ Cartographic and non-cartographic approaches to the (traditional) CP domain are 
 Cartographic: (\citealt{rizzi1997}) \\
 \begin{forest}
 [ForceP 
-[Force] [TopicP
-[XP_{[\textsc{top}]}][Topic'
-[Topic] [FocusP
-[XP_{[\textsc{foc}]}][Focus'
-[Focus] [TopicP
-[XP_{[\textsc{top}]}][Topic'
-[Topic] [FinitenessP
-[XP_{[\textsc{fin}]}][Fin'
-[Fin] [IP/TP, 
-name=t[\textcolor{white}{triangle??}, roof]  ]]]]]]]]]]
-    
+    [Force] 
+    [TopicP
+        [XP$_{[\textsc{top}]}$]
+        [Topic'
+            [Topic] 
+            [FocusP
+                [XP$_{[\textsc{foc}]}$]
+                [Focus'
+                    [Focus] 
+                    [TopicP
+                        [XP$_{[\textsc{top}]}$]
+                        [Topic'
+                            [Topic] 
+                            [FinitenessP
+                                [XP$_{[\textsc{fin}]}$]
+                                [Fin'
+                                    [Fin] 
+                                    [IP/TP,name=t[\phantom{triangle??},roof]]
+                                ]
+                            ]
+                        ]
+                    ]
+                ]
+            ]
+        ]
+    ]
+]    
 \end{forest}
 \end{exe}
 
@@ -107,7 +123,7 @@ Cartographic: (\citealt{Rizzi1997}) \\
 [CP 
 [XP] [C'
 [C$^{0}$] [TP
-[(adjunct)] [TP [YP] [T' [T^{0}] [vP]]] [(adjunct)] ]]]
+[(adjunct)] [TP [YP] [T' [T$^{0}$] [vP]]] [(adjunct)] ]]]
 \end{forest}
 \end{exe}
 
@@ -121,13 +137,13 @@ Many Slavic languages show multiple WH-fronting (\cite{Rudin1988}). As was obser
 \begin{xlist}
 \ex \label{bai4a}
 \gll \emph{Koj}		\emph{koga}		\emph{vižda}? \jambox{}(BG) \\
-who_{\textsc{nom}} whom_{\textsc{acc}} sees\\
+who$_{\textsc{nom}}$ whom$_{\textsc{acc}}$ sees\\
 \glt `Who sees who?'
 
 
 \ex \label{bai4b}
 \gll *\emph{Koga}		\emph{koj}		\emph{vižda}? \jambox{}(BG) \\
-who_{\textsc{acc}} whom_{\textsc{nom}} sees\\
+who$_{\textsc{acc}}$ whom$_{\textsc{nom}}$ sees\\
 \end{xlist}
 \end{exe}
 
@@ -136,11 +152,11 @@ who_{\textsc{acc}} whom_{\textsc{nom}} sees\\
 \begin{xlist}
 \ex \label{bai5a}
 \gll \emph{Ko}		\emph{koga}		\emph{vidi}? \jambox{}(SC)\\
-who_{\textsc{nom}} whom_{\textsc{acc}} sees\\
+who$_{\textsc{nom}}$ whom$_{\textsc{acc}}$ sees\\
 
 \ex \label{bai5b}
 \gll \emph{Koga}		\emph{ko}		\emph{vidi}? \jambox{}(SC) \\
-who_{\textsc{nom}} whom_{\textsc{acc}} sees\\
+who$_{\textsc{nom}}$ whom$_{\textsc{acc}}$ sees\\
 \end{xlist}
 \end{exe}
 
@@ -151,12 +167,12 @@ In (\ref{bai4a})-(\ref{bai4b}) we see that the Bulgarian type obeys superiority 
 \begin{xlist}
 \ex \label{bai6a}
 \gll \emph{Koj}		\emph{koga}	\emph{e}	\emph{vidjal}? \hspace{5.5cm}(BG) \\
-who_{\textsc{nom}} whom_{\textsc{acc}} aux seen\\
+who$_{\textsc{nom}}$ whom$_{\textsc{acc}}$ aux seen\\
 \glt `Who saw whom?'
 
 \ex \label{bai6b}
 \gll *\emph{Koj}	\textbf{\emph{e}}	\emph{koga}		\emph{vidjal}? \hspace{5.5cm}(BG) \\
-who_{\textsc{nom}} aux whom_{\textsc{acc}} seen\\
+who$_{\textsc{nom}}$ aux whom$_{\textsc{acc}}$ seen\\
 \end{xlist}
 \end{exe}
 
@@ -165,11 +181,11 @@ who_{\textsc{nom}} aux whom_{\textsc{acc}} seen\\
 \begin{xlist}
 \ex \label{bai7a}
 \gll \emph{Ko}	\emph{\textbf{je}} \emph{koga}		\emph{vidio}? \jambox{}(SC) \\
-who_{\textsc{nom}} aux whom_{\textsc{acc}} seen\\
+who$_{\textsc{nom}}$ aux whom$_{\textsc{acc}}$ seen\\
 
 \ex \label{bai7b}
 \gll *\emph{Ko}		\emph{koga}	 \emph{\textbf{je}}	\emph{vidio}? \jambox{}(SC) \\
-who_{\textsc{nom}} whom_{\textsc{acc}} seen\\
+who$_{\textsc{nom}}$ whom$_{\textsc{acc}}$ seen\\
 \end{xlist}
 \end{exe}
 
@@ -181,7 +197,7 @@ In (\ref{bai6a}) we see that Bulgarian auxiliary clitics (or any other material,
 
 \ex \label{bai8a}
 \gll \emph{Ko}		\emph{šta}		\emph{gdje}	  \emph{kupuje}? \hspace{5cm}(SC) \\
-who_{\textsc{nom}} what_{\textsc{acc}} where buys\\
+who$_{\textsc{nom}}$ what$_{\textsc{acc}}$ where buys\\
 
 \ex \label{bai8b}
  *\emph{Ko-Nom}	    \emph{kupuje}   \emph{šta-Acc}	\emph{gdje}	 \\
@@ -214,8 +230,8 @@ Both properties (superiority and clustering) have been attributed in the Bulgari
 ][K]
 ][S]
 ]
-\caption{Bulgarian type}
 \end{forest}
+Bulgarian type
 
 
 
@@ -234,9 +250,9 @@ name=t[\textcolor{white}{tri}, roof] ]
 ]
 ]
 ]
-\caption{Serbo-Croatian type}
-
 \end{forest}
+Serbo-Croatian type
+
 
 \vfill\null
 \columnbreak
@@ -247,9 +263,9 @@ name=t[\textcolor{white}{tri}, roof] ]
 ][S, 
 name=t[KK, roof] ]
 ]
-\caption{English type }
-
 \end{forest}
+English type
+
 
 
 
@@ -302,28 +318,28 @@ Besides cluster interruption, the Serbo-Croatian/Russian kind has another well-k
 \begin{xlist}
 \ex \label{bai11a}
 \gll \emph{Kto}		\emph{kogo}		\emph{komu}		\emph{predstavil}? \hspace{4.5cm}(Rus) \\
-who_{\textsc{nom}} who_{\textsc{acc}} who_{\textsc{dat}} introduced \\
+who$_{\textsc{nom}}$ who$_{\textsc{acc}}$ who$_{\textsc{dat}}$ introduced \\
 \glt `Who introduced who to whom?'
 
 \ex \label{bai11b}
 \gll \emph{Kto}			\emph{komu}	\emph{kogo}		\emph{predstavil}? \\
-who_{\textsc{nom}}  who_{\textsc{dat}} who_{\textsc{acc}} introduced \\
+who$_{\textsc{nom}}$  who$_{\textsc{dat}}$ who$_{\textsc{acc}}$ introduced \\
 
 \ex \label{bai11c}
 \gll \emph{Kogo}	\emph{kto}			\emph{komu}		\emph{predstavil}? \\
-who_{\textsc{acc}} who_{\textsc{nom}}  who_{\textsc{dat}}  introduced \\
+who$_{\textsc{acc}}$ who$_{\textsc{nom}}$  who$_{\textsc{dat}}$  introduced \\
 
 \ex \label{bai11d}
 \gll \emph{Kogo}		\emph{komu}		\emph{kto}		\emph{predstavil}? \\
-who_{\textsc{acc}} who_{\textsc{dat}}  who_{\textsc{nom}}  introduced \\
+who$_{\textsc{acc}}$ who$_{\textsc{dat}}$  who$_{\textsc{nom}}$  introduced \\
 
 \ex \label{bai11e}
 \gll \emph{Komu}	\emph{kto}		\emph{kogo}		\emph{predstavil}? \\
-who_{\textsc{dat}}  who_{\textsc{nom}} who_{\textsc{acc}}  introduced \\
+who$_{\textsc{dat}}$  who$_{\textsc{nom}}$ who$_{\textsc{acc}}$  introduced \\
 
 \ex \label{bai11f}
 \gll \emph{Komu}	\emph{kogo}	\emph{kto}		\emph{predstavil}? \\
-who_{\textsc{dat}}  who_{\textsc{acc}}   who_{\textsc{nom}} introduced \\
+who$_{\textsc{dat}}$  who$_{\textsc{acc}}$   who$_{\textsc{nom}}$ introduced \\
 
 \end{xlist}
 \end{exe}
@@ -360,12 +376,10 @@ for tree=nice empty nodes
 [vP
 [<WH$_2$>,name=wh2][v'
 [v$^0$] [VP
-[V$^{0}$][<WH_3>,name=wh3]]]]]]]]]]]]]]]
+[V$^{0}$][<WH$_3$>,name=wh3]]]]]]]]]]]]]]]
 \draw[->] (wh1) to[out=west,in=south] (spec1);
 \draw[->] (wh2) to[out=west,in=south] (spec2);
 \draw[->] (wh3) to[out=west,in=south] (spec3);
-
-
 \end{forest}
 
 
@@ -391,7 +405,7 @@ One attempt to apply a cartographic approach to the multiple wh situation in Sla
 \end{table}
 \end{exe}
 
-\citeauthor{KrapovaCinque2005} do not provide any individual derivations, but for a case of two wh-phrases, one of which is D-linked and the other not, it  is clear they assume distinct functional category specifier positions as landing sights, consistent with discourse roles of certain phrases in the left-periphery. They demonstrate clearly that there are discourse preference associated with the orders found, in line with general information structure principle of given > new, to be discussed in Section 3 below. However, it is not possible to determine if C&K are committed to a fully cartographic analysis in which the various wh elements within each general zone (D-linked; non-D linked), that is, whether each lands in a distinct specifier position, or if they assume multiple specifiers. In either case, the analysis would still have to account for the freedom of ordering among non-initial WH elements, and the inability for the entire WH-cluster to be broken up (something usually attributed to sharing of a single specifier position). \\
+\citeauthor{KrapovaCinque2005} do not provide any individual derivations, but for a case of two wh-phrases, one of which is D-linked and the other not, it  is clear they assume distinct functional category specifier positions as landing sights, consistent with discourse roles of certain phrases in the left-periphery. They demonstrate clearly that there are discourse preference associated with the orders found, in line with general information structure principle of given > new, to be discussed in Section 3 below. However, it is not possible to determine if C\&K are committed to a fully cartographic analysis in which the various wh elements within each general zone (D-linked; non-D linked), that is, whether each lands in a distinct specifier position, or if they assume multiple specifiers. In either case, the analysis would still have to account for the freedom of ordering among non-initial WH elements, and the inability for the entire WH-cluster to be broken up (something usually attributed to sharing of a single specifier position). \\
 Furthermore, some sort of Superiority seems to be at play among non-D-linked wh elements – a structure-preserving effect. Once D-linking is controlled for, \citeauthor{KrapovaCinque2005} conclude that “various clues seem to suggest that [surface wh] ordering reflects the order of wh-phrases prior to wh-movement” (p. 189). They analyze such structure preservation as resulting a chain-sensitive form of Relativized Minimality, but do not address the issue of the landing site of non D-linked wh elements. Clearly, for surface positions to line up with base-positions, the lower left periphery would either have to replicate the argument domain (a highly unlikely state of affairs, and one that is inconsistent with cartographic views of the left-periphery since \citealt{Rizzi1997}). Rather, it is generally assumed (Richards 1997 and much subsequent work) that there exist multiply filled or multiple specifiers, which are equidistant, allowing apparent lack of superiority effects. Even if Bulgarian shows a higher rigid left wh order, either multiple specifiers would have to be allowed, or a highly flexible set of functional categories would have to exist, both contradicting basic tenets of Strict Cartography. \\
 Finally, \citealt{KrapovaCinque2005} also do not address how the wh elements form a syntactic cluster, which is well-known (\citealt{Grewendorf2001}, \citealt{Bailyn2017}). If, to account for cluster-like behavior, such an account would posit multiple specifiers of a single head, then even this partly cartographic approach would be forced to abandon the strong cartographic requirement of one head - one specifier to accommodate multiple occurrences in varying order, within each larger set. If not, clustering appears to remain a mystery within Strict Cartography. \\
 Either way, a fully cartographic account of the landing sites of multiple wh movement structures without recourse to adjuncts or multiple specifiers has yet to be provided.  And this is for the one Slavic language that shows some degree of rigidity in the wh left periphery. For those with none, such as Serbo-Croatian/Russian, a cartographic approach remains feasible, but would require extensive manipulation of the functional hierarchy, since each attested order, with identical semantics, (other than scope), would have to be derived through a highly intricate set of (unmotivated) remnant movements. The burden of proof thus remains with the strict cartographic approaches to provide an analysis that maintains the tenets of Strict Cartography discussed above, while at the same time accounting for the clustering and superiority properties of these well-known multiple-wh language types.
@@ -449,7 +463,7 @@ Who reads newspaper \\
 
 \ex \label{bai16b}
 \gll \emph{[Gazetu]}	[X]	\emph{čitaet}		[X]	\emph{Ivan.}		\hspace{3.15cm}(OVS) \\
-[newspaper]_{\textsc{top}} {} reads {} [Ivan]_{\textsc{foc}} \\
+[newspaper]$_{\textsc{top}}$ {} reads {} [Ivan]$_{\textsc{foc}}$ \\
 \glt `IVAN is reading the paper.' \\
 
 \end{xlist}
