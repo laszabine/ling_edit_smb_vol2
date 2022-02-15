@@ -221,7 +221,6 @@ Both properties (superiority and clustering) have been attributed in the Bulgari
 
 \begin{multicols}{3}
 
-
 \begin{forest}
 [S'
 [Comp
@@ -231,11 +230,7 @@ Both properties (superiority and clustering) have been attributed in the Bulgari
 ][S]
 ]
 \end{forest}
-Bulgarian type
-
-
-
-
+{\small Bulgarian type}
 
 \vfill\null
 \columnbreak
@@ -250,8 +245,8 @@ name=t[\textcolor{white}{tri}, roof] ]
 ]
 ]
 ]
-\end{forest}
-Serbo-Croatian type
+\end{forest}\\
+{\small Serbo-Croatian type}
 
 
 \vfill\null
@@ -263,8 +258,8 @@ Serbo-Croatian type
 ][S, 
 name=t[KK, roof] ]
 ]
-\end{forest}
-English type
+\end{forest}\\
+{\small English type}
 
 
 
@@ -317,7 +312,7 @@ Besides cluster interruption, the Serbo-Croatian/Russian kind has another well-k
 
 \begin{xlist}
 \ex \label{bai11a}
-\gll \emph{Kto}		\emph{kogo}		\emph{komu}		\emph{predstavil}? \hspace{4.5cm}(Rus) \\
+\gll \emph{Kto}		\emph{kogo}		\emph{komu}		\emph{predstavil}? \hfill (Rus) \\
 who$_{\textsc{nom}}$ who$_{\textsc{acc}}$ who$_{\textsc{dat}}$ introduced \\
 \glt `Who introduced who to whom?'
 
@@ -393,14 +388,12 @@ One attempt to apply a cartographic approach to the multiple wh situation in Sla
 \begin{exe}
 \ex \label{bai13}
 \citeauthor{KrapovaCinque2005} (\citeyear{KrapovaCinque2005}:189) summary of Bulgarian WH orders: 
-\begin{table}[]
-\begin{tabular}{|l|l|l|l|l|l|l|l|}
+\begin{table}[] 
+\footnotesize
+\begin{tabular}{|l|lllllll|}
 \hline
-\multicolumn{1}{|c|}{\textbf{D-linked wh-$^12$}}                                                                                                                                             & \multicolumn{7}{c|}{\textbf{Non-D-linked wh-phrases}}                                                                                                                                                                                                                                                                                                                                                                        \\ \hline
-\multirow{4}{*}{\textit{\begin{tabular}[c]{@{}l@{}}koj/koja/koe/koi (N)\\ (kogo)\\ (na kogo)\\ (marked) kakvo\\ (marked) k\textbackslash{}\textasciicircum{}ade/koga\end{tabular}}} & \multirow{4}{*}{\textit{kogo}} & \multirow{4}{*}{\textit{\begin{tabular}[c]{@{}l@{}}na\\ kogo\end{tabular}}} & \multirow{4}{*}{\textit{koga}} & \multirow{4}{*}{\textit{k\textbackslash{}\textasciicircum{}ade}} & \multirow{4}{*}{\textit{\begin{tabular}[c]{@{}l@{}}kakvo\\ kolko N\end{tabular}}} & \multirow{4}{*}{\textit{\begin{tabular}[c]{@{}l@{}}kakvo\\ (na)kolko N\end{tabular}}} & \multirow{4}{*}{\textit{kak}} \\
-                                                                                                                                                                                    &                                &                                                                             &                                &                                                                  &                                                                                   &                                                                                       &                               \\
-                                                                                                                                                                                    &                                &                                                                             &                                &                                                                  &                                                                                   &                                                                                       &                               \\
-                                                                                                                                                                                    &                                &                                                                             &                                &                                                                  &                                                                                   &                                                                                       &                               \\ \hline
+\multicolumn{1}{|c|}{\textbf{D-linked wh-}}                                               & \multicolumn{7}{c|}{\textbf{Non-D-linked wh-phrases}} \\ \hline
+\begin{tabular}[c]{@{}l@{}}koj/koja/koe/koi(N)\\ (kogo)\\ (na kogo)\\ (marked) kakvo$_{subj/obj}$\\ (marked) kâde/koga\end{tabular} & \multicolumn{1}{l|}{kogo} & \multicolumn{1}{l|}{na kogo} & \multicolumn{1}{l|}{koga} & \multicolumn{1}{l|}{kâde} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}kakvo$_{Subj}$\\ kolko$_{Subj}$ N\end{tabular}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}kakvo$_{Obj}$\\ (na)kolko$_{Obj}$ N\end{tabular}} & kak \\ \hline
 \end{tabular}
 \end{table}
 \end{exe}
@@ -440,13 +433,22 @@ Cartographic approach to Topic > Focus order: \\
 fairly nice empty nodes,
 for tree={inner sep=0, l=0}
 [TopicP
-[XP$_{TOP}$][
-[Top$^0$]
-[FocusP
-[XP$_{FOC}$][
-[Foc$^0$]
-[TP (S), 
-name=t[\textcolor{white}{triangle??}, roof] ]]]]]
+    [XP$_{TOP}$, name=topic]
+    [
+        [Top$^0$]
+        [FocusP
+            [XP$_{FOC}$, name=focus]
+            [
+                [Foc$^0$]
+                [TP (S), name=t
+                    [\textcolor{white}{triangle??}, roof, name=start] 
+                ]
+            ]
+        ]
+    ]
+]
+\draw[->] (start) to[out=south west,in=south] (topic);
+\draw[->] (start) to[out=south west,in=south] (focus);
 \end{forest}
 \end{exe}
 

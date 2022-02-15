@@ -132,7 +132,12 @@ Finally, when the main clause T merges into the structure, T, which has [uϕ], p
 \begin{exe}
 \ex \label{9ha}
 \begin{forest}for tree=nice empty nodes
-[TP[DP2$_{j}$$^{[\sout{uCase}]}$,name=specvP][F[DP1$_{i}$$^{[F]}$\\..t$_{i}$...,name=specTP, tikz={\node [draw,black,dotted, inner sep=0,fit to=tree]{};}][CP$^{[F]}$\\..t$_{i}$...,name=VP]]]
+[TP
+    [DP2$_{j}$ $^{[\sout{uCase}]}$,name=specvP]
+    [F[DP1$_{i}$ $^{[F]}$\\..t$_{i}$...,name=specTP, tikz={\node [draw,black,dotted, inner sep=0,fit to=tree]{};}]
+    [CP$^{[F]}$[..t$_{i}$..., roof, name=VP]]
+    ]
+]
 \draw[->] (VP) to[out=south,in=south] (specTP);
 \draw[->] (specTP) to [out= west,in=south]  (specvP);
 $
