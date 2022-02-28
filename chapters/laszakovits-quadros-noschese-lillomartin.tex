@@ -77,8 +77,8 @@ verbs that denote movement to or from a location (such as `put X on Z').%
         \item word order is OSV (vs. SOV),
         \item the predicate is restricted to `is located at' (vs. any verb), and 
         \item there is no minimally different derivation with the word order SVO (which there is for
-    object-shift; see e.g.~\REF{lasz:ex:4}--\REF{lasz:ex:7} and throughout the paper
-    \end{inparaenum}).
+    object-shift; see e.g.~\REF{lasz:ex:4}--\REF{lasz:ex:7} and throughout the paper).
+    \end{inparaenum}
 }
 
 There are three main triggers for object-shift in ASL and
@@ -284,12 +284,11 @@ ASL and Libras.
 \newcommand{\laszTabColA}[0]{\cellcolor{gray!30}}
 \newcommand{\laszTabColB}[0]{\cellcolor{gray!10}}
 \newcommand{\laszTabColC}[0]{\cellcolor{gray!30}}
-
-\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}} % aligns in the middle vertically
+% \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}} % aligns in the middle vertically
 
 \begin{table}
     \centering 
-    \begin{tabularx}{r C{3em} c c c}
+    \begin{tabular}{r c c c c}
         \hline
         \hline 
         & V\laszPlain{} & V\laszLoc{\_} & V\laszHs{\_} & V\laszAsp{} \\ 
@@ -301,16 +300,376 @@ ASL and Libras.
             \laszTabColC{} 
             \\ 
         Libras & 
-            \multirow{-2}{*}{\laszTabColA{} \cmark SVO \newline \xmark SOV} & 
+            \multirow{-2}{*}{\laszTabColA{} \shortstack{\cmark SVO \\ \xmark SOV}} & 
             \multirow{-2}{*}{\laszTabColB{} \shortstack{\cmark SVO \\ \cmark SOV}} & 
             \laszTabColB{} & 
-            \multirow{-2}{*}{\laszTabColC{} \shortstack{\xmark SVO \\ \cmark SOV}} \\
+            \multirow{-2}{*}{\laszTabColC{} \shortstack{\xmark SVO \\ \cmark SOV}} 
+            \\
         \hline 
-    \end{tabularx}
+    \end{tabular}
     \caption{Comparison of judgments for SVO and OSV}
     \label{lasz:tab:1}
 \end{table}
 
+Several proposals have been made regarding the syntax of object-shift
+in ASL/Libras. The difficulty in providing a satisfactory analysis of
+this phenomenon seems to stem from the disparate nature and the
+disparate obligatoriness of the constructions that trigger object shift.
+
+For durative-aspect marking of V, \citet{Matsuoka.1997} and \citet{Braze.2004} 
+have proposed that object shift arises because aspectual
+morphology sits on an Asp head, and V must move there, and AspP is
+right-headed. In section~\ref{lasz:sec:3} we will show that there is an empirical and a
+conceptual problem with this analysis.
+
+An alternative proposal is based on the fact that durative-aspect
+marking is expressed by reduplication of the verb’s movement 
+\citep{Klima.Bellugi.1979}. The complexity of a sign’s movement corresponds to
+its phonological heaviness \citep{Brentari.1998}, and we know from several
+spoken languages that there is a preference for phonologically heavy
+elements to appear late in a sentence \parentext{\citealp{Ross.1967,Williams.2003}, i.a.}.
+\citet{Brentari.1998} has argued that this preference also applies in the
+object-shift construction with heavy verbs, but remains agnostic
+whether the inversion is realized by V moving to the right, or by O
+moving to the left triggered by V’s heaviness, as \citet{Liddell.1980}
+proposed.%
+\footnote{
+    Note that according to \citeapos{Brentari.1998} analysis, locus-agreement per se
+    does not constitute `complex movement', neither if it modifies the locus in which V
+    is signed, nor if it modifies the locus of V’s endpoint or starting point. In section 6.5
+    she discusses how phonological weight units interact with the order of syntactic
+    constituents. In \citeauthor{Brentari.1998}’s model, movement corresponds to prosodic features, and
+    each branching prosodic feature constitutes a weight unit. In ASL, GIVE usually
+    contains only a “direction”-movement, that is one weight unit. Both VO and OV
+    ordering are allowed. When habitual aspect is added, GIVE contains an additional
+    “trill” movement, a total of two weight units. OV ordering is preferred over VO.
+    Exhaustive aspect adds both a “trill” movement and an “arc” movement, totallying
+    three weight units. Now, due to V’s heaviness, VO is unacceptable.
+}
+
+However, as we have seen, object shift is also related to
+agreement between V and O, both noun-class (classifier) agreement
+\REF{lasz:ex:3}; and referential (locus) agreement \REF{lasz:ex:4}--\REF{lasz:ex:5}. 
+These agreement-data
+are difficult to unify with the aspect-data. If one follows a syntactic
+proposal for the aspect-data like \citet{Matsuoka.1997} or \citet{Braze.2004},
+one has to explain why aspect-marking makes the OV order
+obligatory, while agreement-marking allows both the OV and the VO
+order. On the other hand, if one follows a phonology-driven proposal
+for the aspect-data like \citet{Liddell.1980} or \citet{Brentari.1998}, one needs an
+independent account for the agreement-data, because changes to V’s
+direction or locus or handshape do not influence V’s heaviness
+\citep{Brentari.1998}.
+
+Should the aspect-construction receive an analysis independent
+of the agreement-construction, then, or is there a way to unify them?
+We will propose a unified analysis that takes into account both
+phonological heaviness and syntactic agreement projections. We use
+\citeapos{Bobaljik.Wurmbrand.2012} proposal that, for any given
+derivation and its resulting LF, a combination of inviolable and
+violable, but equally ranked, PF-constraints determine the best
+realization of this LF. We will introduce five independently attested
+PF-constraints and show that they derive the data presented here
+perfectly. In this way, we demonstrate that object shift in ASL and
+Libras arises from the interaction of syntax and PF, and we strengthen
+current assumptions about the size of the verbal domain by making
+explicit the postulated projections.
+
+The rest of the chapter is structured as follows: In section~\ref{lasz:sec:2}, we
+present our analysis in detail and show that it makes the correct
+predictions. In section~\ref{lasz:sec:3}, we discuss the alternative proposals by
+\citet{Fischer.Janis.1992}, \citet{Matsuoka.1997}, and \citet{Braze.2004}, who
+argue for rightward-movement of V. Section~\ref{lasz:sec:4} concludes.
+
+% ===================================================================
+\section{Analysis}
+    \label{lasz:sec:2}
+    
+% -------------------------------------------------------------------
+\subsection{Phrase structure}
+
+Our analysis extends the proposals made by \citet{Quadros.etal.2004}, 
+\citet{Quadros.DLM.2010}, and \citet{Gokgoz.2013}, who follow the
+common analysis of object shift in spoken languages (\citealp{Holmberg:1986}
+and much work since) and suggest that in object-shift constructions,
+the order of V and O is inverted by movement of O to the left. Further,
+we adopt the following insights from the literature:
+
+As stated before, we follow \citet{Fischer.1975}, \citet{Liddell.1980},
+\citet{Quadros.1999} and many others in assuming that the underlying order
+of ASL and Libras is SVO. In other words, VP is left-headed.
+
+Regarding agreement with noun-classes, we adopt \citeapos{Benedicto.Brentari.2004}
+proposal: For classifier-agreement with O, there is
+a dedicated phrase ClP immediately dominating VP, where the
+handshape-feature on V is set by V moving to the head of ClP and O
+moving to Spec,ClP, followed by Agree between O and V.%
+\footnote{
+    The feature value that O shares with V is not the handshape feature of O’s
+    sign, but O’s sign’s noun-class resp.~information about the shape of O’s referent.
+}
+If the
+classifier expressed on V is a handling classifier, there is a second,
+higher ClP responsible for agreement between V and S \citep{Benedicto.Brentari.2004}.
+
+For agreement with loci, we adopt the proposal that loci are the
+realization of morphosyntactic features, similar to the proposals by
+\citet{Neidle.etal.2000}, \citet{Kuhn.2016}, and \citet{Pfau.etal.2018}. We call the
+phrase where V agrees with O in locus AgrOP, and assume that it
+dominates the lower ClP or, in its absence, VP.%
+\footnote{
+    \citet{Gokgoz.2013} argues that the phrase that objects shift to is in the
+    TP-domain. He elicited word order data where in SOV sentences in ASL, manual
+    sentential negation in preverbal position is rated better between O and V (SONegV)
+    than before O (SNegOV): Assuming that manual negation appears in a NegP and
+    that this NegP marks the edge of the VP-domain, O must raise beyond.
+    
+    We note that in his Experiment 3, the most accepted placement of manual
+    negation is in sentence-final position for plain V, classifier-agreeing V,
+    locus-agreeing V, and ditransitives agreeing in classifier and locus. (He does not
+    discuss durative/continuative aspect.) We tentatively suggest that the realization of
+    manual (and non-manual) negation may follow similar PF-constraints as the
+    realization of O as discussed in this paper, but we consider an investigation of
+    negation outside the scope of the present proposal.
+    
+    \citeauthor{Gokgoz.2013} also presents examples where shifted O has a presuppositional
+    reading, which indicates, in line with \citet{Diesing1992}, that O moves out of the VP.
+    This presuppositional effect is also observed in \citet{Napoli.SS.RMQ.2017}. We have not
+    collected further data on presuppositional readings of O, but we did test for a
+    definiteness effect of O in ASL (parallel to Scandinavian object-shift; \citealp{Holmberg:1986})
+    and did not find one.
+}
+Similarly, for
+directional verbs that contain movement from one locus to another, the
+endpoint referring to S is established by agreement between V and S
+in a projection AgrSP.
+
+For aspect-marked verbs, we adopt parts of \citeapos{Matsuoka.1997}
+and \citeapos{Braze.2004} analysis of the syntax of aspect: When the verb
+displays durative-aspect agreement (reduplication), V moves to an Asp
+head. However, we differ from these proposals in the headedness of
+AspP: We contend that Asp is left-headed, like all verbal projections in
+ASL and Libras. This allows our proposal to be consistent with the
+Final-over-Final Constraint (FOFC; \citealp{BiberauerHR.2014,SheehanBRH.2017}) 
+as will be discussed in section~\ref{lasz:sec:33}.
+
+The tree in Fig.~\ref{lasz:fig:1} illustrates our assumptions about the phrase
+structure of ASL and Libras for transitive verbs. Regarding
+ditransitives like GIVE, which agree with the direct object in
+handshape, but with the indirect object in locus, we tentatively assume
+that the phrase that introduces the indirect object is projected between
+the lower ClP and AgrOP. In this way, Cl will probe down and find O,
+while AgrO will find IO because it is structurally higher than O.%
+\footnote{
+    We follow \citet{Quadros.etal.2004} in the assumption that the projections
+    ClP, AgrOP, and AspP are only present when the verb shows the respective marking,
+    but nothing in our analysis hinges on this.
+}%
+\footnote{
+    See also the discussion in \citet{Pfau.etal.2018} of \citeapos{Nevins.2011} proposal.
+}
+
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \Tree
+        [.TP
+            \node (SpecTP) {$\langle$S$\rangle$};
+            [
+                [.T ]
+                [.Cl\textsubscript{S}P
+                    \node (SpecClSP) {$\langle$S$\rangle$};
+                    [
+                        [.Cl\textsubscript{S} ]
+                        [.AspP
+                            \node (SpecAspP) {$\langle$O$\rangle$}; 
+                            [
+                                [.Asp ]
+                                [.\textit{v}P
+                                    \node (Sbase) {$\langle$S$\rangle$};
+                                    [
+                                        [.\textit{v} ]
+                                        [.AgrOP
+                                            \node (SpecAgrOP) {$\langle$O$\rangle$};
+                                            [
+                                                [.AgrO ]
+                                                [.Cl\textsubscript{O}P
+                                                    \node (SpecClOP) {$\langle$O$\rangle$};
+                                                    [
+                                                        [.Cl\textsubscript{O} ]
+                                                        [.VP
+                                                            [.V ]
+                                                            \node (Obase) {$\langle$O$\rangle$};
+                                                        ]
+                                                    ]
+                                                ]
+                                            ]
+                                        ]
+                                    ]
+                                ]
+                            ]
+                        ]
+                    ]
+                ]
+            ]
+        ]
+        \draw[->] (Obase) [in=-90,out=-135]  to (SpecClOP);
+        \draw[->] (SpecClOP) [in=-90,out=-135]  to (SpecAgrOP);
+        \draw[->] (SpecAgrOP) [in=-90,out=-135]  to (SpecAspP);
+        \draw[->] (Sbase) [in=-90,out=-135]  to (SpecClSP);
+        \draw[->] (SpecClSP) [in=-90,out=-135]  to (SpecTP);
+    \end{tikzpicture}
+    \caption{Phrase structure of ASL and Libras}
+    \label{lasz:fig:1}
+\end{figure}
+
+% -------------------------------------------------------------------
+\subsection{Verbal agreement}
+    \label{lasz:sec:22}
+
+We make the following assumptions about verbal agreement:
+In sentences where V agrees in handshape/locus/aspect, V
+moves to the respective syntactic head (Cl/Agr/Asp). This movement
+is covert. In other words, there is an inviolable constraint at PF stating
+that it is always the lowest copy of V that will be realized. This is
+similar to English, where V agrees with T, but fully lexical verbs are
+never realized in T. Another example of such an inviolable constraint
+is in \citeapos{Bobaljik.Wurmbrand.2012} analysis of Quantifier Raising in
+English: English syntax has scrambling just like German and
+Japanese, and this movement is visible at LF in all languages, but in
+contrast to German and Japanese, English PF never pronounces the
+higher copies, giving rise to QR.
+
+That V does not move overtly is corroborated by the fact that
+we never see V move past manual negation~\REF{lasz:ex:8} or adverbs of
+frequency~\REF{lasz:ex:9} in ASL and Libras:
+
+\ea
+    \label{lasz:ex:8}
+    \ea[]{ 
+        IX\laszLoc{a} MARIA\laszLoc{a} NOT HELP\laszDir{a}{b} IX\laszLoc{b} JOHN\laszLoc{b}. 
+        \\
+        `Maria did not help John.'
+        \hfill         
+        \cmark Libras, 
+        \cmark ASL 
+        \\
+        \citep[][\pnfmt{6}, ex. (26a,b)]{Quadros.etal.2004}
+    }
+    \ex[*]{ 
+        IX\laszLoc{a} MARIA\laszLoc{a} HELP\laszDir{a}{b} NOT IX\laszLoc{b} JOHN\laszLoc{b}.
+        \\
+        \citep[][\pnfmt{6}, ex. (26a,b)]{Quadros.etal.2004}
+        \hfill 
+        *Libras, 
+        *ASL 
+    }
+    \z 
+\ex 
+    \label{lasz:ex:9}
+    \ea[]{
+        IX\laszLoc{a} MARIA\laszLoc{a} SOMETIMES HELP\laszDir{a}{b} IX\laszLoc{b} JOHN\laszLoc{b}. 
+        \hfill 
+        \cmark Libras, 
+        \cmark ASL
+        \\
+        `Maria sometimes helped John.'
+        \citep[][\pnfmt{6}, ex. (27a,b)]{Quadros.etal.2004}
+    }
+    \ex[*]{
+        IX\laszLoc{a} MARIA\laszLoc{a} HELP\laszDir{a}{b} SOMETIMES  IX\laszLoc{b} JOHN\laszLoc{b}. 
+        \hfill 
+        \cmark Libras, 
+        \cmark ASL
+        \\
+        \citep[][\pnfmt{6}, ex. (27a,b)]{Quadros.etal.2004}
+    }
+    \z
+\z 
+
+\noindent 
+When V moves to agree, this triggers syntactic movement of O to the
+respective specifier position. That is, when V agrees in handshape
+with O, O moves to the specifier of the low ClP (Cl\textsubscript{O}P). When V agrees in
+locus with O, O moves to the specifier of AgrOP. When V agrees in
+aspect, O moves to the specifier of AspP. Whether this movement of O
+is overt or covert, i.e. which copy of O gets realized, depends on
+PF-constraints as we will discuss below. When agreement doesn’t take
+place, the agreement-phrase becomes vacuous, and we assume here
+that vacuous phrases are not projected at all, but nothing hinges on this
+assumption.
+
+When V is plain, there is no position for O and V to move to.
+
+% -------------------------------------------------------------------
+\subsection{Determining PF} 
+    \label{lasz:sec:23}
+
+Syntax will thus yield a representation where V has copies in the
+functional heads it agrees with, and O has copies in the specifiers of
+the same functional phrases. In line with \citeapos{Bobaljik.Wurmbrand.2012} 
+framework (which builds on \citealp{Bobaljik.1995,Bobaljik.2002,Brody.1995,ErteschikShir.1997}, a.o.), 
+this representation is first sent to LF, and
+LF decides which copies to interpret, and this will always be the
+highest copies. Then possible PF-realizations of this LF are evaluated.
+PF-candidates differ in which copies of V to realize (which is trivial,
+given the inviolable constraint discussed above) and which copies of
+O to realize. We propose the following violable and equally-ranked
+constraints for PF to achieve this. We number the constraints for ease
+of reference, but this numbering is not relevant for the evaluation
+mechanism. Whichever PF-candidate(s) fulfil the most constraints will
+be grammatical realizations for this LF.
+
+\subsubsection*{Constraint 1: Scope Transparency}
+
+\citet{Bobaljik.Wurmbrand.2012} investigate the connection between the
+scope of quantifiers and word orders in two sets of languages: one set
+allows QR and doesn’t allow scrambling (e.g. English), and the other
+set allows scrambling and doesn’t allow QR (e.g. German, Japanese).
+They argue that these properties are connected in the following way:
+all languages allow quantifier movement in the syntax and thus at LF,
+but the two sets of languages differ in which copy of the quantifier
+they pronounce. Pronouncing the high copy amounts to scrambling
+and is not available in English, while it is available in German and
+Japanese. To capture the distribution of QR, B\&W introduce the
+violable constraint Scope Transparency (10), which, given an LF with
+a moved quantifier, favors pronouncing the high copy of the quantifier
+(scrambling) over pronouncing the low copy of the quantifier (QR). In
+English, where scrambling is not an option for PF (this is an inviolable
+constraint), Scope Transparency can be violated, giving rise to QR.
+
+\ea
+    Scope Transparency (ScoT) \citep[\pnfmt{373}]{Bobaljik.Wurmbrand.2012}: \\
+    If the order of two elements at LF is $A\gg B$, the order at PF is $A\gg B$. \\
+    \begin{quote}
+    We use the symbol $\gg$ to represent the canonical manifestation
+    of hierarchical order at the relevant level: roughly, scope at LF
+    [...] and linear precedence at PF [...]. \parentext{ibid.}
+    \end{quote}
+\z 
+
+\citet{Bobaljik.Wurmbrand.2012} proceed to phenomena where, given
+two LF choices and two PF choices, 3 out of the 4 possible
+combinations are grammatical. They call this the “3⁄4 signature” and
+argue that this is the characteristic pattern of the interaction of ScoT
+with another violable constraint. If both constraints favor the same
+PF-candidate, this PF will be the “best” PF of the given LF. If the
+constraints disagree, however, this results in a tie, and both PF
+candidates are the “best” choice. This pattern is illustrated in Table~\ref{lasz:tab:4}.
+
+\begin{table}[
+]
+    \centering
+    \begin{tabular}{ccccc}
+        LF & PFs & ScoT & Constraint X & Prediction \\
+        % \laszTabColA{} & 
+        % \multirow{2}{*}{$A \gg B$} & 
+    \end{tabular}
+    \caption{The 3⁄4 signature \citep[\pnfmt{385}f.]{Bobaljik.Wurmbrand.2012}}
+    \label{lasz:tab:4}
+\end{table}
+
+% ===================================================================
 \printbibliography[heading=subbibliography,notkeyword=this]
 
 \end{document}
