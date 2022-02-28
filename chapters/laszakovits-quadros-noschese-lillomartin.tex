@@ -1,0 +1,316 @@
+\documentclass[output=paper,colorlinks,citecolor=brown,
+% hidelinks,
+% showindex
+]{langscibook}
+
+\newcommand{\citeapos}[1]{\citeauthor{#1}'s \citeyearpar{#1}}
+\newcommand{\laszAsp}[0]{[asp]}
+\newcommand{\laszLoc}[1]{[loc:#1]}
+\newcommand{\laszDir}[2]{[dir:#1$\to$#2]}
+\newcommand{\laszHs}[1]{[hs:#1]}
+\newcommand{\laszClaw}[0]{{\fontspec{aslfontgithubio.ttf} S}}
+\newcommand{\laszPlain}[0]{[plain]}
+
+\author{
+    Sabine Laszakovits\affiliation{University of Connecticut; Austrian Academy of Sciences} and
+    Ronice Müller de Quadros\affiliation{Universidade Federal de Santa Catarina} and 
+    {Emily Jo} Noschese\affiliation{University of Hawai'i} and 
+    Diane Lillo-Martin\affiliation{University of Connecticut; Haskins Laboratories}
+}
+\title{Object shift in ASL and Libras}
+\abstract{
+    ASL and Libras have an object-shift construction 
+    by which the canonical SVO order is changed to SOV. 
+    In both sign languages, this ordering is 
+    mandatory for V marked with durative/continuative aspect (reduplicated movement), 
+    optional for V that agrees with O in locus,
+    and not allowed with plain V. 
+    When V agrees with O in handshape, 
+    ASL requires OV ordering whereas Libras allows both OV and VO ordering. 
+    We present an analysis that derives these data 
+    with a combination of syntactic movement of O 
+    and violable, equally-ranked PF-constraints as proposed by \citet{BW.2012}. 
+    Unlike \citeapos{Matsuoka.1997} and \citeapos{Braze.2004} proposals, 
+    we do not move V to a head on the right in violation of the Final-over-final constraint
+    \citep{BiberauerHR.2014,SheehanBRH.2017}.
+}
+
+\begin{document}
+\maketitle
+
+% ===================================================================
+\section{Introduction}
+
+The underlying word order in modern American Sign Language (ASL)
+and Brazilian sign language (Língua Brasileira de Sinais, Libras) has
+often been argued to be subject-verb-object (SVO; 
+\citealp[see]{Fischer.1975,Liddell.1980,Padden.1988} for ASL; 
+\citealp{Quadros.1999,Quadros.2003} for Libras), 
+which we adopt here. However, in both languages, word order
+variations are possible. In this paper, we focus on the construction with
+the word order SOV, which has been termed ``object shift''. This
+construction differs from topicalization structures like O'SV, VO'S,
+S'VO, or S'O'V in that the latter contain a prosodic break after the
+topic (indicated here by an apostrophe) and may contain nonmanual
+marking (raised brows and a slight upward chin tilt; 
+\citealp{Liddell.1977,Liddell.1980,Padden.1988}) during the utterance of the topic.%
+\footnote{
+    \citet{Fischer.1990} argues that object-shift constructions in ASL involve
+    ``mini-topicalization'' of O to some intermediate specifier position. She corroborates
+    this analysis by reporting a definiteness effect found in SOV orders, which is typical
+    of topics. However, unlike typical topicalizations, SOV constructions lack a prosodic
+    break after O and cannot mark O with nonmanual topicalization marking. Our
+    analysis is similar to \citeauthor{Fischer.1990}'s in that we think O moves to some intermediate
+    specifier position. However, we have not been able to reproduce this definiteness
+    effect for ASL, and we see no reason to call this movement topicalization.
+}
+We restrict our attention to verbs that take a direct object (such as `buy X') and
+possibly an indirect object (such as `send X to Y'), but do not discuss
+verbs that denote movement to or from a location (such as `put X on Z').%
+\footnote{
+    Furthermore, we distinguish object-shift from locative constructions of the
+    form location-subject-predicate, which have been taken as instances of the word
+    order OSV because, like object-shift, they lack the prosodic break of topicalization
+    structures \citep{Liddell.1980}. Locative constructions differ from object-shift
+    constructions at least in the following properties: 
+    \begin{inparaenum}[(i)]
+        \item word order is OSV (vs. SOV),
+        \item the predicate is restricted to `is located at' (vs. any verb), and 
+        \item there is no minimally different derivation with the word order SVO (which there is for
+    object-shift; see e.g.~\REF{lasz:ex:4}--\REF{lasz:ex:7} and throughout the paper
+    \end{inparaenum}).
+}
+
+There are three main triggers for object-shift in ASL and
+Libras: 
+\begin{inparaenum}[1.]
+    \item durative/continuative aspect on the verb, which makes object-shift obligatory; 
+    \item verbal agreement in handshape with the object, which makes object-shift 
+    optional in Libras and obligatory in ASL; and 
+    \item verbal agreement in locus with the object, which makes object-shift optional in both languages. 
+\end{inparaenum}
+The effect of durative aspect on word order is illustrated in \REF{lasz:ex:1}--\REF{lasz:ex:2}.%
+\footnote{
+    Following standard practice in sign linguistics, signs are glossed using
+    English words in all caps. Most of our examples represent sign sequences that are
+    grammatical in both ASL and Libras, though the actual signs are of course different.
+    `IX' is the gloss used for a pointing indexical sign which serves
+    pronominal functions. `\laszAsp{}' indicates an aspectual marker involving reduplication
+    of the sign root. `\laszHs{\_}' indicates the use of a classifier handshape. `\laszLoc{\_}'
+    indicates that a sign is produced using a spatial locus other than default (`a', `b',
+    etc. indicate distinct loci but not physical location). `\laszDir{\_}{\_}' indicates that a sign
+    moves from one locus to another. \par 
+    In the English translation, past tense is used although neither ASL nor
+    Libras has grammatical tense marking; similarly, we often use `a/the' for nouns
+    because in both of these sign languages either translation is possible.
+}%
+\footnote{
+    When a source is not provided, the judgments primarily come from the
+    2\textsuperscript{nd} and 3\textsuperscript{rd} co-authors, who are native signers of Libras and ASL respectively.
+}
+
+\ea
+    \label{lasz:ex:1}
+    \ea[]{
+        \label{lasz:ex:1a}
+        IX1 WINE DRINK\laszAsp{}. 
+        \hfill 
+        \cmark ASL, \cmark Libras \\ 
+        `I drank wine continuously.'
+    }
+    \ex[*]{
+        \label{lasz:ex:1b}
+        IX1 DRINK\laszAsp{} WINE. 
+        \hfill 
+        *ASL, *Libras
+    }
+    \z 
+\ex
+    \label{lasz:ex:2}
+    \ea[]{
+        \label{lasz:ex:2a}
+        MY SISTER LETTER SEND\laszAsp{}. 
+        \hfill 
+        \cmark ASL, \cmark Libras \\ 
+        `My sister repeatedly sent a/the letter(s).'
+    }
+    \ex[*]{ 
+        \label{lasz:ex:2b}
+        MY SISTER SEND\laszAsp{} LETTER. 
+        \hfill 
+        *ASL, *Libras 
+    }
+    \z 
+\z
+
+Verbal agreement can target the object's noun-class%
+\footnote{
+    In this sense we follow \citeapos{Benedicto.Brentari.2004} proposal, whereby
+    classifiers are treated as a type of agreement between V and O/S.
+}, 
+whereby V
+changes its handshape (`hs') to a classifier as illustrated in~\REF{lasz:ex:3}, or it
+can target the object's referent, whereby V changes the end-point of its
+movement (`dir') to the object's locus (`loc'), as seen in~\REF{lasz:ex:4}.%
+\footnote{
+    \citet{Fischer.1975} proposed that object-shift is also licensed if the relation
+    between V and O is established in the semantics, such that SOV is possible only if it
+    is clear from the semantics of V, S, and O which argument is the agent and which is
+    the patient. However, \citet{Liddell.1980} showed that this approach makes incorrect
+    predictions, and that syntactic agreement is a better way to go.
+}
+
+\ea 
+    \label{lasz:ex:3}
+    The handshape of `GIVE' changes to the \laszClaw{} handshape indicative of handling an apple. 
+    \ea[]{ 
+        SALLY APPLE GIVE\laszHs{\laszClaw}. 
+        \hfill 
+        \cmark ASL, \cmark Libras 
+    }
+    \ex[]{ 
+        SALLY GIVE\laszHs{\laszClaw} APPLE. 
+        \hfill
+        \cmark Libras 
+    }
+    \ex[*]{
+        SALLY GIVE\laszHs{\laszClaw} APPLE. 
+        \hfill 
+        *ASL \\ 
+        all: `Sally gave someone a/the apple.'
+    }
+    \z 
+\ex
+    \label{lasz:ex:4}
+    The direction of `HELP' changes to the locus of `ANA'. 
+    \ea 
+        IX\laszLoc{a} MARIA\laszLoc{a} IX\laszLoc{b} ANA\laszLoc{b} HELP\laszDir{a}{b}. \\
+        \citep[from][6]{Quadros.etal.2004}
+        \hfill 
+        \cmark Libras, \cmark ASL 
+    \ex 
+        IX\laszLoc{a} MARIA\laszLoc{a} HELP\laszDir{a}{b} IX\laszLoc{b} ANA\laszLoc{b}. \\
+        \citep[from][5]{Quadros.etal.2004} 
+        \hfill 
+        \cmark Libras, \cmark ASL \\
+        both: `Maria helped Ana.'
+    \z 
+\z 
+ 
+For some verbs, locus agreement involves signing the verb at the
+object's locus as illustrated in \REF{lasz:ex:5} (termed ``locationality'' by \citealp{Fischer.Gough.1978}, 
+``spatialization'' by \citealp{Quadros.etal.2004}, 
+and ``co-localization'' by \citealp{Lourenco.Wilbur.2018}; 
+see also \citealp{Bergman.1980,Liddell.1980,Costello.2015,Smith.1990}, i.a.; ASL \& Libras),
+or by adding an auxiliary as in \REF{lasz:ex:6} (Libras only; \citealp{Quadros.1999}). We
+will treat all of these options as locus-agreement strategies and
+postulate a uniform syntax.
+
+\ea 
+    \label{lasz:ex:5}
+    Spatialized plain verbs
+    \ea 
+        MAN BICYCLE\laszLoc{a} BUY\laszLoc{a}. 
+        \hfill 
+        \cmark ASL, \cmark Libras \\ 
+        \citep[from][9]{Quadros.etal.2004}
+    \ex 
+        MAN BUY\laszLoc{a} BICYCLE\laszLoc{a}. 
+        \hfill 
+        \cmark ASL, \cmark Libras \\ 
+        \citep[from][9]{Quadros.etal.2004} \\ 
+        both: `The man bought a/the bicycle.'
+    \z 
+\ex 
+    \label{lasz:ex:6}
+    Auxiliary 
+    \ea 
+        IX\laszLoc{a} JOÃO\laszLoc{a} IX\laszLoc{b} MARIA\laszLoc{b} AUX\laszDir{a}{b} SUPPORT. 
+        \hfill 
+        \cmark Libras 
+        \\ 
+        \citep[from][7]{Quadros.etal.2004} 
+    \ex 
+        IX\laszLoc{a} JOÃO\laszLoc{a} SUPPORT IX\laszLoc{b} MARIA\laszLoc{b}. 
+        \hfill 
+        \cmark Libras 
+        \\ 
+        \citep[from][5]{Quadros.etal.2004}
+    \z 
+\z 
+
+The object-shift construction is not possible if neither trigger is
+present, i.e., when the verb is ``plain'', as in \REF{lasz:ex:7}.
+
+\ea 
+    \label{lasz:ex:7}
+    \ea[*]{
+        MAN NUMBER FORGET\laszPlain{}. 
+        \hfill 
+        *ASL
+        \\ 
+        \citep[from][]{Liddell.1980}
+    }
+    \ex[*]{
+        IX JOHN SOCCER LIKE\laszPlain{}. 
+        \hfill 
+        *Libras
+        \\ 
+        \citep[from][61]{Quadros.1999}
+    }
+    \ex[]{
+        MAN FORGET\laszPlain{} NUMBER. 
+        \hfill 
+        \cmark ASL 
+        \\ 
+        `The man forgot a/the number.'
+        \citep[from][]{Liddell.1980}
+    }
+    \ex[]{
+        IX JOHN LIKE\laszPlain{} SOCCER. 
+        \hfill 
+        \cmark Libras 
+        \\ 
+        `John likes soccer.'
+        \citep[from][61]{Quadros.1999}
+    }
+    \z 
+\z 
+
+Table~\ref{lasz:tab:1} presents a summary of the acceptability judgments for the
+basic order SVO and for the object-shift construction SOV for both
+ASL and Libras.
+
+\newcommand{\laszTabColA}[0]{\cellcolor{gray!30}}
+\newcommand{\laszTabColB}[0]{\cellcolor{gray!10}}
+\newcommand{\laszTabColC}[0]{\cellcolor{gray!30}}
+
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}} % aligns in the middle vertically
+
+\begin{table}
+    \centering 
+    \begin{tabularx}{r C{3em} c c c}
+        \hline
+        \hline 
+        & V\laszPlain{} & V\laszLoc{\_} & V\laszHs{\_} & V\laszAsp{} \\ 
+        \hline 
+        ASL & 
+            \laszTabColA{} & 
+            \laszTabColB{} & 
+            \laszTabColC{} & 
+            \laszTabColC{} 
+            \\ 
+        Libras & 
+            \multirow{-2}{*}{\laszTabColA{} \cmark SVO \newline \xmark SOV} & 
+            \multirow{-2}{*}{\laszTabColB{} \shortstack{\cmark SVO \\ \cmark SOV}} & 
+            \laszTabColB{} & 
+            \multirow{-2}{*}{\laszTabColC{} \shortstack{\xmark SVO \\ \cmark SOV}} \\
+        \hline 
+    \end{tabularx}
+    \caption{Comparison of judgments for SVO and OSV}
+    \label{lasz:tab:1}
+\end{table}
+
+\printbibliography[heading=subbibliography,notkeyword=this]
+
+\end{document}
