@@ -289,10 +289,9 @@ ASL and Libras.
 \begin{table}
     \centering 
     \begin{tabular}{r c c c c}
-        \hline
         \hline 
         & V\laszPlain{} & V\laszLoc{\_} & V\laszHs{\_} & V\laszAsp{} \\ 
-        \hline 
+        \hline \hline 
         ASL & 
             \laszTabColA{} & 
             \laszTabColB{} & 
@@ -657,17 +656,542 @@ PF-candidate, this PF will be the “best” PF of the given LF. If the
 constraints disagree, however, this results in a tie, and both PF
 candidates are the “best” choice. This pattern is illustrated in Table~\ref{lasz:tab:4}.
 
+% \newcommand{\laszTabRowA}[0]{\rowcolor{gray!30}}
+% \newcommand{\laszTabRowB}[0]{\rowcolor{gray!10}}
+\newcommand{\laszTabRowA}[0]{}
+\newcommand{\laszTabRowB}[0]{}
+
 \begin{table}[
 ]
     \centering
-    \begin{tabular}{ccccc}
-        LF & PFs & ScoT & Constraint X & Prediction \\
-        % \laszTabColA{} & 
-        % \multirow{2}{*}{$A \gg B$} & 
+    \begin{tabular}{cccccc}
+        \hline 
+        LF & PFs & ScoT & Another constraint & \multicolumn{2}{c}{Prediction} \\
+        \hline \hline 
+        \laszTabRowA{} & $A \gg B$ & \cmark & \cmark & 2/2 & \HandLeft \\
+        \laszTabRowA \multirow{-2}{*}{$A \gg B$} & $B \gg A$ & * & * & 0/2 & \\
+        \hline 
+        \laszTabRowB & $A \gg B$ & * & \cmark & 1/2 & \HandLeft \\ 
+        \laszTabRowB \multirow{-2}{*}{$B \gg A$} & $B \gg A$ & \cmark & * & 1/2 & \HandLeft \\
+        \hline 
     \end{tabular}
     \caption{The 3⁄4 signature \citep[\pnfmt{385}f.]{Bobaljik.Wurmbrand.2012}}
     \label{lasz:tab:4}
 \end{table}
+
+Regarding object-shift in ASL and Libras, we assume syntactic
+movement of O as explained above, which results in two (or more)
+copies of O. Since LF always interprets the highest copy of O, we take
+ScoT to be fulfilled when PF realizes the highest copy of O as well.
+
+\subsection*{Constraint 2: Canonical complement order}
+
+We also adopt B\&W’s second violable constraint called Canonical
+complement order (CCO), which captures the “cost” of movement that
+is otherwise “free”, i.e., not required for the derivation to succeed, not
+feature-driven. B\&W note (p. 390) that the idea for such a constraint is
+a fairly old one and used to be called “Case Adjacency” in early
+GB-models.
+In the present work, this constraint represents favoring the surface
+order SVO, which we understand as the underlying order of ASL and
+Libras, over the derived order SOV.
+
+\subsection*{Constraint 3: If O values V, O precedes V}
+
+\citet{Napoli.SS.2014} have conducted a survey of the order
+of major constituents in 42 sign languages and discovered one
+generalization and five tendencies regarding the word order variation
+between SVO and SOV. We take our cue from their cross-linguistic
+tendency in~\REF{lasz:ex:11} (“Generalization 2”).
+
+\ea 
+    \label{lasz:ex:11}
+    If an argument affects the phonological shape of the V, it precedes V. 
+    \citep{Napoli.SS.2014}
+\z 
+
+\citeauthor{Napoli.SS.2014} understand “affecting the phonological shape
+of V” to include classifier predicates, agreeing verbs, pointing verbs,
+spatial verbs, and argument-sensitive verbs. Only plain verbs are
+exempt. Our data for ASL and Libras, as presented above, show that
+\REF{lasz:ex:11} holds only partially in these languages. We certainly observe that
+O interacting with V enables the word order SOV, which aligns with
+\REF{lasz:ex:11}. However, we also observe a distinction between
+classifier-agreement and locus-agreement, which \citeauthor{Napoli.SS.2014} 
+bundle together. Let us briefly turn to a discussion
+about the differences in syntax between these two types of agreement,
+and why --- in ASL --- classifier-agreement is more strict (only OV)
+than locus-agreement (OV or VO). With respect to why Libras differs
+from ASL here, we remain agnostic at this point, and leave possible
+consequences of this seemingly parametric difference to future
+research.
+
+We assume that classifier-agreement and locus-agreement both
+happen in dedicated phrases as Specifier-Head agreement, such that O
+moves to the Specifier and V moves to the Head \citep{Benedicto.Brentari.2004,Kuhn.2016}. 
+As illustrated above, we term the phrase
+for locus-agreement AgrOP, and the phrase for classifier-agreement
+ClOP. Our proposal is that there is a difference between these two types
+of agreement in the direction of feature valuation. For
+classifier-agreement, what determines V’s handshape is information
+about O’s noun-class. Valuation must thus always proceed from O to
+V. For locus-agreement, on the other hand, we argue that valuation can
+in principle proceed in either direction. The value of the locus (a, b, c,
+\ldots) is not inherent to either O or V; all that matters for agreement is
+that they share the same value. In~\REF{lasz:ex:12} we see that the value does not
+have to originate from O: V introduces the locus b associated with the
+indirect object of GIVE, while the IO itself is a body-anchored sign
+that is not assigned a locus (as it might be via IX, eyegaze, head-tilt or
+shoulder-shift). We interpret this to mean that the locus-feature on the
+IO is unvalued.
+
+\ea 
+    \label{lasz:ex:12}
+    BOOK, FATHER GIVE\laszDir{a}{b} MOTHER.%
+    \footnote{
+        In this example, BOOK is topicalized, as indicated by the comma
+        following it.
+    }%
+    \footnote{
+        Note that the SOV word order is not possible here without locus-marking
+        (eyegaze for Libras; shoulder-shift or eyegaze+headtilt for ASL):
+        \ea 
+            *BOOK, FATHER MOTHER GIVE\laszDir{a}{b}.
+        \z 
+        We do not go into this further, but we note that there might be two possible reasons
+        for this: FATHER and MOTHER might need to be differentiated grammatically to
+        ensure that the predicate is non-reversible (which may prohibit the ordering SOV
+        according to \citealp{Fischer.1974}), or MOTHER (at least) might need to set the value of the
+        locus feature when to the left of V.
+    }
+    \hfill 
+    \cmark ASL,
+    \cmark Libras 
+    \\
+    \parentext{Constructed after \citealp[473]{Kuhn.2016}}
+\z 
+
+\subsection*{Constraint 4: Phonologically heavier elements come later}
+
+Verbs marked with durative aspect have reduplicated movement
+\citep{Klima.Bellugi.1979} and are thus phonologically heavier than
+non-aspect-marked verbs \citep{Brentari.1998}. However, verbs marked
+with locus-agreement or classifier-agreement are not phonologically
+heavier \citep{Brentari.1998}.
+
+This is supported by the following data from Libras.%
+\footnote{
+    In our judgments of ASL, `quickly' is not expressed by a manual sign, so
+    we substituted the ASL adverb SOMETIMES for the Libras adverb QUICKLY.
+}
+In SVO sentences, adverbs can appear in a position on the left~\REF{lasz:ex:13}, or on the
+far right of the clause~\REF{lasz:ex:14}.
+
+\ea 
+    \label{lasz:ex:13}
+     S Adv V O
+    \ea 
+        MY SISTER \textbf{QUICKLY} SEND\laszPlain{} LETTER.
+        \hfill 
+        \cmark Libras
+        \\
+         ‘My sister quickly sent a/the letter.’
+    \ex 
+        MY SISTER \textbf{SOMETIMES} SEND\laszPlain{} LETTER. 
+        \hfill 
+        \cmark ASL 
+        \\ 
+        ‘My sister sometimes sends a letter.’
+    \z 
+\ex 
+    \label{lasz:ex:14}
+    S V O Adv
+    \ea 
+        MY SISTER SEND\laszPlain{} LETTER \textbf{QUICKLY}.
+        \hfill 
+        \cmark Libras 
+        \\ 
+        ‘My sister quickly sent a/the letter.’
+    \ex 
+        MY SISTER SEND\laszPlain{} LETTER \textbf{SOMETIMES}.
+        \hfill 
+        \cmark ASL 
+        \\ 
+        ‘My sister sometimes sends a letter.’
+    \z 
+\z 
+
+However, in SOV constructions with aspect-marked V, the adverb
+cannot appear on the right.
+
+\ea 
+    \label{lasz:ex:15}
+    S Adv O V
+    \ea 
+        MY SISTER \textbf{QUICKLY} LETTER SEND\laszAsp{}.
+        \hfill 
+        \cmark Libras
+        \\ 
+        ‘My sister repeatedly sends letters quickly.’
+    \ex 
+        MY SISTER \textbf{SOMETIMES} LETTER SEND\laszAsp{}.
+        \hfill 
+        \cmark ASL 
+        \\ 
+        ‘My sister sometimes sends letters repeatedly.’
+    \z 
+\ex 
+    \label{lasz:ex:16}
+    *S O V Adv
+    \ea[*]{
+        MY SISTER LETTER SEND\laszAsp{} \textbf{QUICKLY}.
+        \hfill 
+        *Libras
+    }
+    \ex[*]{
+        MY SISTER LETTER SEND\laszAsp{} \textbf{SOMETIMES}.
+        \hfill 
+        *ASL
+    }
+    \z 
+\z 
+
+In contrast to aspect-marking, this restriction on the placement of
+adverbs does not apply to classifier- \REF{lasz:ex:17} or locus-marking \REF{lasz:ex:18} of the
+verb.
+
+\ea 
+    \label{lasz:ex:17}
+    S O V[hs] Adv
+    \ea 
+         IX1 WINE DRINK\laszHs{\laszClaw} \textbf{QUICKLY}.
+        \hfill 
+        \cmark Libras
+    \ex 
+        IX1 WINE DRINK\laszHs{\laszClaw} \textbf{SOMETIMES}. 
+        \hfill 
+        \cmark ASL 
+    \z 
+\ex 
+    \label{lasz:ex:18}
+    S O V[loc] Adv
+    \ea 
+         IX1 HOUSE\laszLoc{a} BUY\laszLoc{a} \textbf{QUICKLY}. 
+         \hfill 
+         \cmark Libras
+    \ex 
+         IX1 HOUSE\laszLoc{a} BUY\laszDir{1}{a} \textbf{SOMETIMES}.
+        \hfill 
+        \cmark ASL
+    \z 
+\z 
+   
+\subsection{Our account in action}
+
+Table~\ref{lasz:tab:5} illustrates the application of these PF constraints for object
+shift in ASL and Libras. For any given LF (which differ in the position
+of where O and V have moved to), the PF candidates of pronouncing
+the sequence as SVO or SOV are evaluated. The columns marked with
+“C$i$” show whether the constraint is fulfilled (“\cmark”) or violated (“*”).
+The prediction is that all candidates with the highest number of
+constraints fulfilled (indicated with the selector symbol “\HandLeft”) will be
+acceptable, and all candidates with a lower-than-highest count will be
+unacceptable. The final column displays the actual judgment. It
+matches the prediction for all rows.
+
+Table~\ref{lasz:tab:5} illustrates the different outcomes when a plain verb
+with no classifier-agreement is used, compared to verbs with
+classifier-agreement. The first two rows present the LF without
+agreement, i.e. the verb has plain inflection. Since there are no other
+copies of O and V, only one PF-candidate is available, namely the one
+with the ordering SVO.
+
+The second two rows present the minimally different LF where
+clas\-si\-fi\-er-agree\-ment did happen. We see two PF-candidates: the first
+one spells out the copy of O inside the VP, and the second one spells
+out the copy of O in Spec,Cl\textsubscript{O}P. Note that we do not need to consider
+PF-candidates that spell out the higher copy of V, since there is an
+inviolable constraint requiring lower V to be spelled out. The
+SVO-candidate does not fulfill ScoT, but fulfills CCO. The
+SOV-candidate fulfills ScoT, but does not fulfill CCO. We see the 3⁄4
+signature arising from the interaction of two violable constraints.
+
+\newcommand{\laszLB}[1]{[\textsubscript{#1}}
+
+\newcommand{\lasztO}[0]{t\textsubscript{O}}
+\newcommand{\lasztV}[0]{t\textsubscript{V}}
+
+\begin{table}
+    \centering
+    \begin{tabular}{ll p{1.5em}p{1.5em} p{2em}p{2em}}
+        \hline 
+        LF & PF candidates & C1: ScoT & C2: CCO & Pred. & Judg\-ment \\ 
+        \hline \hline 
+        \multirow{2}{*}{
+            S \laszLB{VP} V\textsubscript{\laszPlain} O} & 
+            S \laszLB{VP} V\textsubscript{\laszPlain} O &
+            \cmark & \cmark & \HandLeft & ok \\
+        &   S \laszLB{?} O \laszLB{VP} V\textsubscript{\laszPlain} \lasztO &
+            \multicolumn{3}{l}{Not applicable\footnotemark{}} & * \\ 
+        \hline 
+        \multirow{2}{*}{
+            S \laszLB{ClP} O V\textsubscript{\laszHs{}} \laszLB{VP} \lasztV{} \lasztO{}} & 
+            S \laszLB{ClP} \lasztO{} \lasztV{} \laszLB{VP} V\textsubscript{\laszHs{}} O & 
+            * & \cmark & \HandLeft & ok \\ 
+        &   S \laszLB{ClP} O \lasztV{} \laszLB{VP} V\textsubscript{\laszHs{}} \lasztO{} & 
+            \cmark & * & \HandLeft & ok \\ 
+        \hline 
+    \end{tabular}
+    \caption{No agreement vs. classifier-agreement in Libras}
+    \label{lasz:tab:5}
+\end{table}
+\footnotetext{ 
+    There is no higher copy of O at LF that PF could spell out. This
+    PF-candidate does not exist and is only given for completeness to illustrate that the
+    ordering SOV\laszPlain{} is ungrammatical.
+}
+
+Table~\ref{lasz:tab:6} illustrates classifier-agreement in ASL. Here
+Constraint 3 “If O values V, O precedes V” comes into play. It
+differentiates between the two possible PFs of the second LF, allowing
+only SOV ordering in ASL with classifier-agreeing V.
+
+\begin{table}
+    \centering
+    \begin{tabular}{ll p{1.5em}p{1.5em}p{1.5em} p{2em}p{2em}}
+        \hline 
+        LF & PF candidates & C1: ScoT & C2: CCO & C3: Value & Pred. & Judg\-ment \\ 
+        \hline \hline 
+        \multirow{2}{*}{
+            S \laszLB{VP} V\textsubscript{\laszPlain} O} & 
+            S \laszLB{VP} V\textsubscript{\laszPlain} O &
+            \cmark & \cmark & \cmark & \HandLeft 
+            & ok \\
+        &   S \laszLB{?} O \laszLB{VP} V\textsubscript{\laszPlain} \lasztO &
+            \multicolumn{4}{l}{Not applicable} 
+            & * \\ 
+        \hline 
+        \multirow{2}{*}{
+            S \laszLB{ClP} O V\textsubscript{\laszHs{}} \laszLB{VP} \lasztV{} \lasztO{}} & 
+            S \laszLB{ClP} \lasztO{} \lasztV{} \laszLB{VP} V\textsubscript{\laszHs{}} O & 
+            * & \cmark & * & \HandLeft 
+            & ok \\ 
+        &   S \laszLB{ClP} O \lasztV{} \laszLB{VP} V\textsubscript{\laszHs{}} \lasztO{} & 
+            \cmark & * & \cmark & \HandLeft 
+            & ok \\ 
+        \hline 
+    \end{tabular}
+    \caption{No agreement vs. classifier-agreement in ASL}
+    \label{lasz:tab:6}
+\end{table}
+
+Locus-agreement in both ASL and Libras mirrors Table~\ref{lasz:tab:5}
+(because, as argued above, Constraint 3 does not apply to
+locus-agreement), except that it is less optional for O. I.e., whenever O
+is associated with a locus and V allows locus-agreement with O, V
+will agree (\citealp{Padden.1988}; but see the corpus studies by 
+\citealp{DeBeuzeville.etal.2009} for Auslan, 
+\citealp{Costello.2015} for LSE, and 
+\citealp{Fenlon.etal.2018} for BSL 
+showing that while locus-agreement on V with O is more
+frequent than with S, this is by no means obligatory in these three sign
+languages).
+
+Aspect-marking on V is also not optional, given that it is the
+only marking of aspectual information in a sentence. V that is marked
+with durational aspect modifies its movement to contain a circular
+motion, which corresponds to phonological heaviness \citep{Brentari.1998}.
+Thus, Constraint 4 “Heavy elements appear at the end”, which was
+fulfilled for all PF-candidates in Tables 5 and 6, differentiates the
+PF-candidates in Table~\ref{lasz:tab:7}:
+
+\begin{table}[]
+    \centering
+    \begin{tabular}{ll p{1.5em}p{1.5em}p{1.5em} p{2em}p{2em}}
+        \hline 
+        LF & PF candidates & C1: ScoT & C2: CCO & C4: Heavy & Pred. & Judg\-ment \\ 
+        \hline \hline 
+        \multirow{2}{*}{
+            S \laszLB{AspP} O V\textsubscript{\laszAsp{}} \laszLB{VP} \lasztV{} \lasztO{} } &
+            S \laszLB{AspP} \lasztO{} \lasztV{} \laszLB{VP} V\textsubscript{\laszAsp} O &
+            * & \cmark & * & &
+            *\footnotemark{} \\ 
+        &   S \laszLB{AspP} O \lasztV{} \laszLB{VP} V\textsubscript{\laszAsp} \lasztO{} &
+            \cmark & * & \cmark & \HandLeft &
+            ok \\ 
+        \hline 
+    \end{tabular}
+    \caption{Aspect-marking in ASL and Libras}
+    \label{lasz:tab:7}
+\end{table}
+\footnotetext{
+    \citet{Braze.2004} reports that his consultants like the order SV\laszAsp{}O and
+    dislike the order SOV\laszAsp{}. This may be due to an influence of English on ASL, as
+    \citet{Matsuoka.1997} notes, or it could be dialectal variation within ASL, as \citeauthor{Braze.2004}
+    suspects, or both.
+}
+
+\section{Problems with previous proposals}
+
+It has been proposed that the obligatory word order change from VO
+to OV when V carries aspect-marking is due to V moving into a
+right-headed Aspect phrase to collect this extra morphology. \citet{Fischer.Janis.1992}
+suggested such an analysis, although for verb-doubling
+constructions of the form SV\laszPlain{}OV\laszAsp{}. This proposal has then
+been picked up, refined, and applied to object shift constructions by
+\citet{Matsuoka.1997} and \citet{Braze.2004}.
+
+The motivation for movement of V into a right-headed Asp
+head stems from verb-doubling constructions as illustrated in~\REF{lasz:ex:19}.
+
+\ea 
+     SALLY TYPE\laszPlain{} HER TERM PAPER TYPE\laszAsp{}.
+     \hfill 
+     \cmark ASL, \cmark Libras 
+     \\ 
+     ‘Sally typed her term paper for a very long time.’
+     \hfill 
+     \citep[from][]{Fischer.Janis.1992}
+\z 
+
+The idea is that the two verbs, which always share the same root, are
+two realizations of the same chain. The first verb appears in its base
+position inside VP. The second verb carries additional marking, thus
+appears in a position with additional morphology, which is the Asp
+head, which must be on the right given this construction’s word order.
+\citet{Matsuoka.1997} proposes the derivation in Fig.~\ref{lasz:fig:2}. In a verb-doubling
+construction, both copies of V are pronounced: the copy inside VP in
+its plain form, and the copy in Asp with aspect-marking.
+
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \Tree 
+        [.IP
+            [.AspP
+                [.VP
+                    [.\phantom{X} ]
+                    [.V'
+                        \node (Vbase) {V};
+                        [.O ]
+                    ]
+                ]
+                [.Asp
+                    \node (Vmoved) {V};
+                    [.affix ]
+                ]
+            ]
+        ]
+        \draw[->] (Vbase) ..controls +(south east:1.5) and +(south:1) .. (Vmoved);
+    \end{tikzpicture}
+    \caption{\citeapos{Matsuoka.1997} analysis of aspect-marked verbs}
+    \label{lasz:fig:2}
+\end{figure}
+
+We reject this analysis on two grounds: one empirical and one
+theory-internal, which we discuss in turn in subsections~\ref{lasz:sec:32} and~\ref{lasz:sec:33}.
+
+\subsection{Adverb placement}
+\label{lasz:sec:32}
+
+The empirical problem with the right-headed-Asp analysis is that it
+cannot capture the following data, while our PF-based account can.
+
+In general, adverbs can appear to the left of V (temporal
+adverbs before S, as illustrated in~\REF{lasz:ex:20}; adverbs of manner after S, as
+illustrated in~\REF{lasz:ex:21}) or to the right of V (in sentence-final position,
+\REF{lasz:ex:22}). We remain agnostic as to whether this is derived via optional
+left- or right-adjunction of the adverb to TP resp. \textit{v}P, or via
+extraposition of the adverb.
+
+\ea 
+    \label{lasz:ex:20}
+    Temporal adverbs adjoin on the left.
+    \ea 
+        \textbf{YESTERDAY} MY SISTER SEND\laszPlain{} LETTER.
+        \hfill 
+        \cmark Libras, \cmark ASL 
+    \ex 
+        \textbf{YESTERDAY} MY SISTER LETTER SEND\laszAsp{}.
+        \hfill 
+        \cmark Libras, \cmark ASL 
+        \\ 
+        both: ‘Yesterday my sister sent a/the letter(s).’
+    \z 
+\ex 
+    \label{lasz:ex:21}
+    Frequency adverbs adjoin on the left.
+    \ea 
+        MY SISTER \textbf{QUICKLY} SEND\laszPlain{} LETTER.
+        \hfill 
+        \cmark Libras 
+    \ex 
+        MY SISTER \textbf{QUICKLY} LETTER SEND\laszAsp{}.
+        \hfill 
+        \cmark Libras 
+        \\ 
+        both: ‘My sister quickly sent a/the letter(s).’
+    \ex 
+        MY SISTER \textbf{SOMETIMES} LETTER SEND\laszDir{}{1}.
+        \hfill 
+        \cmark ASL 
+        \\ 
+        ‘Sometimes my sister sends me a letter.’
+    \z 
+\ex 
+    \label{lasz:ex:22}
+    Adverbs adjoin on the right in SVO clauses.
+    \ea 
+        MY SISTER SEND\laszPlain{} LETTER \textbf{YESTERDAY}.
+        \hfill 
+        \cmark Libras, \cmark ASL 
+    \ex 
+        MY SISTER SEND\laszPlain{} LETTER \textbf{QUICKLY}.
+        \hfill 
+        \cmark Libras 
+    \ex 
+        MY SISTER LETTER SEND\laszDir{}{1} \textbf{SOMETIMES}.
+        \hfill 
+        \cmark ASL 
+    \z 
+\z 
+    
+However, in object-shift clauses with aspect-marked V, adverbs must
+adjoin on the left. They do not have the option of appearing in
+sentence-final position. This is illustrated in~\REF{lasz:ex:23}.
+
+\ea 
+    \label{lasz:ex:23}
+    Adverbs cannot adjoin on the right in SOV\laszAsp{} clauses.
+    \ea[*]{
+        MY SISTER LETTER SEND\laszAsp{} \textbf{YESTERDAY}.
+        \hfill
+        *Libras, *ASL
+    }
+    \ex[*]{
+        MY SISTER LETTER SEND\laszAsp{} \textbf{QUICKLY}.
+        \hfill 
+        *Libras
+    }
+    \z 
+\z 
+
+That the examples in~\REF{lasz:ex:23} should be ungrammatical is completely
+unexpected under the theories proposed by \citet{Fischer.Janis.1992},
+\citet{Matsuoka.1997}, and \citet{Braze.2004}. Why should movement of V to
+Asp prohibit an adverb adjoining on the right, or extraposing? In
+contrast to this, our account captures these data perfectly. Since we
+postulate a PF-constraint stating that phonologically heavy V should
+be in sentence-final position, SOV-constructions with V\laszAsp{} followed
+by another element are penalized.%
+\footnote{
+    Elements that are typically in sentence-final position and may appear
+    even after V\laszAsp{} include the subject pronoun copy. This is outside the scope of this
+    paper, but it seems to us that copying a subject pronoun into the sentence-final
+    position might be an inviolable constraint, taking precedence over the constraints
+    discussed here.
+}
+Our derivations are illustrated in Tables~\ref{lasz:tab:9} and~\ref{lasz:tab:10}.
 
 % ===================================================================
 \printbibliography[heading=subbibliography,notkeyword=this]
