@@ -1,7 +1,4 @@
-\documentclass[output=paper,colorlinks,citecolor=brown,
-% hidelinks,
-% showindex
-]{langscibook}
+\documentclass[output=paper]{langscibook}
 
 \author{
     Sabine Laszakovits\affiliation{Austrian Academy of Sciences; University of Connecticut} and
@@ -10,24 +7,10 @@
     Diane Lillo-Martin\affiliation{University of Connecticut; Haskins Laboratories}
 }
 \title{Object shift in ASL and Libras}
-\abstract{
-    ASL and Libras have an object-shift construction 
-    by which the canonical SVO order is changed to SOV. 
-    In both sign languages, this ordering is 
-    mandatory for V marked with durative/continuative aspect (reduplicated movement), 
-    optional for V that agrees with O in locus,
-    and not allowed with plain V. 
-    When V agrees with O in handshape, 
-    ASL requires OV ordering whereas Libras allows both OV and VO ordering. 
-    We present an analysis that derives these data 
-    with a combination of syntactic movement of O 
-    and violable, equally-ranked PF-constraints as proposed by \citet{BW.2012}. 
-    Unlike \citeapos{Matsuoka.1997} and \citeapos{Braze.2004} proposals, 
-    we do not move V to a head on the right in violation of the Final-over-final constraint
-    \citep{BiberauerHR.2014,SheehanBRH.2017}.
-}
+\abstract{ASL and Libras have an object-shift construction by which the canonical SVO order is changed to SOV. In both sign languages, this ordering is mandatory for V marked with durative/continuative aspect (reduplicated movement), optional for V that agrees with O in locus, and not allowed with plain V. When V agrees with O in handshape, ASL requires OV ordering whereas Libras allows both OV and VO ordering. We present an analysis that derives these data with a combination of syntactic movement of O and violable, equally-ranked PF-constraints as proposed by \citet{BW.2012}. Unlike \citeapos{Matsuoka.1997} and \citeapos{Braze.2004} proposals, we do not move V to a head on the right in violation of the Final-over-final constraint    \citep{BiberauerHR.2014,SheehanBRH.2017}.}
 
 \begin{document}
+\lehead{Laszakovits et al.}
 \maketitle
 
 % ===================================================================
@@ -47,8 +30,7 @@ S'VO, or S'O'V in that the latter contain a prosodic break after the
 topic (indicated here by an apostrophe) and may contain nonmanual
 marking (raised brows and a slight upward chin tilt; 
 \citealp{Liddell.1977,Liddell.1980,Padden.1988}) during the utterance of the topic.%
-\footnote{
-    \citet{Fischer.1990} argues that object-shift constructions in ASL involve
+\footnote{\citet{Fischer.1990} argues that object-shift constructions in ASL involve
     ``mini-topicalization'' of O to some intermediate specifier position. She corroborates
     this analysis by reporting a definiteness effect found in SOV orders, which is typical
     of topics. However, unlike typical topicalizations, SOV constructions lack a prosodic
@@ -60,8 +42,7 @@ marking (raised brows and a slight upward chin tilt;
 We restrict our attention to verbs that take a direct object (such as `buy X') and
 possibly an indirect object (such as `send X to Y'), but do not discuss
 verbs that denote movement to or from a location (such as `put X on Z').%
-\footnote{
-    Furthermore, we distinguish object-shift from locative constructions of the
+\footnote{Furthermore, we distinguish object-shift from locative constructions of the
     form location-subject-predicate, which have been taken as instances of the word
     order OSV because, like object-shift, they lack the prosodic break of topicalization
     structures \citep{Liddell.1980}. Locative constructions differ from object-shift
@@ -97,15 +78,14 @@ The effect of durative aspect on word order is illustrated in \REF{lasz:ex:1}--\
     Libras has grammatical tense marking; similarly, we often use `a/the' for nouns
     because in both of these sign languages either translation is possible.
 }%
-\footnote{
-    When a source is not provided, the judgments primarily come from the
+\footnote{When a source is not provided, the judgments primarily come from the
     2\textsuperscript{nd} and 3\textsuperscript{rd} co-authors, who are native signers of Libras and ASL respectively.
 }
 \ea
     \label{lasz:ex:1}
     \ea[]{
         \label{lasz:ex:1a}
-        IX1 WINE DRINK\laszAsp{}. 
+        \LaConcept{IX1 WINE DRINK}\laszAsp{}. 
         \hfill 
         \cmark ASL, \cmark Libras \\ 
         `I drank wine continuously.'
@@ -121,21 +101,21 @@ The effect of durative aspect on word order is illustrated in \REF{lasz:ex:1}--\
     \label{lasz:ex:2}
     \ea[]{
         \label{lasz:ex:2a}
-        MY SISTER LETTER SEND\laszAsp{}. 
+        \LaConcept{MY} \LaConcept{SISTER} \LaConcept{LETTER} \LaConcept{SEND}\laszAsp{}. 
         \hfill 
         \cmark ASL, \cmark Libras \\ 
         `My sister repeatedly sent a/the letter(s).'
     }
     \ex[*]{ 
         \label{lasz:ex:2b}
-        MY SISTER SEND\laszAsp{} LETTER. 
+        \LaConcept{MY} \LaConcept{SISTER} \LaConcept{SEND}\laszAsp{} \LaConcept{LETTER}. 
         \hfill 
         *ASL, *Libras 
     }
     \z 
 \z
 Verbal agreement can target the object's noun-class%
-\footnote{
+\footnote{%
     In this sense we follow \citeapos{Benedicto.Brentari.2004} proposal, whereby
     classifiers are treated as a type of agreement between V and O/S.
 }, 
@@ -152,19 +132,19 @@ movement (`dir') to the object's locus (`loc'), as seen in~\REF{lasz:ex:4}.%
 }
 \ea 
     \label{lasz:ex:3}
-    The handshape of `GIVE' changes to the \laszClaw{} handshape indicative of handling an apple. 
+    The handshape of `\textsc{give}' changes to the \laszClaw{} handshape indicative of handling an apple. 
     \ea[]{ 
-        SALLY APPLE GIVE\laszHs{\laszClaw}. 
+        \LaConcept{SALLY} APPLE \textsc{give}\laszHs{\laszClaw}. 
         \hfill 
         \cmark ASL, \cmark Libras 
     }
     \ex[]{ 
-        SALLY GIVE\laszHs{\laszClaw} APPLE. 
+        \LaConcept{SALLY} \textsc{give}\laszHs{\laszClaw} APPLE. 
         \hfill
         \cmark Libras 
     }
     \ex[*]{
-        SALLY GIVE\laszHs{\laszClaw} APPLE. 
+        \LaConcept{SALLY} \textsc{give}\laszHs{\laszClaw} APPLE. 
         \hfill 
         *ASL \\ 
         all: `Sally gave someone a/the apple.'
@@ -198,12 +178,12 @@ postulate a uniform syntax.
     \label{lasz:ex:5}
     Spatialized plain verbs
     \ea 
-        MAN BICYCLE\laszLoc{a} BUY\laszLoc{a}. 
+        MAN BICYCLE\laszLoc{a} \LaConcept{BUY}\laszLoc{a}. 
         \hfill 
         \cmark ASL, \cmark Libras \\ 
         \citep[from][9]{Quadros.etal.2004}
     \ex 
-        MAN BUY\laszLoc{a} BICYCLE\laszLoc{a}. 
+        MAN \LaConcept{BUY}\laszLoc{a} BICYCLE\laszLoc{a}. 
         \hfill 
         \cmark ASL, \cmark Libras \\ 
         \citep[from][9]{Quadros.etal.2004} \\ 
@@ -271,9 +251,8 @@ ASL and Libras.
 \begin{table}
     \centering 
     \begin{tabular}{r c c c c}
-        \hline 
-        & V\laszPlain{} & V\laszLoc{\_} & V\laszHs{\_} & V\laszAsp{} \\ 
-        \hline \hline 
+        \lsptoprule 
+        & V\laszPlain{} & V\laszLoc{\_} & V\laszHs{\_} & V\laszAsp{} \\\midrule
         ASL & 
             \laszTabColA{} & 
             \laszTabColB{} & 
@@ -286,7 +265,7 @@ ASL and Libras.
             \laszTabColB{} & 
             \multirow{-2}{*}{\laszTabColC{} \shortstack{\xmark SVO \\ \cmark SOV}} 
             \\
-        \hline 
+        \lspbottomrule
     \end{tabular}
     \caption{Comparison of judgments for SVO and OSV}
     \label{lasz:tab:1}
@@ -320,9 +299,9 @@ proposed.%
     is signed, nor if it modifies the locus of V’s endpoint or starting point. In section 6.5
     she discusses how phonological weight units interact with the order of syntactic
     constituents. In \citeauthor{Brentari.1998}’s model, movement corresponds to prosodic features, and
-    each branching prosodic feature constitutes a weight unit. In ASL, GIVE usually
+    each branching prosodic feature constitutes a weight unit. In ASL, \textsc{give} usually
     contains only a “direction”-movement, that is one weight unit. Both VO and OV
-    ordering are allowed. When habitual aspect is added, GIVE contains an additional
+    ordering are allowed. When habitual aspect is added, \textsc{give} contains an additional
     “trill” movement, a total of two weight units. OV ordering is preferred over VO.
     Exhaustive aspect adds both a “trill” movement and an “arc” movement, totallying
     three weight units. Now, due to V’s heaviness, VO is unacceptable.
@@ -343,7 +322,7 @@ direction or locus or handshape do not influence V’s heaviness
 \citep{Brentari.1998}.
 
 Should the aspect-construction receive an analysis independent
-of the agreement-construction, then, or is there a way to unify them?
+of the agree\-ment-con\-struc\-tion, then, or is there a way to unify them?
 We will propose a unified analysis that takes into account both
 phonological heaviness and syntactic agreement projections. We use
 \citeapos{Bobaljik.Wurmbrand.2012} proposal that, for any given
@@ -366,7 +345,6 @@ argue for rightward-movement of V. Section~\ref{lasz:sec:4} concludes.
 \section{Analysis}
 \label{lasz:sec:2}
     
-% -------------------------------------------------------------------
 \subsection{Phrase structure}
 \label{lasz:sec:21}
 
@@ -437,7 +415,7 @@ as will be discussed in section~\ref{lasz:sec:33}.
 
 The tree in Fig.~\ref{lasz:fig:1} illustrates our assumptions about the phrase
 structure of ASL and Libras for transitive verbs. Regarding
-ditransitives like GIVE, which agree with the direct object in
+ditransitives like \textsc{give}, which agree with the direct object in
 handshape, but with the indirect object in locus, we tentatively assume
 that the phrase that introduces the indirect object is projected between 
 ClassOP and AgrOP. In this way, ClassO will probe down and find O,
@@ -452,7 +430,6 @@ while AgrO will find IO because it is structurally higher than O.%
 }
 
 \begin{figure}
-    \centering
     \begin{tikzpicture}
         \Tree
         [.TP
@@ -505,7 +482,6 @@ while AgrO will find IO because it is structurally higher than O.%
     \label{lasz:fig:1}
 \end{figure}
 
-% -------------------------------------------------------------------
 \subsection{Verbal agreement}
 \label{lasz:sec:22}
 
@@ -529,7 +505,7 @@ frequency~\REF{lasz:ex:9} in ASL and Libras:
 \ea
     \label{lasz:ex:8}
     \ea[]{ 
-        IX\laszLoc{a} MARIA\laszLoc{a} \textbf{NOT} HELP\laszDir{a}{b} IX\laszLoc{b} JOHN\laszLoc{b}. 
+        \LaConcept{IX}\laszLoc{a} \LaConcept{MARIA}\laszLoc{a} \LaConcept{\textbf{NOT}} \LaConcept{HELP}\laszDir{a}{b} \LaConcept{IX}\laszLoc{b} \LaConcept{JOHN}\laszLoc{b}. 
         \\
         `Maria did not help John.'
         \hfill         
@@ -539,7 +515,7 @@ frequency~\REF{lasz:ex:9} in ASL and Libras:
         \citep[][\pnfmt{6}]{Quadros.etal.2004}
     }
     \ex[*]{ 
-        IX\laszLoc{a} MARIA\laszLoc{a} HELP\laszDir{a}{b} \textbf{NOT} IX\laszLoc{b} JOHN\laszLoc{b}.
+        \LaConcept{IX}\laszLoc{a} \LaConcept{MARIA}\laszLoc{a} \LaConcept{HELP}\laszDir{a}{b} \LaConcept{\textbf{NOT}} \LaConcept{IX}\laszLoc{b} \LaConcept{JOHN}\laszLoc{b}.
         \\
         \citep[][\pnfmt{6}]{Quadros.etal.2004}
         \hfill 
@@ -550,7 +526,7 @@ frequency~\REF{lasz:ex:9} in ASL and Libras:
 \ex 
     \label{lasz:ex:9}
     \ea[]{
-        IX\laszLoc{a} MARIA\laszLoc{a} \textbf{SOMETIMES} HELP\laszDir{a}{b} IX\laszLoc{b} JOHN\laszLoc{b}. 
+        \LaConcept{IX}\laszLoc{a} \LaConcept{MARIA}\laszLoc{a} \textbf{\LaConcept{SOMETIMES}} \LaConcept{HELP}\laszDir{a}{b} \LaConcept{IX}\laszLoc{b} \LaConcept{JOHN}\laszLoc{b}. 
         \hfill 
         \cmark Libras, 
         \cmark ASL
@@ -559,7 +535,7 @@ frequency~\REF{lasz:ex:9} in ASL and Libras:
         \citep[][\pnfmt{6}]{Quadros.etal.2004}
     }
     \ex[*]{
-        IX\laszLoc{a} MARIA\laszLoc{a} HELP\laszDir{a}{b} \textbf{SOMETIMES}  IX\laszLoc{b} JOHN\laszLoc{b}. 
+        \LaConcept{IX}\laszLoc{a} \LaConcept{MARIA}\laszLoc{a} \LaConcept{HELP}\laszDir{a}{b} \textbf{\LaConcept{SOMETIMES}}  \LaConcept{IX}\laszLoc{b} \LaConcept{JOHN}\laszLoc{b}. 
         \hfill 
         \cmark Libras, 
         \cmark ASL
@@ -583,7 +559,6 @@ assumption.
 
 When V is plain, there is no position for O and V to move to.
 
-% -------------------------------------------------------------------
 \subsection{Determining PF} 
 \label{lasz:sec:23}
 
@@ -638,19 +613,16 @@ PF-candidate, this PF will be the “best” PF of the given LF. If the
 constraints disagree, however, this results in a tie, and both PF
 candidates are the “best” choice. This pattern is illustrated in Table~\ref{lasz:tab:4}.
 
-\begin{table}[
-]
-    \centering
+\begin{table}
     \begin{tabular}{cccccc}
-        \hline 
-        LF & PFs & ScoT & Another constraint & \multicolumn{2}{c}{Prediction} \\
-        \hline \hline 
+        \lsptoprule 
+        LF & PFs & ScoT & Another constraint & \multicolumn{2}{c}{Prediction} \\\midrule
         \laszTabRowA{} & $A \gg B$ & \cmark & \cmark & 2/2 & \HandLeft \\
         \laszTabRowA \multirow{-2}{*}{$A \gg B$} & $B \gg A$ & * & * & 0/2 & \\
-        \hline 
+        \midrule
         \laszTabRowB & $A \gg B$ & * & \cmark & 1/2 & \HandLeft \\ 
         \laszTabRowB \multirow{-2}{*}{$B \gg A$} & $B \gg A$ & \cmark & * & 1/2 & \HandLeft \\
-        \hline 
+        \lspbottomrule
     \end{tabular}
     \caption{The 3⁄4 signature \citep[\pnfmt{385}f.]{Bobaljik.Wurmbrand.2012}}
     \label{lasz:tab:4}
@@ -695,7 +667,7 @@ However, we also observe a distinction between
 classifier-agreement and locus-agreement, which \citeauthor{Napoli.SS.2014} 
 bundle together. Let us briefly turn to a discussion
 about the differences in syntax between these two types of agreement,
-and why --- in ASL --- classifier-agreement is more strict (only OV)
+and why -- in ASL -- classifier-agreement is more strict (only OV)
 than locus-agreement (OV or VO). With respect to why Libras differs
 from ASL here, we remain agnostic at this point, and leave possible
 consequences of this seemingly parametric difference to future
@@ -715,28 +687,26 @@ in principle proceed in either direction. The value of the locus ($a$, $b$, $c$,
 \ldots) is not inherent to either O or V; all that matters for agreement is
 that they share the same value. In~\REF{lasz:ex:12} we see that the value does not
 have to originate from O: V introduces the locus $b$ associated with the
-indirect object of GIVE, while the IO itself is a body-anchored sign
+indirect object of \textsc{give}, while the IO itself is a body-anchored sign
 that is not assigned a locus (as it might be via IX, eyegaze, head-tilt or
 shoulder-shift). We interpret this to mean that the locus-feature on the
 IO is unvalued.
 
 \ea 
     \label{lasz:ex:12}
-    BOOK, FATHER GIVE\laszDir{a}{b} MOTHER.%
-    \footnote{
-        In this example, BOOK is topicalized, as indicated by the comma
+    \textsc{book}, \textsc{father} \textsc{give}\laszDir{a}{b} \textsc{mother}.%
+    \footnote{%
+        In this example, \textsc{book} is topicalized, as indicated by the comma
         following it.
     }%
-    \footnote{
+    \footnote{%
         Note that the SOV word order is not possible here without locus-marking
         (eyegaze for Libras; shoulder-shift or eyegaze+headtilt for ASL):
-        \ea 
-            *BOOK, FATHER MOTHER GIVE\laszDir{a}{b}.
-        \z 
+        \begin{exe} \ex[*]{\textsc{book}, \textsc{father} \textsc{mother} \textsc{give}\laszDir{a}{b}.} \end{exe}
         We do not go into this further, but we note that there might be two possible reasons
-        for this: FATHER and MOTHER might need to be differentiated grammatically to
+        for this: \textsc{father} and \textsc{mother} might need to be differentiated grammatically to
         ensure that the predicate is non-reversible (which may prohibit the ordering SOV
-        according to \citealp{Fischer.1974}), or MOTHER (at least) might need to set the value of the
+        according to \citealp{Fischer.1974}), or \textsc{mother} (at least) might need to set the value of the
         locus feature when to the left of V.
     }
     \hfill 
@@ -751,13 +721,13 @@ IO is unvalued.
 Verbs marked with durative aspect have reduplicated movement
 \citep{Klima.Bellugi.1979} and are thus phonologically heavier than
 non-aspect-marked verbs \citep{Brentari.1998}. However, verbs marked
-with locus-agreement or classifier-agreement are not phonologically
+with lo\-cus-agree\-ment or class\-i\-fier-agree\-ment are not phonologically
 heavier \citep{Brentari.1998}.
 
 This is supported by the following data.%
-\footnote{
+\footnote{%
     In our judgments of ASL, `quickly' is not expressed by a manual sign, so
-    we substituted the ASL adverb SOMETIMES for the Libras adverb QUICKLY.
+    we substituted the ASL adverb \LaConcept{SOMETIMES} for the Libras adverb \LaConcept{QUICKLY}.
 }
 In SVO sentences, adverbs can appear in a position on the left~\REF{lasz:ex:13}, or on the
 far right of the clause~\REF{lasz:ex:14}.
@@ -765,13 +735,13 @@ far right of the clause~\REF{lasz:ex:14}.
     \label{lasz:ex:13}
     %  S Adv V O
     \ea 
-        MY SISTER \textbf{QUICKLY} SEND\laszPlain{} LETTER.
+        \LaConcept{MY} \LaConcept{SISTER} \textbf{\LaConcept{QUICKLY}} \LaConcept{SEND}\laszPlain{} \LaConcept{LETTER}.
         \hfill 
         \cmark Libras
         \\
          ‘My sister quickly sent a/the letter.’
     \ex 
-        MY SISTER \textbf{SOMETIMES} SEND\laszPlain{} LETTER. 
+        \LaConcept{MY} \LaConcept{SISTER} \textbf{\LaConcept{SOMETIMES}} \LaConcept{SEND}\laszPlain{} \LaConcept{LETTER}. 
         \hfill 
         \cmark ASL 
         \\ 
@@ -781,13 +751,13 @@ far right of the clause~\REF{lasz:ex:14}.
     \label{lasz:ex:14}
     % S V O Adv
     \ea 
-        MY SISTER SEND\laszPlain{} LETTER \textbf{QUICKLY}.
+        \LaConcept{MY} \LaConcept{SISTER} \LaConcept{SEND}\laszPlain{} \LaConcept{LETTER} \textbf{\LaConcept{QUICKLY}}.
         \hfill 
         \cmark Libras 
         \\ 
         ‘My sister quickly sent a/the letter.’
     \ex 
-        MY SISTER SEND\laszPlain{} LETTER \textbf{SOMETIMES}.
+        \LaConcept{MY} \LaConcept{SISTER} \LaConcept{SEND}\laszPlain{} \LaConcept{LETTER} \textbf{\LaConcept{SOMETIMES}}.
         \hfill 
         \cmark ASL 
         \\ 
@@ -799,29 +769,29 @@ cannot appear on the right.
 \ea 
     \label{lasz:ex:15}
     % S Adv O V
-    \ea 
-        MY SISTER \textbf{QUICKLY} LETTER SEND\laszAsp{}.
+    \ea[]{ 
+        \LaConcept{MY} \LaConcept{SISTER} \textbf{\LaConcept{QUICKLY}} \LaConcept{LETTER} \LaConcept{SEND}\laszAsp{}.
         \hfill 
         \cmark Libras
         \\ 
-        ‘My sister repeatedly sends letters quickly.’
-    \ex 
-        MY SISTER \textbf{SOMETIMES} LETTER SEND\laszAsp{}.
+        \glt ‘My sister repeatedly sends letters quickly.’}
+    \ex[]{ 
+        \LaConcept{MY} \LaConcept{SISTER} \textbf{\LaConcept{SOMETIMES}} \LaConcept{LETTER} \LaConcept{SEND}\laszAsp{}.
         \hfill 
         \cmark ASL 
         \\ 
-        ‘My sister sometimes sends letters repeatedly.’
+        \glt ‘My sister sometimes sends letters repeatedly.’}
     \z 
 \ex 
     \label{lasz:ex:16}
     % *S O V Adv
     \ea[*]{
-        MY SISTER LETTER SEND\laszAsp{} \textbf{QUICKLY}.
+        \LaConcept{MY} \LaConcept{SISTER} \LaConcept{LETTER} \LaConcept{SEND}\laszAsp{} \textbf{\LaConcept{QUICKLY}}.
         \hfill 
         *Libras
     }
     \ex[*]{
-        MY SISTER LETTER SEND\laszAsp{} \textbf{SOMETIMES}.
+        \LaConcept{MY} \LaConcept{SISTER} \LaConcept{LETTER} \LaConcept{SEND}\laszAsp{} \textbf{\LaConcept{SOMETIMES}}.
         \hfill 
         *ASL
     }
@@ -834,11 +804,11 @@ verb.
     \label{lasz:ex:17}
     S O V[hs] Adv
     \ea 
-         IX1 WINE DRINK\laszHs{\laszClaw} \textbf{QUICKLY}.
+         \LaConcept{IX1 WINE DRINK}\laszHs{\laszClaw} \textbf{\LaConcept{QUICKLY}}.
         \hfill 
         \cmark Libras
     \ex 
-        IX1 WINE DRINK\laszHs{\laszClaw} \textbf{SOMETIMES}. 
+        \LaConcept{IX1 WINE DRINK}\laszHs{\laszClaw} \textbf{\LaConcept{SOMETIMES}}. 
         \hfill 
         \cmark ASL 
     \z 
@@ -846,17 +816,16 @@ verb.
     \label{lasz:ex:18}
     S O V[loc] Adv
     \ea 
-         IX1 HOUSE\laszLoc{a} BUY\laszLoc{a} \textbf{QUICKLY}. 
+         \LaConcept{IX1 \LaConcept{HOUSE}}\laszLoc{a} \LaConcept{BUY}\laszLoc{a} \textbf{\LaConcept{QUICKLY}}. 
          \hfill 
          \cmark Libras
     \ex 
-         IX1 HOUSE\laszLoc{a} BUY\laszDir{1}{a} \textbf{SOMETIMES}.
+         \LaConcept{IX1 \LaConcept{HOUSE}}\laszLoc{a} \LaConcept{BUY}\laszDir{1}{a} \textbf{\LaConcept{SOMETIMES}}.
         \hfill 
         \cmark ASL
     \z 
 \z 
 
-% -------------------------------------------------------------------
 \subsection{Our account in action}
 \label{lasz:sec:24}
 
@@ -879,7 +848,7 @@ copies of O and V, only one PF-candidate is available, namely the one
 with the ordering SVO.
 
 The second two rows present the minimally different LF where
-classifier-agreement did happen. We see two PF-candidates: the first
+classifier-agree\-ment did happen. We see two PF-candidates: the first
 one spells out the copy of O inside the VP, and the second one spells
 out the copy of O in Spec,Cl\textsubscript{O}P. Note that we do not need to consider
 PF-candidates that spell out the higher copy of V, since there is an
@@ -889,30 +858,28 @@ SOV-candidate fulfills ScoT, but does not fulfill CCO. We see the 3⁄4
 signature arising from the interaction of two violable constraints.
 
 \begin{table}
-    \centering
-    \begin{tabular}{p{4em}l p{1.5em}p{1.5em} p{2.75em}p{2em}}
-        \hline 
-        LF & PF candidates & ScoT & CCO & Predic\-tion & Judg\-ment \\ 
-        \hline \hline 
+    \begin{tabular}{ll cccc}
+        \lsptoprule 
+        LF & PF candidates & ScoT & CCO & Pred. & Judg. \\\midrule
         \multicolumn{2}{l}{
             S \laszLB{VP} V\textsubscript{\laszPlain} O ] } \\
         &   S \laszLB{VP} V\textsubscript{\laszPlain} O ] &
             \cmark & \cmark & \HandLeft & ok \\
         &   S \laszLB{?} O \laszLB{VP} V\textsubscript{\laszPlain} \lasztO{} ] ] &
             \multicolumn{3}{l}{Not applicable\footnotemark{}} & * \\ 
-        \hline 
+        \midrule
         \multicolumn{2}{l}{
             S \laszLB{ClassOP} O V\textsubscript{\laszHs{\_}} \laszLB{VP} \lasztV{} \lasztO{} ] ] } \\
         &   S \laszLB{ClassOP} \lasztO{} \lasztV{} \laszLB{VP} V\textsubscript{\laszHs{\_}} O  ] ] & 
             * & \cmark & \HandLeft & ok \\ 
         &   S \laszLB{ClassOP} O \lasztV{} \laszLB{VP} V\textsubscript{\laszHs{\_}} \lasztO{} ] ] & 
             \cmark & * & \HandLeft & ok \\ 
-        \hline 
+        \lspbottomrule
     \end{tabular}
     \caption{No agreement vs. classifier-agreement in Libras}
     \label{lasz:tab:5}
 \end{table}
-\footnotetext{ 
+\footnotetext{%
     There is no higher copy of O at LF that PF could spell out. This
     PF-candidate does not exist and is only given for completeness to illustrate that the
     ordering SOV\laszPlain{} is ungrammatical.
@@ -924,11 +891,9 @@ differentiates between the two possible PFs of the second LF, allowing
 only SOV ordering in ASL with classifier-agreeing V.
 
 \begin{table}
-    \centering
-    \begin{tabular}{p{3.5em}l p{1.5em}p{1.5em}p{1.6em} p{2em}p{2em}}
-        \hline 
-        LF & PF candidates & ScoT & CCO & Value & Pred. & Judg. \\ 
-        \hline \hline 
+    \begin{tabular}{ll ccccc}
+        \lsptoprule 
+        LF & PF candidates & ScoT & CCO & Value & Pred. & Judg. \\\midrule
         \multicolumn{2}{l}{
             S \laszLB{VP} V\textsubscript{\laszPlain} O ] } \\
         &   S \laszLB{VP} V\textsubscript{\laszPlain} O ] &
@@ -937,7 +902,7 @@ only SOV ordering in ASL with classifier-agreeing V.
         &   S \laszLB{?} O \laszLB{VP} V\textsubscript{\laszPlain} \lasztO{} ] ] &
             \multicolumn{4}{l}{Not applicable} 
             & * \\ 
-        \hline 
+        \midrule 
         \multicolumn{2}{l}{
             S \laszLB{ClassOP} O V\textsubscript{\laszHs{\_}} \laszLB{VP} \lasztV{} \lasztO{} ] ] } \\ 
         &   S \laszLB{ClassOP} \lasztO{} \lasztV{} \laszLB{VP} V\textsubscript{\laszHs{\_}} O ] ] & 
@@ -946,7 +911,7 @@ only SOV ordering in ASL with classifier-agreeing V.
         &   S \laszLB{ClassOP} O \lasztV{} \laszLB{VP} V\textsubscript{\laszHs{\_}} \lasztO{} ] ] & 
             \cmark & * & \cmark & \HandLeft 
             & ok \\ 
-        \hline 
+        \lspbottomrule 
     \end{tabular}
     \caption{No agreement vs. classifier-agreement in ASL}
     \label{lasz:tab:6}
@@ -972,12 +937,11 @@ Thus, the constraint ``Heavy'', which was
 fulfilled for all PF-candidates in Tables~\ref{lasz:tab:5} and~\ref{lasz:tab:6}, differentiates the
 PF-candidates in Table~\ref{lasz:tab:7}:
 
-\begin{table}[]
-    \centering
-    \begin{tabular}{p{3.5em} l p{1.5em}p{1.5em}p{2em} p{2em}p{2em}}
-        \hline 
+\begin{table}
+    \begin{tabular}{ll ccccc}
+        \lsptoprule
         LF & PF candidates & ScoT & CCO & Heavy & Pred. & Judg. \\ 
-        \hline \hline 
+        \midrule
         \multicolumn{2}{l}{
             S \laszLB{AspP} O V\textsubscript{\laszAsp{}} \laszLB{VP} \lasztV{} \lasztO{} ] ] } \\ 
         &   S \laszLB{AspP} \lasztO{} \lasztV{} \laszLB{VP} V\textsubscript{\laszAsp} O ] ] &
@@ -986,7 +950,7 @@ PF-candidates in Table~\ref{lasz:tab:7}:
         &   S \laszLB{AspP} O \lasztV{} \laszLB{VP} V\textsubscript{\laszAsp} \lasztO{} ] ] &
             \cmark & * & \cmark & \HandLeft &
             ok \\ 
-        \hline 
+        \lspbottomrule
     \end{tabular}
     \caption{Aspect-marking in ASL and Libras}
     \label{lasz:tab:7}
@@ -1012,12 +976,11 @@ been picked up, refined, and applied to object shift constructions by
 A verb-doubling construction is illustrated in~\REF{lasz:ex:19}.
 \ea 
     \label{lasz:ex:19}
-     SALLY TYPE\laszPlain{} HER TERM PAPER TYPE\laszAsp{}.
+     \LaConcept{SALLY} \LaConcept{TYPE}\laszPlain{} \LaConcept{HER} \LaConcept{TERM} \LaConcept{PAPER} \LaConcept{TYPE}\laszAsp{}.
      \hfill 
      \cmark ASL, \cmark Libras 
      \\ 
-     ‘Sally typed her term paper for a very long time.’
-     \\ 
+     \glt ‘Sally typed her term paper for a very long time.’
      \citep[from][]{Fischer.Janis.1992}
 \z 
 The idea is that the two verbs, which always share the same root, are
@@ -1030,7 +993,6 @@ construction, both copies of V are pronounced: the copy inside VP in
 its plain form, and the copy in Asp with aspect-marking.
 
 \begin{figure}
-    \centering
     \begin{tikzpicture}
         \Tree 
         [.IP
@@ -1057,7 +1019,7 @@ its plain form, and the copy in Asp with aspect-marking.
 We reject this analysis on two grounds: one empirical and one
 theory-internal, which we discuss in turn in subsections~\ref{lasz:sec:32} and~\ref{lasz:sec:33}.
 
-% -------------------------------------------------------------------
+
 \subsection{Adverb placement}
 \label{lasz:sec:32}
 
@@ -1074,11 +1036,11 @@ extraposition of the adverb.
     \label{lasz:ex:20}
     Temporal adverbs adjoin on the left.
     \ea 
-        \textbf{YESTERDAY} MY SISTER SEND\laszPlain{} LETTER.
+        \textbf{\LaConcept{YESTERDAY}} \LaConcept{MY} \LaConcept{SISTER} \LaConcept{SEND}\laszPlain{} \LaConcept{LETTER}.
         \hfill 
         \cmark Libras, \cmark ASL 
     \ex 
-        \textbf{YESTERDAY} MY SISTER LETTER SEND\laszAsp{}.
+        \textbf{\LaConcept{YESTERDAY}} \LaConcept{MY} \LaConcept{SISTER} \LaConcept{LETTER} \LaConcept{SEND}\laszAsp{}.
         \hfill 
         \cmark Libras, \cmark ASL 
         \\ 
@@ -1088,17 +1050,17 @@ extraposition of the adverb.
     \label{lasz:ex:21}
     Frequency adverbs adjoin on the left.
     \ea 
-        MY SISTER \textbf{QUICKLY} SEND\laszPlain{} LETTER.
+        \LaConcept{MY} \LaConcept{SISTER} \textbf{\LaConcept{QUICKLY}} \LaConcept{SEND}\laszPlain{} \LaConcept{LETTER}.
         \hfill 
         \cmark Libras 
     \ex 
-        MY SISTER \textbf{QUICKLY} LETTER SEND\laszAsp{}.
+        \LaConcept{MY} \LaConcept{SISTER} \textbf{\LaConcept{QUICKLY}} \LaConcept{LETTER} \LaConcept{SEND}\laszAsp{}.
         \hfill 
         \cmark Libras 
         \\ 
         both: ‘My sister quickly sent a/the letter(s).’
     \ex 
-        MY SISTER \textbf{SOMETIMES} LETTER SEND\laszDir{}{1}.
+        \LaConcept{MY} \LaConcept{SISTER} \textbf{\LaConcept{SOMETIMES}} \LaConcept{LETTER} \LaConcept{SEND}\laszDir{}{1}.
         \hfill 
         \cmark ASL 
         \\ 
@@ -1108,15 +1070,15 @@ extraposition of the adverb.
     \label{lasz:ex:22}
     Adverbs adjoin on the right in SVO clauses.
     \ea 
-        MY SISTER SEND\laszPlain{} LETTER \textbf{YESTERDAY}.
+        \LaConcept{MY} \LaConcept{SISTER} \LaConcept{SEND}\laszPlain{} \LaConcept{LETTER} \textbf{\LaConcept{YESTERDAY}}.
         \hfill 
         \cmark Libras, \cmark ASL 
     \ex 
-        MY SISTER SEND\laszPlain{} LETTER \textbf{QUICKLY}.
+        \LaConcept{MY} \LaConcept{SISTER} \LaConcept{SEND}\laszPlain{} \LaConcept{LETTER} \textbf{\LaConcept{QUICKLY}}.
         \hfill 
         \cmark Libras 
     \ex 
-        MY SISTER LETTER SEND\laszDir{}{1} \textbf{SOMETIMES}.
+        \LaConcept{MY} \LaConcept{SISTER} \LaConcept{LETTER} \LaConcept{SEND}\laszDir{}{1} \textbf{\LaConcept{SOMETIMES}}.
         \hfill 
         \cmark ASL 
     \z 
@@ -1128,12 +1090,12 @@ sentence-final position. This is illustrated in~\REF{lasz:ex:23}.
     \label{lasz:ex:23}
     Adverbs cannot adjoin on the right in SOV\laszAsp{} clauses.
     \ea[*]{
-        MY SISTER LETTER SEND\laszAsp{} \textbf{YESTERDAY}.
+        \LaConcept{MY} \LaConcept{SISTER} \LaConcept{LETTER} \LaConcept{SEND}\laszAsp{} \textbf{\LaConcept{YESTERDAY}}.
         \hfill
         *Libras, *ASL
     }
     \ex[*]{
-        MY SISTER LETTER SEND\laszAsp{} \textbf{QUICKLY}.
+        \LaConcept{MY} \LaConcept{SISTER} \LaConcept{LETTER} \LaConcept{SEND}\laszAsp{} \textbf{\LaConcept{QUICKLY}}.
         \hfill 
         *Libras
     }
@@ -1148,7 +1110,7 @@ contrast to this, our account captures these data perfectly. Since we
 postulate a PF-constraint stating that phonologically heavy V should
 be in sentence-final position, SOV-constructions with V\laszAsp{} followed
 by another element are penalized.%
-\footnote{
+\footnote{%
     Elements that are typically in sentence-final position and may appear
     even after V\laszAsp{} include the subject pronoun copy. This is outside the scope of this
     paper, but it seems to us that copying a subject pronoun into the sentence-final
@@ -1157,12 +1119,10 @@ by another element are penalized.%
 }
 Our derivations are illustrated in Tables~\ref{lasz:tab:9} and~\ref{lasz:tab:10}.
 
-\begin{table}[]
-    \centering
-    \begin{tabular}{p{5em} l p{1.5em}p{1.5em} p{2em}p{2em}}
-        \hline 
-        LF & PF candidates & ScoT & CCO & Pred. & Judg. \\ 
-        \hline \hline 
+\begin{table}
+    \begin{tabular}{ll cccc}
+        \lsptoprule
+        LF & PF candidates & ScoT & CCO & Pred. & Judg. \\\midrule
         \multirow{4}{*}{
             S \laszLB{VP} V O ]}
         & S \laszLB{} Adv \laszLB{VP} V\textsubscript{\laszPlain} O 
@@ -1173,18 +1133,16 @@ Our derivations are illustrated in Tables~\ref{lasz:tab:9} and~\ref{lasz:tab:10}
             & \multicolumn{3}{c}{Not applicable} & * \\ 
         & S \laszLB{} \laszLB{?} O \laszLB{VP} V\textsubscript{\laszPlain} ] ] Adv ] 
             & \multicolumn{3}{c}{Not applicable} & * \\ 
-        \hline 
+        \lspbottomrule 
     \end{tabular}
     \caption{Adverb-placement options with plain V}
     \label{lasz:tab:9}
 \end{table}
 
-\begin{table}[]
-    \centering
-    \begin{tabular}{p{3.5em} l p{1.5em}p{1.5em}p{2em} p{2em}p{2em}}
-        \hline 
-        LF & PF candidates & ScoT & CCO & Heavy & Pred. & Judg. \\
-        \hline \hline 
+\begin{table}
+    \begin{tabular}{ll ccccc}
+        \lsptoprule 
+        LF & PF candidates & ScoT & CCO & Heavy & Pred. & Judg. \\\midrule 
         \multicolumn{2}{l}{
             S \laszLB{AspP} O V \laszLB{VP} \lasztV{} \lasztO{} ] ] } \\
         & S [ Adv \laszLB{AspP} \lasztO{} \lasztV{} \laszLB{VP} V O ] ] ] & 
@@ -1195,7 +1153,7 @@ Our derivations are illustrated in Tables~\ref{lasz:tab:9} and~\ref{lasz:tab:10}
             \cmark & * & \cmark & \HandLeft & ok \\ 
         & S [ \laszLB{AspP} O \lasztV{} \laszLB{VP} V \lasztO{} ] ] Adv ] & 
             \cmark & * & * & & * \\
-        \hline 
+        \lspbottomrule
     \end{tabular}
     \caption{Adverb-placement options with aspect-marked V}
     \label{lasz:tab:10}
@@ -1212,82 +1170,80 @@ the constraint ``Value'' comes into play additionally).
     \label{lasz:ex:24}
     Adverb placement with classifier-agreement in Libras
     \ea 
-        IX1 \textbf{QUICKLY} DRINK\laszHs{\laszClaw} WINE. 
+        \LaConcept{IX1} \textbf{\LaConcept{QUICKLY}} \LaConcept{DRINK}\laszHs{\laszClaw} \LaConcept{WINE}. 
         
     \ex 
-        IX1 DRINK\laszHs{\laszClaw} WINE \textbf{QUICKLY}.
+        \LaConcept{IX1 DRINK}\laszHs{\laszClaw} \LaConcept{WINE} \textbf{\LaConcept{QUICKLY}}.
         \hfill \cmark Libras
     \ex 
-        IX1 \textbf{QUICKLY} WINE DRINK\laszHs{\laszClaw}.
+        \LaConcept{IX1} \textbf{\LaConcept{QUICKLY}} \LaConcept{WINE DRINK}\laszHs{\laszClaw}.
         \hfill \cmark Libras
     \ex 
-        IX1 WINE DRINK\laszHs{\laszClaw} \textbf{QUICKLY}. 
+        \LaConcept{IX1 WINE DRINK}\laszHs{\laszClaw} \textbf{\LaConcept{QUICKLY}}. 
         \hfill \cmark Libras
         \\ 
-        all: ‘I quickly drank wine.’
+        \glt all: ‘I quickly drank wine.’
     \z 
 \ex 
     \label{lasz:ex:25}
     Adverb placement with classifier-agreement in ASL
     \ea 
-        IX1 \textbf{SOMETIMES} DRINK\laszHs{\laszClaw} WINE.
+        \LaConcept{IX1} \textbf{\LaConcept{SOMETIMES}} \LaConcept{DRINK}\laszHs{\laszClaw} \LaConcept{WINE}.
         \hfill \cmark ASL
     \ex 
-        IX1 DRINK\laszHs{\laszClaw} WINE \textbf{SOMETIMES}.
+        \LaConcept{IX1 DRINK}\laszHs{\laszClaw} \LaConcept{WINE} \textbf{\LaConcept{SOMETIMES}}.
         \hfill \cmark ASL
     \ex 
-        IX1 \textbf{SOMETIMES} WINE DRINK\laszHs{\laszClaw}.
+        \LaConcept{IX1} \textbf{\LaConcept{SOMETIMES}} \LaConcept{WINE DRINK}\laszHs{\laszClaw}.
         \hfill \cmark ASL
     \ex 
-        IX1 WINE DRINK\laszHs{\laszClaw} \textbf{SOMETIMES}. 
+        \LaConcept{IX1 WINE DRINK}\laszHs{\laszClaw} \textbf{\LaConcept{SOMETIMES}}. 
         \hfill \cmark ASL
         \\ 
-        all: ‘I drink wine sometimes.’
+        \glt all: ‘I drink wine sometimes.’
     \z 
 \ex 
     \label{lasz:ex:26}
     Adverb placement with locus-agreement in Libras
     \ea 
-        IX1 \textbf{QUICKLY} BUY\laszLoc{a} HOUSE\laszLoc{a}.
+        \LaConcept{IX1} \textbf{\LaConcept{QUICKLY}} \LaConcept{BUY}\laszLoc{a} \LaConcept{HOUSE}\laszLoc{a}.
         \hfill \cmark Libras
     \ex 
-        IX1 BUY\laszLoc{a} HOUSE\laszLoc{a} \textbf{QUICKLY}.
+        \LaConcept{IX1} \LaConcept{BUY}\laszLoc{a} \LaConcept{HOUSE}\laszLoc{a} \textbf{\LaConcept{QUICKLY}}.
         \hfill \cmark Libras
     \ex 
-        IX1 \textbf{QUICKLY} HOUSE\laszLoc{a} BUY\laszLoc{a}.
+        \LaConcept{IX1} \textbf{\LaConcept{QUICKLY}} \LaConcept{HOUSE}\laszLoc{a} \LaConcept{BUY}\laszLoc{a}.
         \hfill \cmark Libras
     \ex 
-        IX1 HOUSE\laszLoc{a} BUY\laszLoc{a} \textbf{QUICKLY}. 
+        \LaConcept{IX1 \LaConcept{HOUSE}}\laszLoc{a} \LaConcept{BUY}\laszLoc{a} \textbf{\LaConcept{QUICKLY}}. 
         \hfill \cmark Libras
         \\ 
-        all: ‘I quickly bought the house.’
+        \glt all: ‘I quickly bought the house.’
     \z 
 \ex
     \label{lasz:ex:27}
     Adverb placement with locus-agreement in ASL
     \ea 
-        IX1 \textbf{SOMETIMES} BUY\laszDir{1}{a} HOUSE\laszLoc{a}.
+        \LaConcept{IX1} \textbf{\LaConcept{SOMETIMES}} \LaConcept{BUY}\laszDir{1}{a} \LaConcept{HOUSE}\laszLoc{a}.
         \hfill \cmark ASL
     \ex 
-        IX1 BUY\laszDir{1}{a} HOUSE\laszLoc{a} \textbf{SOMETIMES}.
+        \LaConcept{IX1} \LaConcept{BUY}\laszDir{1}{a} \LaConcept{HOUSE}\laszLoc{a} \textbf{\LaConcept{SOMETIMES}}.
         \hfill \cmark ASL
     \ex 
-        IX1 \textbf{SOMETIMES} HOUSE\laszLoc{a} BUY\laszDir{1}{a}.
+        \LaConcept{IX1} \textbf{\LaConcept{SOMETIMES}} \LaConcept{HOUSE}\laszLoc{a} \LaConcept{BUY}\laszDir{1}{a}.
         \hfill \cmark ASL
     \ex 
-        IX1 HOUSE\laszLoc{a} BUY\laszDir{1}{a} \textbf{SOMETIMES}. 
+        \LaConcept{IX1 \LaConcept{HOUSE}}\laszLoc{a} \LaConcept{BUY}\laszDir{1}{a} \textbf{\LaConcept{SOMETIMES}}. 
         \hfill \cmark ASL
         \\ 
         all: `I sometimes buy a house.' 
     \z 
 \z 
 
-\begin{table}[]
-    \centering
-    \begin{tabular}{p{3.5em} l p{1.5em}p{1.5em} p{2em}p{2em}}
-        \hline 
-        LF & PF candidates & ScoT & CCO & Pred. & Judg. \\ 
-        \hline \hline 
+\begin{table}
+    \begin{tabular}{ll cccc}
+        \lsptoprule 
+        LF & PF candidates & ScoT & CCO & Pred. & Judg. \\\midrule
         \multicolumn{2}{l}{
             S \laszLB{AgrOP} O V \laszLB{VP} \lasztV{} \lasztO{} ] ] } \\ 
         & S [ Adv \laszLB{AgrOP} \lasztO{} \lasztV{} \laszLB{VP} V O ] ] ] &
@@ -1298,13 +1254,12 @@ the constraint ``Value'' comes into play additionally).
             \cmark & * & \HandLeft & ok \\ 
         & S [ \laszLB{AgrOP} O \lasztV{} \laszLB{VP} V \lasztO{} ] ] Adv ] &
             \cmark & * & \HandLeft & ok \\ 
-        \hline 
+        \lspbottomrule
     \end{tabular}
     \caption{Adverb-placement options with locus-marked V}
     \label{lasz:tab:11}
 \end{table}
 
-% -------------------------------------------------------------------
 \subsection{Mixed headedness}
 \label{lasz:sec:33}
 
@@ -1410,7 +1365,7 @@ left-headed and AspP is right-headed, is incompatible with the FOFC
     \caption{Possible and impossible headedness combinations}
     \label{lasz:fig:3}
 \end{figure}
-\footnotetext{
+\footnotetext{%
     The FOFC is unintuitively named, as the configuration Final-over-final in Fig.~\ref{lasz:fig:3a} does not stand out in the paradigm. 
     However, the name can be understood as: \laszLB{Topic} Final ] over \laszLB{Focus} Final ] Constraint, 
     saying that if $Y$P is head-final, $X$P must be head-final as well. 
@@ -1450,7 +1405,7 @@ and O happens by movement of V into a right-headed Aspect phrase.
 We have shown data from adverb placement that is problematic for
 their proposal but derived perfectly in our theory; and we have given a
 theory-internal argument against assuming a right-headed Aspect
-phrase dominating a left-headed VP --- namely that it violates the
+phrase dominating a left-headed VP -- namely that it violates the
 implicational universal FOFC.
 
 In this way, we have provided additional evidence for the
