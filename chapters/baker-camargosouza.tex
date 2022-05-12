@@ -42,7 +42,7 @@ The specific issue we consider here is the status of verbal projections bearing 
 			     (she) banana carry-\sc{ss.nom} Shaya.\sc{nom} fall-\sc{pfv}\\
 			    \glt `While she\textsubscript{i} was carrying bananas, Shaya\textsubscript{i} fell.'
 			\ex \label{BakerX2b}
-			\gll [Shaya-N pitxã-pai-ki-N], (pro) mai  keti  hi-a.\\
+			\gll [Shaya-N pitxã-pai-\textit{ki-N}], (pro) mai  keti  hi-a.\\
     			 Shaya-\sc{erg} cook-\sc{des-ss-erg} (she) clay pot get-\sc{pfv}\\
 			    \glt `Because Shaya\textsubscript{i} was wanting to cook, she\textsubscript{i} got a clay pot.'
 		\end{xlist}
@@ -271,13 +271,17 @@ What is special syntactically about SS constituents, which might cause them to h
 		     Shaya-\sc{erg} (she) fish\sc{ss-erg} catfish catch-\sc{pfv}\\
 		    \glt `Shaya, while fishing, caught a catfish.'
 		\ex \label{BakerX16b}
-		    [\textsubscript{TP }Sh\rnode{shaya}aya\textsubscript{i} [\textsubscript{CP }[\textsubscript{TP }pro\textsubscript{i} [\textsubscript{vP } \rnode{t2}t fish v]-\rnode{t}T] \rnode{c}C] [\textsubscript{vP } t fish catch v] T]
-		    \psset{linewidth=0.5pt, linejoin=1, arrows=->, arrowscale=1.5, arrowinset=0.15, angle=90, nodesep=1pt, arm=2ex}
-		    \ncbar[angle= -90]{t}{t2}
-		    \ncbar[angle= -90, arm=3ex]{c}{shaya}
-		    \ncbar[angle= -90, arm=1ex, arrows=-]{t}{c}
+		    [\textsubscript{TP} \tikz[baseline=(Bashaya.base),remember picture] \node (Bashaya) {Shaya\textsubscript{i}}; [\textsubscript{CP} [\textsubscript{TP} pro\textsubscript{i} [\textsubscript{vP} \tikz[remember picture, baseline=(Bat.base)] \node (Bat) {t}; fish v]-\tikz[remember picture, baseline=(BaT.base)] \node (BaT) {T};] \tikz[remember picture, baseline=(BaC.base)] \node (BaC) {C};] [\textsubscript{vP} t fish catch v] T]
+		    
+	    \begin{tikzpicture}[remember picture, overlay]
+	    \draw[-{Triangle[]}] (BaT.south) |- ++(-1ex,-2ex) -| (Bat.south);
+	    \draw[-{Triangle[]}] (BaC.south) |- ++(-1ex,-3ex) -| (Bashaya.south);
+	    \draw (BaC.south) |- ++(-1ex,-1ex) -| (BaT.south);
+	    \end{tikzpicture}
 	\end{xlist}
 \end{exe}
+
+
 
 B\&CS present more detailed evidence for the downward Agree relationship than for the upward one. But there is adequate evidence that upward Agree holds too. For example, DP-movement to Spec TP in the matrix clause crucially feeds SS marking, showing that the tracked DP in the matrix clause must c-command the SS morpheme in the adjunct clause. Even more to the point, an SS constituent adjoined to one particular clause~– to the complement of `see’ in (\ref{BakerX17}), for instance~– can only track the subject of that very clause, namely Meni, not the subject of a still higher clause, in this case eN, the subject of `see’. This shows that the SS heads cannot enter into a relationship with a DP that is too far away, with distance measured in terms of clauses, which correspond to phase boundaries within our framework.
 
@@ -294,26 +298,25 @@ This last point can provide an entry into understanding the puzzle that is befor
 \ex Leading idea: (phrases in \{ \} are spell out domains) \label{BakerX18}
     \begin{xlist}
 		\ex \label{BakerX18a}
-		    [S\rnode{subj}ubj [\rnode{h}H clause] [\textsubscript{vP V} \{V....\}]] \textit{Adjunct clause}
-		        \psset{linewidth=0.5pt, linejoin=1, arrows=->, arrowscale=1.5, arrowinset=0.15, nodesep=1pt, arm=2.5ex}
-				\ncbar[angle=-90, arm=3ex]{h}{subj}\\
-				\hspace*{3.5em} \textit{Agree possible}
-				%HOW DO YOU LABEL THESE DEAR GOD HELP ME
-		    \vspace{8pt}
+		    [\tikz[remember picture, baseline=(BaSubj.base)] \node (BaSubj) {Subj}; [\tikz[remember picture, baseline=(bah.base)] \node (bah) {H}; clause] [\textsubscript{vP V} \{\textit{V}....\}]]\jambox*{Adjunct clause} 
+		    \begin{tikzpicture}[remember picture, overlay]
+		    \draw[-{Triangle[]}] (bah.south) |- ++(-1ex,-2ex) -| (BaSubj.south) node [near start,below] {Agree possible};
+		    \end{tikzpicture}
+		    \vskip\baselineskip
 		\ex \label{BakerX18b}
-		    [S\rnode{subj}ubj v \{V [\rnode{h}H clause]\} \textit{Argument clause}
-				\psset{linewidth=0.5pt, linejoin=1, arrows=->, arrowscale=1.5, arrowinset=0.15, nodesep=1pt, arm=2ex}
-				\ncbar[angle=-90, arm=3ex]{h}{subj}
-				\ncput*{X}\\
-				\hspace*{5.3em} \textit{Agree blocked}
-			\vspace{12pt}
+		    [\tikz[remember picture, baseline=(BaSubj2.base)] \node (BaSubj2) {Subj}; v \{V [\tikz[remember picture, baseline=(bah2.base)] \node (bah2) {H}; clause]\}\jambox*{Argument clause}
+		    \begin{tikzpicture}[remember picture, overlay, decoration={crosses, shape size=1.5mm, pre length=20pt}]
+		    \draw[-{Triangle[]}] (bah2.south) |- ++(-1ex,-2ex) -| (BaSubj2.south) node [near start,below] {Agree blocked};
+		    \draw[decorate] (bah2.south) |- ++(-10ex,-2ex);
+		    \end{tikzpicture}
+		    \vskip\baselineskip
 	\end{xlist}
 \end{exe}
 
 This is a start, but we need another layer of the analysis to explain why “small”, restructuring-type SS-complements are possible in Panoan, whereas “large” SS-complements are not. At this point, it evidently matters whether the SS-com\-ple\-ment counts as a full CP, with its own phase head, or not. When the SS-complement is a full CP, Agree fails, whereas when it is less than a full CP, Agree can succeed – even though the v-phase boundary is there. We find our way through to a full analysis if we adopt a view in which two phase boundaries block upward Agree but one phase boundary does not. This amounts to adopting \citet[13--14]{chomsky2001derivation} view of the PIC, as stated in (\ref{BakerX19}), rather than his \citeyearpar{chomsky2000minimalist} version.
 
 \begin{exe}
-    \ex Elements in the complement of a phase head H are accessible to the computation until the introduction of the next phase head Z. \label{BakerX19}
+\ex Elements in the complement of a phase head H are accessible to the computation until the introduction of the next phase head Z. \label{BakerX19}
 \end{exe}
 
 The other key assumption we make concerns the finer structure of the CP in YW and SK. B\&CS assume that T probes downward to find the
@@ -321,25 +324,26 @@ The other key assumption we make concerns the finer structure of the CP in YW an
 embedded subject, and C probes upward to find the matrix subject, T then fusing with C to form a single head, as in (\ref{BakerX16}). Following CS, we revise this by distinguishing Force from Fin \citep{rizzi1997fine}. The higher head Force is the phase head, whereas the lower head Fin is the upward probe and the head that fuses with T. These assumptions allow us to derive the three-way contrast at hand, where SS is possible in ForceP adjuncts and FinP complements, but not in ForceP complements, as outlined in (\ref{BakerX20}). This is the core of our analysis.
 
 \begin{exe}
-    \ex Leading idea expanded: (\{ \} = complement of phase head) \label{BakerX20}
-        \begin{xlist}
-        \ex \label{BakerX20a}
-			 [S\rnode{subj}ubj [\textsubscript{ForceP} Force \{F\rnode{fin}in TP\}] [\textsubscript{v} \{\textsubscript{VP} V....\}]] ForceP adjunct
-			        \psset{linewidth=0.5pt, linejoin=1, arrows=->, arrowscale=1.5, arrowinset=0.15, nodesep=1pt, arm=2.5ex}
-		           	\ncbar[angle=-90, arm=3ex]{fin}{subj}\\
-		        	\hspace*{9em} \textit{Agree OK by (\ref{BakerX19})}
-		\ex \label{BakerX20b}
-			[S\rnode{subj}ubj v \{\textsubscript{VP} know/begin [\textsubscript{ForceP} Force \{F\rnode{fin}in TP\}]\}] ForceP
-			        \psset{linewidth=0.5pt, linejoin=1, arrows=->, arrowscale=1.5, arrowinset=0.15, nodesep=1pt, arm=2.5ex}
-		           	\ncbar[angle=-90, arm=3ex]{fin}{subj}
-		           	\ncput*{X}\\
-		        	\hspace*{16.5em} \textit{Agree * by (\ref{BakerX19})}
-		\ex \label{BakerX20c}
-		    [S\rnode{subj}ubj v \{\textsubscript{VP} know/begin [\textsubscript{FinP} F\rnode{fin}in TP]\}] FinP complement
-			        \psset{linewidth=0.5pt, linejoin=1, arrows=->, arrowscale=1.5, arrowinset=0.15, nodesep=1pt, arm=2.5ex}
-		           	\ncbar[angle=-90, arm=3ex]{fin}{subj}\\
-		        	\hspace*{13em} \textit{Agree OK by (\ref{BakerX19})}
-        \end{xlist}
+\ex Leading idea expanded: (\{ \} = complement of phase head) \label{BakerX20}
+\begin{xlist}
+\ex \label{BakerX20a}
+	[\tikz[remember picture, baseline=(Ba20aS.base)] \node (Ba20aS) {Subj}; [\textsubscript{ForceP} Force \{\tikz[remember picture, baseline=(Ba20aF.base)] \node (Ba20aF) {Fin}; TP\}] [\textsubscript{v} \{\textsubscript{VP} V....\}]]\jambox*{ForceP adjunct}
+	\begin{tikzpicture}[remember picture, overlay]
+	    \draw[-{Triangle[]}] (Ba20aF.south) |- ++(-1ex,-2ex) -| (Ba20aS.south) node [near start,below] {Agree OK by (\ref{BakerX19})};
+    \end{tikzpicture}\vskip2\baselineskip
+\ex \label{BakerX20b}
+	[\tikz[remember picture, baseline=(Ba20bS.base)] \node (Ba20bS) {Subj}; v \{\textsubscript{VP} know/begin [\textsubscript{ForceP} Force \{\tikz[remember picture, baseline=(Ba20cF.base)] \node (Ba20cF) {Fin}; TP\}]\}] \jambox*{ForceP}
+
+    \begin{tikzpicture}[remember picture, overlay, decoration={crosses, shape size=1.5mm, pre length=20pt}]
+    \draw[-{Triangle[]}] (Ba20cF.south) |- ++(-1ex,-2ex) -| (Ba20bS.south) node [near start,below] {Agree * by (\ref{BakerX19})};
+    \draw[decorate] (Ba20cF.south) |- ++(-35ex,-2ex);
+	\end{tikzpicture}\vskip2\baselineskip
+\ex \label{BakerX20c}
+	[\tikz[remember picture, baseline=(Ba20cS.base)] \node (Ba20cS) {Subj}; v \{\textsubscript{VP} know/begin [\textsubscript{FinP} \tikz[remember picture, baseline=(Ba20cF.base)] \node (Ba20cF) {Fin}; TP]\}] \jambox*{FinP complement}
+	\begin{tikzpicture}[remember picture, overlay]
+	    \draw[-{Triangle[]}] (Ba20cF.south) |- ++(-1ex,-2ex) -| (Ba20cS.south) node [near start,below] {Agree OK by (\ref{BakerX19})};
+    \end{tikzpicture}\vskip\baselineskip
+\end{xlist}
 \end{exe}
 
 \section{Refining the analysis}\label{sec:baker:5}
@@ -356,12 +360,13 @@ First, we acknowledge that the “small” version of the SS complement in (\ref
 			     Shaya-\sc{erg} fish cook-\sc{ss-erg} know-\sc{pfv}\\
 			    \glt `Shaya knows how to cook fish.'
 			\ex \label{BakerX21b}
-			    \small[\textsubscript{TP }Sh\rnode{shaya}aya [\textsubscript{vP }t [\textsubscript{VP }[\textsubscript{FinP }[\textsubscript{TP }[\textsubscript{vP } P\rnode{pro}RO [\textsubscript{VP }fish cook] v ]  \rnode{t}T\textsubscript{SS} \rnode{fin1}F\rnode{fin}in\textsubscript{SS}] know] v] T]\\
-			    \textit{Agree \hspace{7.5em} Agree \hspace{11em}head mov't}
-			    \psset{linewidth=0.5pt, linejoin=1, arrows=->, arrowscale=1.5, arrowinset=0.15, angle=90, nodesep=1pt, arm=3ex}
-			    \ncbar[angle= -90]{t}{pro}
-			    \ncbar[angle= -90, arm=4ex]{fin}{shaya}
-			    \ncbar[nodesep=1pt, angleA=-50, armA=2.5ex, armB=0]{t}{fin1}
+			    \small
+			    [\textsubscript{TP} \tikz[remember picture, baseline=(Ba21S.base)] \node [inner sep=0pt] (Ba21S) {Shaya}; [\textsubscript{vP} t [\textsubscript{VP} [\textsubscript{FinP} [\textsubscript{TP} [\textsubscript{vP}  \tikz[remember picture, baseline=(Ba21P.base)] \node [inner sep=0pt] (Ba21P) {PRO}; [\textsubscript{VP} fish cook] v ]  \tikz[remember picture, baseline=(Ba21T.base)] \node [inner sep=0pt] (Ba21T) {T\textsubscript{SS}}; ] \tikz[remember picture, baseline=(Ba21F.base)] \node (Ba21F) [inner sep=0pt] {Fin\textsubscript{SS}};] know] v] T]
+			    \begin{tikzpicture}[remember picture, overlay]
+			    \draw[-{Triangle[]}] (Ba21F.305) |- ++(-1ex,-3ex) -| (Ba21S.south) node [near start,below,font=\small] {Agree};
+			    \draw[-{Triangle[]}] (Ba21T.235) |- ++(-1ex,-2ex) -| (Ba21P.south) node [near start,above,inner sep=0pt,font=\small] {Agree};
+			    \draw[-{Triangle[]}] (Ba21T.south) to [out=270,in=270] node [inner sep=0pt,pin={[pin edge={dashed, thick, line to,-{}}]below:{head mov't}},font=\small] {} (Ba21F.south);
+			    \end{tikzpicture}\vskip3\baselineskip
 		\end{xlist}
 \end{exe}
 
@@ -371,9 +376,9 @@ Further evidence that SS complements contain TP comes from the fact they can con
 
 \begin{exe}
     \ex Yawanawa (fieldwork) \label{BakerX22}\\
-		\small	\gll Ewẽ ketxa {mixti-hãui [\textsubscript{TP} t\textsubscript{i}} {[\textsubscript{ApplP} e-a} {[\textsubscript{VP} t\textsubscript{i} muxi]-shun]-i]}] tae-a-hu.\\
-			    my plate little-\sc{PL.ERG} me-\sc{acc} break-\sc{appl-ss.nom} begin-\sc{pfv-pl}\\
-			    \glt `My little plates began to break on me.'
+	\gll Ewẽ ketxa {mixti-hãui [\textsubscript{TP} t\textsubscript{i}} {[\textsubscript{ApplP} e-a} {[\textsubscript{VP} t\textsubscript{i} muxi]-shun]-i]}] tae-a-hu.\\
+    my plate little-\sc{PL.ERG} me-\sc{acc} break-\sc{appl-ss.nom} begin-\sc{pfv-pl}\\
+	\glt `My little plates began to break on me.'
 \end{exe}
 
 The last refinement we consider is a closer look at the role of v heads in these constructions. If SS complements are FinPs, then they must contain vP projections as well, that being a lower projection in the clausal spine. But v is also a phase head, at least in active/agentive clauses like (\ref{BakerX4}) and (\ref{BakerX4}). The question is whether this spoils our aimed-for result, that ‘begin’ and ‘know’ constructions count as a single domain for processes like O=S switch reference and ergative case assignment. If so, there is a contradiction within our analysis.
