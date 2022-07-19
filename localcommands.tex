@@ -62,3 +62,13 @@
 \newcommand{\lasztV}[0]{t\textsubscript{V}}
 
 
+% First, we need counters to hold temporary values:
+\newcounter{nexttmp}    % Counter for the Next example
+\newcounter{nnexttmp}   % Counter for the NNext example
+\newcounter{lasttmp}    % Counter for the Last example
+\newcounter{llasttmp}   % Counter for the LLast example
+% These replicate the linguex commands. I can't promise they won't break things.
+\newcommand{\Next}{\setcounter{nexttmp}{\value{equation}}\stepcounter{nexttmp}(\thenexttmp)\xspace}
+\newcommand{\NNext}{\setcounter{nnexttmp}{\value{equation}}\addtocounter{nnexttmp}{2}(\thennexttmp)\xspace}
+\newcommand{\Last}{\setcounter{lasttmp}{\value{equation}}(\thelasttmp)\xspace}
+\newcommand{\LLast}{\setcounter{llasttmp}{\value{equation}}\addtocounter{llasttmp}{-1}(\thellasttmp)\xspace}
