@@ -4,7 +4,7 @@
 % hidelinks,
 % showindex
 ]{langscibook}
-\author{Martin Prinzhorn\affiliation{University of Vienna} and Viola Schmitt\affiliation{Humboldt University Berlin}\orcid{}}
+\author{Martin Prinzhorn\affiliation{University of Vienna} and Viola Schmitt\orcid{}\affiliation{Humboldt-Universität zu Berlin}}
 \title{Partial control and plural predication}
 \abstract{Partial control is known to exhibit constraints on which predicates can be embedded: While it allows for collective predicates like \textit{assemble}, it blocks predicates with the VP-modifier \textit{each}, for instance. This restriction is surprising if the subject of the embedded predicate is a plurality, and existing accounts appeal to syntactic explanations. Based on German data, we argue that the constraint is semantic in nature: Embedded predication in PC cannot ascribe properties to parts of a plurality that do not contain the matrix subject -- essentially because, following (a simplified version of) \citet{Pearson:2016}, PC involves a property attribution \textit{de se}. We sketch an implementation of this idea using the “plural projection” system (\citealt{Schmitt:2019, Haslinger:2018a, Haslinger:2018b}): It lets us “divide” certain predicates -- e.g., those involving \textit{each} -- into “parts”. The afore-mentioned constraint must hold for each such predicate part, which rules out certain types of predication in PC.}
 
@@ -16,12 +16,11 @@
 
 Some control verbs in English allow for so-called  {\it partial control} (PC): The matrix subject is semantically singular, but the embedded predicate can only hold of semantic pluralities (\cite{Wilkinson:1971, Landau:2000, Wurmbrand:2001, Wurmbrand:2002, Pearson:2016} a.o.). {\it Assemble} requires a semantically plural subject, as shown in (\ref{prinzhornex1a}). Yet, when the relation between such a semantically singular subject and the predicate is “mediated” by the control verb {\it want}, as in (\ref{prinzhornex1b}), the result is acceptable. (\ref{prinzhornex2a}) and (\ref{prinzhornex2b}) make the same point for {\it go on vacation together}.
 
-\todo[inline]{Please check source of examples: are they both (1a) in Pearson 2016?}
 \ea  
 \ea The children\slash\#Ada assembled in the hall. \label{prinzhornex1a}
 \ex	Ada wanted to assemble in the hall. \hfill \citep[(1a)]{Pearson:2016} \label{prinzhornex1b}
 \ex The children\slash\#Ada went on vacation together. \label{prinzhornex2a}
-\ex Ada expected to go on vacation together. \hfill \citep[(1a)]{Pearson:2016} \label{prinzhornex2b}
+\ex Ada expected to go on vacation together. \hfill \citep[(1b)]{Pearson:2016} \label{prinzhornex2b}
 \z\z
 	
 It thus seems that the embedded subject can introduce a plurality of individuals which the denotation of the matrix subject is a proper part of. This is schematized in the simplified rendering of (\ref{prinzhornex1b}) in (\ref{prinzhornex3}).\footnote{Unless noted otherwise, we draw on some basic notions of plural semantics: We assume a set $A \subseteq D_e$ of atomic individuals, a binary operation $+$ on $D_e$ and a function $f\colon (\mathcal{P}(A)\setminus \{\emptyset\}) \to D_e$ such that: 1. $f(\{x\}) = x$ for any $x \in A$ and 2. $f$ is an isomorphism between the structures $(\mathcal{P}(A)\setminus \{\emptyset\}, \cup)$ and $(D_e, +)$. Hence there is a one-to-one correspondence between plural individuals and nonempty sets of atomic individuals. We will use the notation in (\ref{prinzhornDD}).
@@ -213,7 +212,7 @@ This couple has today (in-total) texactly 3000 Euros earned \\
 \glt `The couple earned 3000 Euros (in total) today' \label{prinzhornex19b}\phantom{.}\hfill {true} in (\ref{prinzhornex19a})
 \z\z
 
-Such semantically plural, syntactically singular elements also license distributive\slash cumulative EP-predicates in PC, as shown in (\ref{prinzhornex20}). So while we follow \citet{Landau:2000} in assuming that the lack of a plural feature on \textsc{pro} and \todo{Something missing in this sentence!} on the matrix subject plays a role in the lack of plural morphology shown in (\ref{prinzhornex15}),\footnote{Syntactic plurality by itself, however, is not sufficient to license plural morphology in the embedded structure in (\ref{prinzhornex15}). This is witnessed by examples like (\ref{prinzhorndame}), which were brought to our attention by a reviewer: A  semantically singular matrix subject with syntactic plural marking (i.e., the polite plural) cannot license plural morphology on the embedded noun.
+Such semantically plural, syntactically singular elements also license distributive\slash cumulative EP-predicates in PC, as shown in (\ref{prinzhornex20}). So while we follow \citet{Landau:2000} in assuming that the lack of a plural feature on \textsc{pro} and on the matrix subject plays a role in the lack of plural morphology shown in (\ref{prinzhornex15}),\footnote{Syntactic plurality by itself, however, is not sufficient to license plural morphology in the embedded structure in (\ref{prinzhornex15}). This is witnessed by examples like (\ref{prinzhorndame}), which were brought to our attention by a reviewer: A  semantically singular matrix subject with syntactic plural marking (i.e., the polite plural) cannot license plural morphology on the embedded noun.
 
 
 \ea[*]{
