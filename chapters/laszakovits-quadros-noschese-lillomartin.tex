@@ -194,11 +194,11 @@ postulate a uniform syntax.
     Auxiliary 
     \ea 
         \LaConcept{IX}\laszLoc{a} \LaConcept{JOÃO}\laszLoc{a} \LaConcept{IX}\laszLoc{b} \LaConcept{MARIA}\laszLoc{b} \LaConcept{AUX}\laszDir{a}{b} \LaConcept{SUPPORT}. 
-        \hfill 
-        \cmark Libras 
         \\ 
         `Joao supported Maria.'
         \citep[from][7]{Quadros.etal.2004} 
+        \hfill 
+        \cmark Libras 
     \ex 
         \LaConcept{IX}\laszLoc{a} \LaConcept{MARIA}\laszLoc{a} \LaConcept{SUPPORT} \LaConcept{IX}\laszLoc{b} \LaConcept{LULA}\laszLoc{b}. 
         \hfill 
@@ -250,23 +250,52 @@ ASL and Libras.
 
 \begin{table}
     \centering 
-    \begin{tabular}{r c c c c}
+    \begin{tabular}{
+        l
+        \laszTabColJdg{\laszTabColA} @{} \laszTabColWOr{\laszTabColA}
+        \laszTabColJdg{\laszTabColB} @{} \laszTabColWOr{\laszTabColB}
+        r @{} l 
+        \laszTabColJdg{\laszTabColC} @{} \laszTabColWOr{\laszTabColC}
+    }
         \lsptoprule 
-        & V\laszPlain{} & V\laszLoc{\_} & V\laszHs{\_} & V\laszAsp{} \\
+        & 
+            \multicolumn{2}{c}{V\laszPlain{}} &
+            \multicolumn{2}{c}{V\laszLoc{\_}} &
+            \multicolumn{2}{c}{V\laszHs{\_}} & 
+            \multicolumn{2}{c}{V\laszAsp{}}
+        \\ 
         \midrule
-        ASL & 
-            \laszTabColA{} & 
-            \laszTabColB{} & 
-            \shortstack{\laszTabColC{} *SVO \\ \cmark SOV}& 
-            \laszTabColC{} 
-            \\ 
+        % \multirow{2}{=}{
+            ASL
+        % } 
+        &
+            \cmark & SVO & 
+            \cmark & SVO & 
+            \multicolumn{1}{\laszTabColJdg{\laszTabColC} @{}}{*} & \multicolumn{1}{@{} \laszTabColWOr{\laszTabColC}}{SVO} & 
+            * & SVO 
+        \\ 
+        &
+            * & SOV &
+            \cmark & SOV & 
+            \multicolumn{1}{\laszTabColJdg{\laszTabColC} @{}}{\cmark} & \multicolumn{1}{@{} \laszTabColWOr{\laszTabColC}}{SOV} & 
+            \cmark & SOV
+        \\
         \midrule 
-        Libras & 
-            \multirow{-2}{*}{\laszTabColA{} \shortstack{\cmark SVO \\ \xmark SOV}} & 
-            \multirow{-2}{*}{\laszTabColB{} \shortstack{\cmark SVO \\ \cmark SOV}} & 
-            \shortstack{\laszTabColB{} \cmark SVO \\ \cmark SOV} & 
-            \multirow{-2}{*}{\laszTabColC{} \shortstack{\xmark SVO \\ \cmark SOV}} 
-            \\
+        % \multirow{2}{=}{
+            Libras
+        % } 
+        &
+            \cmark & SVO & 
+            \cmark & SVO & 
+            \multicolumn{1}{\laszTabColJdg{\laszTabColB} @{}}{\cmark} & \multicolumn{1}{@{} \laszTabColWOr{\laszTabColB}}{SVO} & 
+            * & SVO 
+        \\
+        &
+            * & SOV & 
+            \cmark & SOV & 
+            \multicolumn{1}{\laszTabColJdg{\laszTabColB} @{}}{\cmark} & \multicolumn{1}{@{} \laszTabColWOr{\laszTabColB}}{SOV} & 
+            \cmark & SOV
+        \\
         \lspbottomrule
     \end{tabular}
     \caption{Comparison of judgments for SVO and SOV}

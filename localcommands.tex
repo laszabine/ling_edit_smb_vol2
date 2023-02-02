@@ -50,17 +50,16 @@
 \newcommand{\laszHs}[1]{[hs:#1]}
 \newcommand{\laszClaw}[0]{{\fontspec{aslfontgithubio.ttf} S}}
 \newcommand{\laszPlain}[0]{[plain]}
-\newcommand{\laszTabColA}[0]{\cellcolor{gray!30}}
-\newcommand{\laszTabColB}[0]{\cellcolor{gray!10}}
-\newcommand{\laszTabColC}[0]{\cellcolor{gray!30}}
-% \newcommand{\laszTabRowA}[0]{\rowcolor{gray!30}}
-% \newcommand{\laszTabRowB}[0]{\rowcolor{gray!10}}
-\newcommand{\laszTabRowA}[0]{}
-\newcommand{\laszTabRowB}[0]{}
 \newcommand{\laszLB}[1]{[\textsubscript{#1}}
 \newcommand{\lasztO}[0]{t\textsubscript{O}}
 \newcommand{\lasztV}[0]{t\textsubscript{V}}
-
+\newcolumntype{\laszTabColJdg}[1]{>{\columncolor[gray]{#1}[\tabcolsep][0pt]} r}
+\newcolumntype{\laszTabColWOr}[1]{>{\columncolor[gray]{#1}[0pt][\tabcolsep]} l}
+\newcommand{\laszTabColA}{0.85}
+\newcommand{\laszTabColB}{0.95}
+\newcommand{\laszTabColC}{0.85}
+\newcommand{\laszTabRowA}[0]{}
+\newcommand{\laszTabRowB}[0]{}
 
 % First, we need counters to hold temporary values:
 \newcounter{nexttmp}    % Counter for the Next example
